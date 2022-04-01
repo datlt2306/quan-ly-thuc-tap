@@ -1,5 +1,6 @@
 import React, { Children, useEffect, useState } from 'react';
 import { Layout, Menu, Breadcrumb, Row,Col, Button } from 'antd';
+import "../common/styles/layout.css"
 import {
   ProfileOutlined,
   PieChartOutlined,
@@ -16,11 +17,11 @@ import { $ } from '../ultis';
 const { Sider } = Layout;
 function LayoutWebsite() {
   const [state, setState] = useState(false);
-  const [userLocatlStorage, setUserLocatlStorage] = useState({});
+  // const [userLocatlStorage, setUserLocatlStorage] = useState({});
 
   useEffect(() => {
     localStorage.setItem('user', JSON.stringify({ id: 1, name: "Trần Văn Đoàn", email: "doantvph11605@fpt.edu.vn", avatar: "https://media.tadicdn.com/media/image/s/tdtp/id/610cee400df9386a46462317.jpeg_640x", role: 0 }))
-    setUserLocatlStorage(JSON.parse(localStorage.getItem('user')))
+    // setUserLocatlStorage(JSON.parse(localStorage.getItem('user')))
   }, [])
 
   const onCollapse = () => {
@@ -49,7 +50,7 @@ function LayoutWebsite() {
               <NavLink to=''>Đăng ký thực tập</NavLink>
             </Menu.Item>
             <Menu.Item key="2" icon={<ProfileOutlined className='icon-link'/>}>
-              <NavLink to='status'>Danh sách đăng ký</NavLink>
+              <NavLink to='sinh-vien/danh-sach-dang-ky'>Danh sách đăng ký</NavLink>
             </Menu.Item>
             <Menu.Item key="3" icon={<TeamOutlined className='icon-link'/>}>
               <NavLink to='up-file'>Nhân viên</NavLink>

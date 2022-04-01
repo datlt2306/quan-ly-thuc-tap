@@ -14,13 +14,12 @@ const Router = () => {
       <Route path="/" element={<LayoutWebsite />}>
         <Route index element={<Login/>} />
         <Route path="/home" element={<Home/>} />
-        <Route path="/status" element={<Status />} />
-        <Route path="/review-cv" element={<ReviewCV />} />
-        <Route path="/up-file" element={<UpFile />} />
       </Route>
 
-      <Route path="admin/*" element={<LayoutAdmin />}>
-        <Route index element={<Navigate to="dashboard" />} />
+      <Route path="quan-ly/" element={<LayoutWebsite />}>
+        <Route path="sinh-vien/danh-sach-dang-ky" element={<Status />} />
+        <Route path="review-cv" element={<ReviewCV />} />
+        <Route path="up-file" element={<UpFile />} />
       </Route>
     </Routes>
   );

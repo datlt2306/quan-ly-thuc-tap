@@ -8,6 +8,14 @@ export const getUser=createAsyncThunk(
         return users
     }
 )
+export const editStudent=createAsyncThunk(
+    "user/editStudent",
+    async (id,data)=>{
+        const {data:users}=await UsersAPI.upload(id,data)
+        console.log(users)
+        // return users
+    }
+)
 const userSlice=createSlice({
     name:"user",
     initialState:{
@@ -20,6 +28,9 @@ const userSlice=createSlice({
     },
     extraReducers:(builder)=>{
         builder.addCase(getUser.fulfilled,(state,action)=>{
+            state.value = action.payload
+        })
+        builder.addCase(editStudent.fulfilled,(state,action)=>{
             state.value = action.payload
         })
     }
