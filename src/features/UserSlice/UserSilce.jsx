@@ -13,7 +13,7 @@ export const editStudent=createAsyncThunk(
     async (id,data)=>{
         const {data:users}=await UsersAPI.upload(id,data)
         console.log(users)
-        // return users
+        return users
     }
 )
 const userSlice=createSlice({
@@ -31,7 +31,8 @@ const userSlice=createSlice({
             state.value = action.payload
         })
         builder.addCase(editStudent.fulfilled,(state,action)=>{
-            state.value = action.payload
+            // console.log(action.payload)
+            // state.value = action.payload
         })
     }
     

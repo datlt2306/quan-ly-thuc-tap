@@ -45,7 +45,7 @@ function LayoutWebsite() {
             </div>
           </div>
 
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" className='ul'>
             <Menu.Item key="1" icon={<PieChartOutlined className='icon-link'/>}>
               <NavLink to=''>Đăng ký thực tập</NavLink>
             </Menu.Item>

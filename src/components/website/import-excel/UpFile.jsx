@@ -22,6 +22,7 @@ const UpFile = () => {
             const fileData = XLSX.utils.sheet_to_json(wordSheet, { header: 1 })
             fileData.splice(0, 1)
             const headers = fileData[0]
+
             const heads = headers.map((head, index) => ({ title: head, key: index }))
             setHeader(heads)
 
@@ -42,7 +43,20 @@ const UpFile = () => {
 
     }
     const submitSave = () => {
-        DataAPI.add({ data: dataNew })
+        const data = []
+        dataNew.map((item) => {
+            const newObject = {}
+            newObject['mssv'] = item['MSSV']
+            newObject['name'] = item['Họ tên']
+            newObject['course'] = item['Khóa nhập học']
+            newObject['status'] = item['Trạng thái FA21']
+            newObject['majors'] = item['Ngành FA21']
+            newObject['name'] = item['Họ tên']
+            newObject['email'] = item['Email']
+            newObject['supplement'] = item['bổ sung']
+            data.push(newObject)
+        })
+        DataAPI.add({ data: data })
     }
     const submitCole = () => {
         setData()

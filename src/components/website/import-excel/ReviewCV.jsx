@@ -6,6 +6,7 @@ import { notification, Select, Input, Checkbox, Table } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import { $ } from '../../../ultis';
 import { getStudent } from '../../../features/StudentSlice/StudentSlice';
+import { editStudent } from '../../../features/UserSlice/UserSilce';
 const { Option } = Select;
 const ReviewCV = () => {
   const user = JSON.parse(localStorage.getItem('user'))
@@ -117,21 +118,6 @@ const ReviewCV = () => {
 
         </Select >
       }
-
-
-
-
-      // {
-      //     if (status == 0) {
-      //         return <span className='status-fail' style={{ color: 'red' }}>Đã tạch <br /><button onClick={() => openDetail(student, 'error')}>Đã tạch</button></span>
-      //     } else if (status == 1) {
-      //         return <span className='status-up' style={{ color: 'red' }}>Sửa lại<br /><button>Sửa</button></span>
-      //     }else if(status==2){
-      //         return <span className='status-check' style={{ color: 'rgb(255, 106, 0)' }}>Chờ kiểm tra</span>
-      //     }else if(status==3){
-      //         return <span className='status-true' style={{ color: 'rgb(44, 194, 21)' }}>Đã kiểm tra</span>
-      //     }
-      // }
     }
   ];
   const rowSelection = {
@@ -147,9 +133,9 @@ const ReviewCV = () => {
       })
     })
     newStudents.map(item => {
-        StudentAPI.upload(item.id, { ...item, "user_id": '' })
+        dispatch(editStudent(item.id, { ...item, "user_id": '' }))
     })
-    alert("Xóa thành công")
+    // alert("Xóa thành công")
 
   }
   const data = [];
