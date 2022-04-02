@@ -159,7 +159,7 @@ const Status = () => {
                     <Option value="QTDN">Quản trị doanh nghiệp</Option>
                     <Option value="TKĐH">Thiết kế đồ họa</Option>
                     <Option value="UDPM">Ứng dụng phần mềm</Option>
-                    <Option value="TMĐT">Maketing</Option>
+                    <Option value="TMĐT">Thương mại điện tử</Option>
                     <Option value="LTMT">Lập trình máy trính</Option>
                     <Option value="TKTW">Thiết kế Website</Option>
                     <Option value="QHCC">Quan hệ công chúng</Option>

@@ -30,7 +30,7 @@ function LayoutWebsite() {
           <div className="logo-school">
             <div className="logo">
               <img
-                style={state ? { width: '40%', height: '40%' } : { width: '80%', height: '80%' }}
+                style={state ? { width: '35%', height: '35%',margin:'40px 0 0 0' } : { width: '100%', height: '100%' }}
                 src="https://upload.wikimedia.org/wikipedia/commons/2/20/FPT_Polytechnic.png"
                 alt=""
               />
@@ -52,7 +52,7 @@ function LayoutWebsite() {
               </Menu.Item>
             </SubMenu>
             <Menu.Item key="2" icon={<ProfileOutlined className="icon-link" />}>
-              <NavLink to="status">Danh sách đăng ký</NavLink>
+              <NavLink to="sinh-vien/danh-sach-dang-ky">Danh sách đăng ký</NavLink>
             </Menu.Item>
             <Menu.Item key="3" icon={<TeamOutlined className="icon-link" />}>
               <NavLink to="up-file">Nhân viên</NavLink>
@@ -71,10 +71,6 @@ function LayoutWebsite() {
         <Layout className="site-layout">
           <GlobalHeader onCollapse={onCollapse} state={state} />
           <Content style={{ margin: '15px 15px', background: 'white' }}>
-            {/* <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
-            </Breadcrumb> */}
             <div style={{ padding: 24, minHeight: 360 }}>
               <Outlet />
             </div>
