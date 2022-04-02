@@ -4,20 +4,20 @@ import Sidebar from '../../../components/sidebar/Sidebar';
 
 const { Header, Content } = Layout;
 
-const Home = () => {
+const SupportStudent = () => {
   
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sidebar />
+      <Sidebar/>
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content style={{ margin: '0 16px' }}>
-              Home
+          SupportStudent
           </Content>
         </Layout>
       </Layout>
   )
 }
 
-export default Home
+export default SupportStudent

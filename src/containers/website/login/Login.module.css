@@ -8,13 +8,48 @@
 }
 .campus{
     margin-top:20px;
+    width:40vw;
 }
 .button_login{
     margin-top:20px;
-    width:500px;
+    width:40vw;
     display: flex;
     justify-content: center;
 }
 .logo{
-    width:30%;
+    width:30vw;
+}
+
+@media screen and (max-width: 800px) {
+    .campus{
+        margin-top:20px;
+        width:60vw;
+    }
+    .button_login{
+        margin-top:20px;
+        width:60vw;
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        width:60vw;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .campus{
+        margin-top:20px;
+        width:80vw;
+    }
+    .button_login{
+        margin-top:20px;
+        width:80vw;
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        width:80vw;
+    }
+    
 }

@@ -5,5 +5,6 @@ const rootReducer = combineReducers(
     {
     students:studentSlice,
     users:userSlice
+
 });
 export default rootReducer;

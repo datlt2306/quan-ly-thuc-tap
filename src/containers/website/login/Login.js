@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GoogleLogin from "react-google-login";
 import styles from "./Login.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginGoogle } from "../../../features/slice/authSlice";
 import { Select, Empty } from "antd";
+import { useNavigate } from "react-router";
 
 const { Option } = Select;
 const dataCumpus = [
@@ -27,6 +28,9 @@ const dataCumpus = [
 const Login = () => {
   const dispatch = useDispatch();
   const [cumpus,setCumpus] = useState("")
+  const navigate = useNavigate()
+  const data = useSelector((state) => state.auth)
+  console.log(data)
 
   const handleFailure = (result) => {
     alert(result);
@@ -39,6 +43,12 @@ const Login = () => {
   const handleChange = (value) => {
     setCumpus(value)
   };
+
+  useEffect(()=>{
+    if(localStorage.getItem('token')){
+      navigate('/home')
+    }
+  },[])
   
   return (
     <div className={styles.login_wrapper}>
@@ -46,10 +56,10 @@ const Login = () => {
         className={styles.logo}
         src="https://career.fpt.edu.vn/Content/images/logo_unit/Poly.png"
       />
-      <div className={styles.campus}>
+      <div>
         <Select
+          className={styles.campus}
           defaultValue="Lựa chọn cơ sở"
-          style={{ width: 500 }}
           onChange={handleChange}
         >
           {dataCumpus ? dataCumpus.map( (item,index) => (

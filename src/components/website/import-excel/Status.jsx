@@ -6,7 +6,7 @@ import { Select, Input, Table } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import { getStudent } from '../../../features/StudentSlice/StudentSlice';
 import { getUser } from '../../../features/UserSlice/UserSilce';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const { Option } = Select;
 const Status = () => {
     const dispatch = useDispatch()
@@ -146,13 +146,13 @@ const Status = () => {
             StudentAPI.upload(item.id, { ...item, "user_id": `${user.id}` })
         })
         alert("Thêm thành công ")
-         navigate("/review-cv");
+        navigate("/review-cv");
     }
 
 
     return (
         <div className='status'>
-            <h4>Sinh viên đăng ký thực tập</h4>
+            <h5>Sinh viên đăng ký thực tập</h5>
 
             <div className="filter">
                 <Select style={{ width: 200 }} onChange={filterMajors} placeholder="Lọc theo ngành">
@@ -190,79 +190,7 @@ const Status = () => {
 
 
 
-            {/* 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Chọn</th>
-                        <th>STT</th>
-                        <th>MSSV</th>
-                        <th>Họ và Tên</th>
-                        <th>Email</th>
-                        <th>Điện thoại</th>
-                        <th>Ngành</th>
-                        <th>CV</th>
-                        <th>Phân loại</th>
-                        <th>Trạng thái</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        (studentSearch.length == 0 ? students : studentSearch).map((item, index) => {
-
-                            return (
-                                <tr key={index}>
-                                    <td className='checkbox'>
-                                        <Checkbox onChange={(e) => chooseId(item.id, e)}></Checkbox>
-                                    </td>
-
-                                    <td>{index + 1}</td>
-                                    <td>{item.mssv}</td>
-                                    <td>{item.name}</td>
-                                    <td>{item.email}</td>
-                                    <td>{item.phone}</td>
-                                    <td>{item.internship_industry}</td>
-                                    <td>
-                                        {item.classify == 0 && <EyeOutlined className='icon-cv' onClick={() => window.open(item.link_cv)} />}
-                                    </td>
-                                    <td>{item.classify == 0 ? 'Tự đăng ký' : 'Hỗ trợ'}</td>
-
-                                    <td className='list-status'>
-                                        {item.status == 0 && <span className='status-fail' style={{ color: 'red' }}>Đã tạch <br /><button onClick={() => openDetail(item.id, 'error')}>Đã tạch</button></span>}
-
-                                        {item.status == 1 && <span className='status-up' style={{ color: 'red' }}>Sửa lại<br /><button onClick={() => editCv(item.id, index)}>Sửa</button>
-
-                                        </span>}
-                                        {item.status == 2 && <span className='status-check' style={{ color: 'rgb(255, 106, 0)' }}>Chờ kiểm tra</span>}
-
-                                        {item.status == 3 && <span className='status-true' style={{ color: 'rgb(44, 194, 21)' }}>Đã kiểm tra</span>}
-                                    </td>
-
-                                </tr>
-                            )
-
-                        })
-                    }
-                </tbody>
-            </table>
-
-            {/* sửa cv *
-
-            <div className="edit-cv " >
-                <div className="form-edit-cv">
-                    <h3>Sửa CV</h3>
-                    <div className="input-edit-cv">
-                        <div className="name">Tên sinh viên : <span className='name-student'></span></div>
-                        <br />
-                        <label htmlFor="ediv-cv">
-                            <span>Sửa CV</span><FilePdfOutlined className='icon-edit-cv' />
-                        </label>
-                        <input type="file" id='ediv-cv' />
-                    </div>
-
-                    <button>Sửa</button>
-                </div>
-            </div> */}
+      
         </div>
     )
 }

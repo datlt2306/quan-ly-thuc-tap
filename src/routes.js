@@ -7,6 +7,8 @@ import Home from "./containers/website/home/Home";
 import Status from "./components/website/import-excel/Status";
 import ReviewCV from "./components/website/import-excel/ReviewCV";
 import UpFile from "./components/website/import-excel/UpFile";
+import SupportStudent from "./containers/website/supportStudent/SupportStudent";
+import ProactiveStudent from "./containers/website/proactiveStudent/ProactiveStudent";
 
 const Router = () => {
   return (

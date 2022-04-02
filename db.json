@@ -5937,7 +5937,7 @@
       "link_cv": "https://www.topcv.vn/xem-cv/UgMHA1RRUlBYAQ1SVlIFBgYCVAcKBwYPWQBVBgc18a",
       "status": "1",
       "status_detail": "Sinh viên thực tập không tập chung bị công ty cho nghỉ việc",
-      "user_id": "1",
+      "user_id": "",
       "classify": "1"
     },
     {
@@ -6069,20 +6069,15 @@
       "role": 0
     },
     {
-      "requestId": "7DO7Pv065unD4MqM6r9UR",
-      "signal": {},
-      "id": 2
+      "id": 2,
+      "name": "Lê Trọng Đạt",
+      "email": "datlt34@fpt.edu.vn",
+      "role": 0
     },
     {
       "id": 3,
       "name": "Giang Văn Hiếu",
       "email": "hieugvpf15011@fpt.edu.vn",
-      "role": 0
-    },
-    {
-      "id": 4,
-      "name": "Nguyễn Tiến Mạnh",
-      "email": "manhntpf15005@fpt.edu.vn",
       "role": 0
     }
   ]
