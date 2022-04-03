@@ -8,13 +8,12 @@ import SupportStudent from "../containers/website/supportStudent/SupportStudent"
 import ProactiveStudent from "../containers/website/proactiveStudent/ProactiveStudent";
 import Privateroute from "./private/privateRoute";
 import LayoutAdmin from "../layouts/LayoutAdmin";
-import LayoutWebsite from "../layouts/LayoutWebsite";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Privateroute><LayoutWebsite /></Privateroute>}>
+      <Route path="/" element={<Privateroute><LayoutAdmin /></Privateroute>}>
         <Route path="/support-student" element={<SupportStudent />} />
         <Route path="/proactive-student" element={<ProactiveStudent />} />
       </Route>

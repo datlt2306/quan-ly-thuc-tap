@@ -12,7 +12,7 @@ const ReviewCV = () => {
   const user = JSON.parse(localStorage.getItem('user'))
   const dispatch = useDispatch()
   var students = useSelector(data => data.students.value);
-  const users = useSelector(data => data.users);
+  const users = useSelector(data => data.users.value);
 
   // lọc ra được sinh viên mà user đã chọn để review cv
   const selectedStudent = students.filter(item => item.user_id == user.id)

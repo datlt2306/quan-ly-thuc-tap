@@ -13,7 +13,7 @@ const Status = () => {
     let navigate = useNavigate();
     const { infoUser } = useSelector(state => state.auth)
     const students = useSelector(data => data.students.value);
-    const users = useSelector(data => data.users);
+    const users = useSelector(data => data.users.value);
     const [studentSearch, setStudentSearch] = useState([])
     const [chooseIdStudent, setChooseIdStudent] = useState([])
 

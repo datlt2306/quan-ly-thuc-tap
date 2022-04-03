@@ -4,9 +4,8 @@ import {
   ProfileOutlined,
   UploadOutlined,
   TeamOutlined,
-  LoginOutlined,
   FolderViewOutlined,
-  ReadOutlined,
+  PieChartOutlined
 } from '@ant-design/icons';
 import { Link, Outlet } from 'react-router-dom';
 import GlobalHeader from '../components/GlobalHeader.js/index.js';
