@@ -58,9 +58,6 @@ console.log("admin")
             <Menu.Item key="4" icon={<FolderViewOutlined className="icon-link" />}>
               <Link to="xem-cv">Review CV</Link>
             </Menu.Item>
-            <Menu.Item key="5" icon={<ReadOutlined className="icon-link" />}>
-              <Link to="xem-bao-cao">Review báo cáo</Link>
-            </Menu.Item>
             <Menu.Item key="6" icon={<UploadOutlined className="icon-link" />}>
               <Link to="up-file">Up File</Link>
             </Menu.Item>

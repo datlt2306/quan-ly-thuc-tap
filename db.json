@@ -1,5 +1,5915 @@
 {
-  "data": [],
+  "data": [
+    {
+      "data": [
+        {
+          "mssv": "PF15005",
+          "name": "Nguyễn Tiến Mạnh",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "UDPM(Java)",
+          "email": "manhntpf15005@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15011",
+          "name": "Giang Văn Hiếu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "hieugvpf15011@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15013",
+          "name": "Nguyễn Đức Tốt",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "totndpf15013@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15031",
+          "name": "Trương Văn Huy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "huytvpf15031@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15050",
+          "name": "Nguyễn Đình Quân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "quanndpf15050@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15083",
+          "name": "Nông Ngọc Tiên",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tiennnpf15083@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15086",
+          "name": "Lưu Hữu Makxim",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "QTDN",
+          "email": "makximlhpf15086@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15092",
+          "name": "Hà Thị Hân",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hanhtpf15092@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15104",
+          "name": "Lê Tuấn Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhltpf15104@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15145",
+          "name": "Phạm Hữu Thắng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "thangphpf15145@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15170",
+          "name": "Phạm Khánh Thơ",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "thopkpf15170@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH03537",
+          "name": "Hoàng Văn Tiến",
+          "course": "15.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "tienhvph03537@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH04727",
+          "name": "Nguyễn Đình Huy",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "huyndph04727@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH05007",
+          "name": "Phương Đăng Quang",
+          "course": "13.2",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "quangpdph05007@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH05320",
+          "name": "Nguyễn Duy Anh",
+          "course": "12.3",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "anhndph05320@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13241",
+          "name": "Lê Gia Tú",
+          "course": "16.2.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tulgph13241@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH06081",
+          "name": "Vũ Chí Trung",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "trungvcph06081@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH06135",
+          "name": "Nguyễn Huy Hoàng",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "hoangnhph06135@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09649",
+          "name": "Trần Quốc Huy",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "QTDN",
+          "email": "huytqph09649@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH06959",
+          "name": "Đỗ Quang Bách",
+          "course": "14.2",
+          "status": "TN1",
+          "majors": "UDPM",
+          "email": "bachdqph06959@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07045",
+          "name": "Lê Văn Cơ",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "colvph07045@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07087",
+          "name": "Hồ Thích Huy",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "huyhtph07087@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07104",
+          "name": "Trần Huy Lộc",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "UDPM",
+          "email": "locthph07104@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07207",
+          "name": "Đặng Ngọc Đại",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "daidnph07207@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07217",
+          "name": "Nguyễn Đắc Tiến Thành",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thanhndtph07217@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07319",
+          "name": "Trần Thành Long",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "longttph07319@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07340",
+          "name": "Lại Văn Mãi",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "mailvph07340@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07387",
+          "name": "Ngô Thị Thuỷ",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "thuyntph07387@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07075",
+          "name": "Trần Văn Chinh",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "chinhtvph07075@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07465",
+          "name": "Nguyễn Hữu Hoàn",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "LTMT",
+          "email": "hoannhph07465@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07477",
+          "name": "Đỗ Trang Nhung",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "nhungdtph07477@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07532",
+          "name": "Trần Đức Thịnh",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "thinhtdph07532@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07554",
+          "name": "Hoàng Viết Quân",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "quanhvph07554@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07558",
+          "name": "Thân Văn Hoàng",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "UDPM",
+          "email": "hoangtvph07558@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07710",
+          "name": "Phạm Chiến Hiệp",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hieppcph07710@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07714",
+          "name": "Trần Hữu Tùng",
+          "course": "15.1",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "tungthph07714@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07776",
+          "name": "Trương Minh Đức",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "ductmph07776@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13242",
+          "name": "Nguyễn Tiến Dũng",
+          "course": "16.2.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "dungntph13242@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07811",
+          "name": "Phạm Văn Dũng",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "dungpvph07811@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07464",
+          "name": "Lê Viết Hoàng Hưng",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hunglvhph07464@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07851",
+          "name": "Nguyễn Hồng Quân",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "quannhph07851@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07867",
+          "name": "Lê Danh Toàn",
+          "course": "15.1",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "toanldph07867@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07871",
+          "name": "Hà Đức Nam",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTKS",
+          "email": "namhdph07871@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07893",
+          "name": "Lương Trọng Vương",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "QTDN",
+          "email": "vuongltph07893@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07902",
+          "name": "Trần Trung Hiếu",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "hieuttph07902@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07903",
+          "name": "Bùi Quang Đức Hòa",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "QTDN",
+          "email": "hoabqdph07903@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07955",
+          "name": "Lê Anh Đức",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "duclaph07955@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08043",
+          "name": "Nguyễn Quang Bách",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "bachnqph08043@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08107",
+          "name": "Lê Thế Hùng",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "hungltph08107@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08119",
+          "name": "Trần Đình Thịnh",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "LTMT",
+          "email": "thinhtdph08119@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08133",
+          "name": "Nguyễn Hoàng Linh",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "linhnhph08133@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08157",
+          "name": "Hoàng Duy Quang",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "quanghdph08157@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08160",
+          "name": "Lại Thế Cường",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "cuongltph08160@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08185",
+          "name": "Lê Thị Trang Nhung",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "QHCC",
+          "email": "nhunglttph08185@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08203",
+          "name": "Phan Văn Dương",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "UDPM",
+          "email": "duongpvph08203@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07974",
+          "name": "Nguyễn Tiến Đạt",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "datntph07974@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13240",
+          "name": "Nguyễn Tuấn Lâm",
+          "course": "16.2.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "lamntph13240@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13236",
+          "name": "Đỗ Tiến Long",
+          "course": "16.2.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "longdtph13236@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08255",
+          "name": "Đặng Thị Hoan",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "hoandtph08255@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08285",
+          "name": "Phan Văn Quang",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "UDPM",
+          "email": "quangpvph08285@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08288",
+          "name": "Trần Anh Thuận",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "thuantaph08288@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08294",
+          "name": "Nguyễn Xuân Quân",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "quannxph08294@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08316",
+          "name": "Nguyễn Hoàng Vinh",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "LTMT",
+          "email": "vinhnhph08316@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08393",
+          "name": "Lê Tiến Huy",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "UDPM",
+          "email": "huyltph08393@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08404",
+          "name": "Nguyễn Ngọc Thạch",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "QTDN",
+          "email": "thachnnph08404@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08448",
+          "name": "Nguyễn Xuân Trường",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "truongnxph08448@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08481",
+          "name": "Nguyễn Quốc Huy",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "huynqph08481@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08523",
+          "name": "Nguyễn Văn Thành",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "UDPM",
+          "email": "thanhnvph08523@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08616",
+          "name": "Nguyễn Đình Khuê",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "khuendph08616@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08693",
+          "name": "Phạm Thị Hoàn",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hoanptph08693@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08723",
+          "name": "Phạm Đức Long",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "QTKS",
+          "email": "longpdph08723@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08752",
+          "name": "Vũ Ngọc Cương",
+          "course": "15.1",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "cuongvnph08752@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08757",
+          "name": "Trần Khánh Toàn",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "toantkph08757@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08806",
+          "name": "Trịnh Đức Huy",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "huytdph08806@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08817",
+          "name": "Trịnh Đình Nam",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "namtdph08817@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08820",
+          "name": "Vũ Trung Nam",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "UDPM",
+          "email": "namvtph08820@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08835",
+          "name": "Vương Hoàng Long",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "longvhph08835@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08930",
+          "name": "Trần Quang Huy",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "huytqph08930@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08973",
+          "name": "Nguyễn Thiện Luân",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "luanntph08973@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08351",
+          "name": "Ma Việt Hưng",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "hungmvph08351@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09023",
+          "name": "Lê Hồng Quân",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "UDPM",
+          "email": "quanlhph09023@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09070",
+          "name": "Vũ Đại Hải",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "haivdph09070@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09284",
+          "name": "Vũ Tiến Mạnh",
+          "course": "15.1",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "manhvtph09284@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09315",
+          "name": "Vũ Ngọc Bình",
+          "course": "15.1",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "binhvnph09315@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09341",
+          "name": "Nguyễn Tuấn Anh",
+          "course": "15.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "anhntph09341@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09368",
+          "name": "Trần Tuấn Minh",
+          "course": "15.1",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "minhttph09368@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09371",
+          "name": "Lê Xuân Hoàng",
+          "course": "15.1",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "hoanglxph09371@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09391",
+          "name": "Bế Văn Thế",
+          "course": "15.1",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "thebvph09391@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09394",
+          "name": "Đặng Thu Trang",
+          "course": "15.1",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "trangdtph09394@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09257",
+          "name": "Hoàng Hữu Đức",
+          "course": "15.1",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "duchhph09257@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09410",
+          "name": "Vũ Văn Tú",
+          "course": "15.1",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "tuvvph09410@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09396",
+          "name": "Trương Vũ Hà Lâm",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "lamtvhph09396@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09419",
+          "name": "Lê Thị Nguyệt",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "nguyetltph09419@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09424",
+          "name": "Bùi Nguyên Phú",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "phubnph09424@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09432",
+          "name": "Hoàng Văn Thuận",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "QHCC",
+          "email": "thuanhvph09432@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09462",
+          "name": "Nguyễn Đức Mạnh",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "manhndph09462@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09491",
+          "name": "Ngô Lan Chi",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "QHCC",
+          "email": "chinlph09491@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09490",
+          "name": "Nguyễn Công Quang",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "quangncph09490@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09492",
+          "name": "Trịnh Trọng Mạnh",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "manhttph09492@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09533",
+          "name": "Đàm Thị Thu Uyên",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "uyendttph09533@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09549",
+          "name": "Bùi Ngọc Hoàng",
+          "course": "15.2",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "hoangbnph09549@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09556",
+          "name": "Giang Văn Thịnh",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thinhgvph09556@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09557",
+          "name": "Trần Minh Quân",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "quantmph09557@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09568",
+          "name": "Đỗ Đức Lương",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "luongddph09568@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09581",
+          "name": "Trần Hữu Hùng",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "hungthph09581@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09591",
+          "name": "Nguyễn Công Triền",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "trienncph09591@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09594",
+          "name": "Hoàng Văn Đảng",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "danghvph09594@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09604",
+          "name": "Bùi Quang Khải",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "khaibqph09604@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09595",
+          "name": "Dương Thị Dung",
+          "course": "15.2",
+          "status": "TN2",
+          "majors": "UDPM",
+          "email": "dungdtph09595@fpt.edu.vn",
+          "supplement": "BL"
+        },
+        {
+          "mssv": "PH09639",
+          "name": "Nguyễn Khả Đạt",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "datnkph09639@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09661",
+          "name": "Vũ Tiến Dũng",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "dungvtph09661@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09676",
+          "name": "Phạm Văn Quang",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "quangpvph09676@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09679",
+          "name": "Trần Văn Quân",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "quantvph09679@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09700",
+          "name": "Đỗ Văn Hùng",
+          "course": "15.2",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "hungdvph09700@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09701",
+          "name": "Trần Thiên Dương",
+          "course": "15.2",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "duongttph09701@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09704",
+          "name": "Đỗ Văn Duy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "duydvph09704@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09716",
+          "name": "Cao Duy Thái",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thaicdph09716@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09719",
+          "name": "Nguyễn Nhật Hùng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "hungnnph09719@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09731",
+          "name": "Đỗ Minh Hiếu",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TMĐT",
+          "email": "hieudmph09731@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09737",
+          "name": "Đinh Thành Đạt",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "datdtph09737@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09753",
+          "name": "Nguyễn Vĩnh Tiến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "tiennvph09753@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09756",
+          "name": "Trần Bá Quân",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "quantbph09756@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09776",
+          "name": "Lưu Quang Hưng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "hunglqph09776@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09789",
+          "name": "Đinh Văn Hưởng",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "huongdvph09789@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09802",
+          "name": "Hoàng Trung Kết",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "kethtph09802@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09803",
+          "name": "Nguyễn Văn Anh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "anhnvph09803@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09808",
+          "name": "Hứa Mạnh Hùng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "hunghmph09808@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09810",
+          "name": "Cao Tiến Đạt",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "datctph09810@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09815",
+          "name": "Đặng Hồng Thọ",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thodhph09815@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09817",
+          "name": "Vũ Trọng Hoà",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hoavtph09817@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09823",
+          "name": "Nông Anh Tài",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tainaph09823@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09824",
+          "name": "Nguyễn Văn Bá",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "banvph09824@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09845",
+          "name": "Nguyễn Thị Hương",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTDN",
+          "email": "huongntph09845@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09856",
+          "name": "Đào Mạnh Cường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "cuongdmph09856@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09867",
+          "name": "Đoàn Tuấn Minh",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "minhdtph09867@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09874",
+          "name": "Cao Thị Kim Mai",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "maictkph09874@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09878",
+          "name": "Nguyễn Hoàng Anh",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "anhnhph09878@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09881",
+          "name": "Nguyễn Công Tùng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "tungncph09881@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09883",
+          "name": "Lê Văn Chiến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "chienlvph09883@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09894",
+          "name": "Lưu Ngọc Lâm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "lamlnph09894@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09895",
+          "name": "Lại Thị Quỳnh",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "quynhltph09895@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09903",
+          "name": "Lê Công Minh Hiếu",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "QHCC",
+          "email": "hieulcmph09903@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09904",
+          "name": "Nguyễn Đỗ Hoàng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "hoangndph09904@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09920",
+          "name": "Đoàn Văn Dũng",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "dungdvph09920@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09935",
+          "name": "Nguyễn Mạnh Hiếu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hieunmph09935@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09938",
+          "name": "Lưu Đức Mạnh",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "manhldph09938@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09942",
+          "name": "Nguyễn An Cường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "cuongnaph09942@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09943",
+          "name": "Bùi Thành Thắng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "thangbtph09943@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09944",
+          "name": "Đỗ Khánh Duy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "duydkph09944@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09948",
+          "name": "Kiều Bá Việt",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "vietkbph09948@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09952",
+          "name": "Phùng Văn Tân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "tanpvph09952@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09957",
+          "name": "Nguyễn Văn Kiên",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "kiennvph09957@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09964",
+          "name": "Nông Hiển Vinh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "vinhnhph09964@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09966",
+          "name": "Nguyễn Đình Hiệp",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "hiepndph09966@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09981",
+          "name": "Nguyễn Quốc An",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "annqph09981@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09983",
+          "name": "Nguyễn Quang Phú",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "phunqph09983@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09987",
+          "name": "Đoàn Thị Thu Hằng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hangdttph09987@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09996",
+          "name": "Phùng Thị Ngọc Ánh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "anhptnph09996@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10002",
+          "name": "Bùi Đức Quyền",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "quyenbdph10002@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10011",
+          "name": "Ngô Minh Quân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "quannmph10011@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10012",
+          "name": "Nguyễn Duy Hưng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hungndph10012@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10017",
+          "name": "Phạm Hồng Thái",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "thaiphph10017@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10022",
+          "name": "Hà Quang Tú Vinh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "vinhhqtph10022@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10033",
+          "name": "Trần Hải Yến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "yenthph10033@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10038",
+          "name": "Nguyễn Đức Cảnh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "canhndph10038@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10039",
+          "name": "Trần Quốc Tuấn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tuantqph10039@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10040",
+          "name": "Lê Ngọc Quý",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "quylnph10040@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10047",
+          "name": "Nguyễn Đức Trường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "truongndph10047@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10049",
+          "name": "Nguyễn Hoàng Long",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "longnhph10049@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10053",
+          "name": "Nguyễn Đức Huy",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "huyndph10053@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10060",
+          "name": "Lê Minh Hiếu",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "hieulmph10060@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10064",
+          "name": "Lê Minh Đức",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "duclmph10064@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10066",
+          "name": "Phạm Huy Sơn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "sonphph10066@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10069",
+          "name": "Nguyễn Thành Huy",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "huyntph10069@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10073",
+          "name": "Nguyễn Duy Thăng",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "thangndph10073@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10075",
+          "name": "Nguyễn Thanh Tùng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "tungntph10075@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10087",
+          "name": "Nguyễn Thị Trang",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "trangntph10087@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10094",
+          "name": "Đỗ Mạnh Cường",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "cuongdmph10094@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10098",
+          "name": "Nguyễn Xuân Khiêm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "khiemnxph10098@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10099",
+          "name": "Đỗ Văn Hoàn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hoandvph10099@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10101",
+          "name": "Dương Đức Huy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "huyddph10101@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10103",
+          "name": "Nguyễn Nam Khánh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "khanhnnph10103@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10111",
+          "name": "Bùi Thị My",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "mybtph10111@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10125",
+          "name": "Phạm Việt Anh",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "QTDN",
+          "email": "anhpvph10125@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10131",
+          "name": "Nguyễn Đức Nhật",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "nhatndph10131@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10150",
+          "name": "Vũ Minh Việt",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "vietvmph10150@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10156",
+          "name": "Hà Mạnh Sơn",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "sonhmph10156@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10177",
+          "name": "Hoàng Thị Nga",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "ngahtph10177@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10183",
+          "name": "Bùi Xuân Thảo",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "thaobxph10183@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10199",
+          "name": "Vũ Hoàng Long",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "longvhph10199@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10204",
+          "name": "Cao Phương Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "namcpph10204@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10207",
+          "name": "Lê Sỹ Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "namlsph10207@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10212",
+          "name": "Đỗ Minh Đức",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "ducdmph10212@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10223",
+          "name": "Ngô Hoài Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "namnhph10223@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10225",
+          "name": "Nguyễn Quang Hoài",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hoainqph10225@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10226",
+          "name": "Nguyễn Duy Thông",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "thongndph10226@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10247",
+          "name": "Trần Đức Chiến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "chientdph10247@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10249",
+          "name": "Nguyễn Minh Ngọc",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "ngocnmph10249@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10252",
+          "name": "Nguyễn Thị Hồng Ngọc",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "ngocnthph10252@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10266",
+          "name": "Nguyễn Hữu Hiếu",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "hieunhph10266@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10268",
+          "name": "Hà Quang Huy",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "UDPM(Java)",
+          "email": "huyhqph10268@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10271",
+          "name": "Đinh Công Thành",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "thanhdcph10271@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10279",
+          "name": "Phạm Minh Tú",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "tupmph10279@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10310",
+          "name": "Nguyễn Thị Minh Thủy",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QHCC",
+          "email": "thuyntmph10310@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10361",
+          "name": "Nguyễn Ngọc Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhnnph10361@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10377",
+          "name": "Nguyễn Duy Nam",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "namndph10377@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10416",
+          "name": "Nguyễn Nam Dương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "duongnnph10416@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10420",
+          "name": "Phùng Thảo My",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "myptph10420@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10438",
+          "name": "Đồng Đức Mạnh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "manhddph10438@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10440",
+          "name": "Nguyễn Ngọc Linh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "linhnnph10440@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10448",
+          "name": "Lương Anh Đức",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "duclaph10448@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10456",
+          "name": "Đinh Ngọc Đương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "duongdnph10456@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10458",
+          "name": "Lê Công Tuấn",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "tuanlcph10458@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10459",
+          "name": "Nguyễn Thị Cẩm Tú",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tuntcph10459@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10465",
+          "name": "Vũ Đình Kiên",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "kienvdph10465@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10473",
+          "name": "Tăng Văn Sơn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "sontvph10473@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10476",
+          "name": "Nguyễn Quang Ninh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QHCC",
+          "email": "ninhnqph10476@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10478",
+          "name": "Lê Mạnh Hùng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hunglmph10478@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10486",
+          "name": "Hà Xuân Định",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "dinhhxph10486@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10496",
+          "name": "Trần Kim Thành",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "thanhtkph10496@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10502",
+          "name": "Trần Trọng Khánh",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "khanhttph10502@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10503",
+          "name": "Lê Hồng Phong",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "phonglhph10503@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10506",
+          "name": "Trần Quốc Khánh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "khanhtqph10506@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10512",
+          "name": "Vũ Công Toàn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "toanvcph10512@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10524",
+          "name": "Trần Quang Vũ",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "vutqph10524@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10527",
+          "name": "Lê Đức Thắng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "thangldph10527@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10534",
+          "name": "Nguyễn Việt Hoàng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hoangnvph10534@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10536",
+          "name": "Phan Thanh Huy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "huyptph10536@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10543",
+          "name": "Nguyễn Trọng Thành",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thanhntph10543@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10545",
+          "name": "Đinh Quốc Khánh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "khanhdqph10545@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10546",
+          "name": "Hồ Minh Quang",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "quanghmph10546@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10549",
+          "name": "Nguyễn Minh Sơn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "sonnmph10549@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10570",
+          "name": "Lương Hoàng Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhlhph10570@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10585",
+          "name": "Trần Văn Thái",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "thaitvph10585@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10587",
+          "name": "Ngô Tiến Mạnh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "manhntph10587@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10591",
+          "name": "Nguyễn Quốc Tuấn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "tuannqph10591@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10593",
+          "name": "Hồ Đức Mạnh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "manhhdph10593@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10594",
+          "name": "Ngọc Thị Thu Thủy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "thuynttph10594@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10599",
+          "name": "Trần Mạnh Hùng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "hungtmph10599@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10608",
+          "name": "Nguyễn Đức Khánh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "khanhndph10608@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10613",
+          "name": "Bùi Trường Anh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "anhbtph10613@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10614",
+          "name": "Bùi Thành Hưng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hungbtph10614@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10632",
+          "name": "Hồ Bá Tiến",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "tienhbph10632@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10636",
+          "name": "Lê Trung Kiên",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "kienltph10636@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10644",
+          "name": "Kiều Anh Quân",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "quankaph10644@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10651",
+          "name": "Nhữ Thành Công",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "congntph10651@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10652",
+          "name": "Vũ Trần Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhvtph10652@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10653",
+          "name": "Phan Tuấn Thắng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thangptph10653@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10657",
+          "name": "Trịnh Quốc Toản",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "toantqph10657@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10665",
+          "name": "Trần Duy Tài",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "taitdph10665@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10691",
+          "name": "Tạ Quốc Huy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "huytqph10691@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10694",
+          "name": "Phạm Ngọc Toàn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "toanpnph10694@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10701",
+          "name": "Nguyễn Mạnh Hoàng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TMĐT",
+          "email": "hoangnmph10701@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10714",
+          "name": "Trương Văn Hân",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "hantvph10714@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10716",
+          "name": "Ngô Quang Cường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "cuongnqph10716@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10717",
+          "name": "Trần Văn Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "namtvph10717@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10718",
+          "name": "Nguyễn Trường Sơn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "sonntph10718@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10719",
+          "name": "Nguyễn Trung Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhntph10719@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10720",
+          "name": "Lê Tuấn Hùng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hungltph10720@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10722",
+          "name": "Bùi Thế Nguyễn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "nguyenbtph10722@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10734",
+          "name": "Nguyễn Văn Hoàng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hoangnvph10734@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10737",
+          "name": "Chu Minh Kiên",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "kiencmph10737@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10742",
+          "name": "Phạm Tiến Doanh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "doanhptph10742@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10743",
+          "name": "Nguyễn Hồng Tuấn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tuannhph10743@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10748",
+          "name": "Hoàng Trọng Tâm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tamhtph10748@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10755",
+          "name": "Dương Đức Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "anhddph10755@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10763",
+          "name": "Cấn Minh Tiến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tiencmph10763@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10764",
+          "name": "Nguyễn Văn Thiện",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "thiennvph10764@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10776",
+          "name": "Nguyễn Cao Sơn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "sonncph10776@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10778",
+          "name": "Nguyễn Văn Minh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "minhnvph10778@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10779",
+          "name": "Nguyễn Minh Thuận",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thuannmph10779@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10789",
+          "name": "Nguyễn Đức Tuấn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "tuanndph10789@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10806",
+          "name": "Lê Văn An",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "anlvph10806@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10808",
+          "name": "Lê Mạnh Cường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "cuonglmph10808@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10817",
+          "name": "Nguyễn Thanh Hải",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "haintph10817@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10825",
+          "name": "Giàng A Kha",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "khagaph10825@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10836",
+          "name": "Nguyễn Trường Giang",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "giangntph10836@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10838",
+          "name": "Trần Minh Thái",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thaitmph10838@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10839",
+          "name": "Nguyễn Tuấn Nghĩa",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "nghiantph10839@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10844",
+          "name": "Nguyễn Hữu Tiến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tiennhph10844@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10846",
+          "name": "Trần Đình Trọng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "trongtdph10846@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10848",
+          "name": "Hoàng Trung Quyết",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "quyethtph10848@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10873",
+          "name": "Vũ Việt Giang",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "giangvvph10873@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10876",
+          "name": "Trần Văn Long",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "longtvph10876@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10884",
+          "name": "Trần Anh Thái",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "thaitaph10884@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10886",
+          "name": "Phạm Huy Khuyến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "khuyenphph10886@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10887",
+          "name": "Nguyễn Quý Dương",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "duongnqph10887@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10888",
+          "name": "Nguyễn Doãn Hào",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "haondph10888@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10894",
+          "name": "Đỗ Minh Hiếu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "hieudmph10894@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10902",
+          "name": "Phạm Ngọc Sơn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "sonpnph10902@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10903",
+          "name": "Đinh Việt Cường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "cuongdvph10903@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10904",
+          "name": "Lê Văn Duy",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "duylvph10904@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10911",
+          "name": "Phạm Duy Khánh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "khanhpdph10911@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10912",
+          "name": "Nguyễn Thanh Tùng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "tungntph10912@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10933",
+          "name": "Nguyễn Trung Phong",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "phongntph10933@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10937",
+          "name": "Đào Phạm Thảo Ngọc",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "ngocdptph10937@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10941",
+          "name": "Đỗ Duy Hưng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "hungddph10941@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10954",
+          "name": "Nguyễn Văn Tài",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tainvph10954@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10958",
+          "name": "Trần Ngọc Sơn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "sontnph10958@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10960",
+          "name": "Đỗ Quang Huy",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "huydqph10960@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10966",
+          "name": "Trần Anh Tuấn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTDN",
+          "email": "tuantaph10966@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10968",
+          "name": "Nguyễn Quang Linh",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "linhnqph10968@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10970",
+          "name": "Nguyễn Tuấn Vũ",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "vuntph10970@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10971",
+          "name": "Trần Mai Linh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "linhtmph10971@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10973",
+          "name": "Nguyễn Công Chiến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "chienncph10973@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10979",
+          "name": "La Thị Hương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "huongltph10979@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10982",
+          "name": "Đỗ Như Linh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "linhdnph10982@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10988",
+          "name": "Bùi Mạnh Tuấn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tuanbmph10988@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11002",
+          "name": "Lưu Huỳnh Đức",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "duclhph11002@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11011",
+          "name": "Trần Lâm Nhật Minh",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "minhtlnph11011@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11014",
+          "name": "Ngô Quang Huy",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "huynqph11014@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11015",
+          "name": "Hoàng Quỳnh Hoa",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "hoahqph11015@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11020",
+          "name": "Bùi Mạnh Quỳnh",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "quynhbmph11020@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11031",
+          "name": "Nguyễn Văn Tuyên",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tuyennvph11031@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11032",
+          "name": "Trương Xuân Vũ",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "vutxph11032@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11035",
+          "name": "Nguyễn Việt Hùng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hungnvph11035@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11045",
+          "name": "Nguyễn Hồng Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "namnhph11045@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11047",
+          "name": "Trần Duy Long",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "longtdph11047@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11050",
+          "name": "Trần Văn Nghiên",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "nghientvph11050@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11051",
+          "name": "Lê Thị Hoa",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "hoaltph11051@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11079",
+          "name": "Lê Hoàng Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhlhph11079@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11087",
+          "name": "Phạm Nguyễn Ngọc Lân",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "lanpnnph11087@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11091",
+          "name": "Nguyễn Thị Bình",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "binhntph11091@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11098",
+          "name": "Nguyễn Văn Thương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thuongnvph11098@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11107",
+          "name": "Nguyễn Đức Duy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "duyndph11107@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11108",
+          "name": "Nguyễn Mạnh Dũng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "dungnmph11108@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11112",
+          "name": "Đỗ Xuân Thiện",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "thiendxph11112@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11117",
+          "name": "Nguyễn Sỹ Kiều",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "kieunsph11117@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11130",
+          "name": "Trương Danh Hưng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hungtdph11130@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11132",
+          "name": "Nguyễn Văn Thành",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "thanhnvph11132@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11133",
+          "name": "Vũ Minh Lợi",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "loivmph11133@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11135",
+          "name": "Đỗ Sỹ Phong",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "phongdsph11135@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11145",
+          "name": "Nguyễn Công Đạt",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "datncph11145@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11146",
+          "name": "Trần Văn Dũng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "dungtvph11146@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11149",
+          "name": "Đặng Hải Long",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "longdhph11149@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11160",
+          "name": "Nguyễn Đức Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "namndph11160@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11169",
+          "name": "Quách Văn Sĩ",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "siqvph11169@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11176",
+          "name": "Nguyễn Mạnh Quân",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "quannmph11176@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11177",
+          "name": "Đinh Lê Quang Thắng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTKS",
+          "email": "thangdlqph11177@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11179",
+          "name": "Lưu Đức Lương",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "luongldph11179@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11185",
+          "name": "Đặng Minh Khánh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "khanhdmph11185@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11187",
+          "name": "Lê Mạnh Hiệp",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM",
+          "email": "hieplmph11187@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11195",
+          "name": "Bùi Tiến Mạnh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "manhbtph11195@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11196",
+          "name": "Nguyễn Hùng Kỳ",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "kynhph11196@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11204",
+          "name": "Vũ Xuân Hùng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "QHCC",
+          "email": "hungvxph11204@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11206",
+          "name": "Ngô Vũ Nam Thái",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "thainvnph11206@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11208",
+          "name": "Hoàng Văn Đạt",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "dathvph11208@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11214",
+          "name": "Chu Hải Dương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "duongchph11214@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11226",
+          "name": "Tạ Ngọc Sơn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "sontnph11226@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11227",
+          "name": "Tạ Ngọc Đông",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "dongtnph11227@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11232",
+          "name": "Lê Trung Kiên",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "kienltph11232@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11240",
+          "name": "Đinh Xuân Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "namdxph11240@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11241",
+          "name": "Cấn Thị Huyền Trang",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "trangcthph11241@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11247",
+          "name": "Nguyễn Ngọc Huy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "huynnph11247@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11248",
+          "name": "Nguyễn Sơn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "sonnph11248@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11251",
+          "name": "Văn Hữu Hoài",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hoaivhph11251@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11253",
+          "name": "Nguyễn Anh Tuấn",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "UDPM(Java)",
+          "email": "tuannaph11253@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11255",
+          "name": "Lê Bảo Lâm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "lamlbph11255@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11261",
+          "name": "Nguyễn Đình Tú",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tundph11261@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11275",
+          "name": "Nguyễn Thanh Phong",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "phongntph11275@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11308",
+          "name": "Lê Thị Giang",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "giangltph11308@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11316",
+          "name": "Nguyễn Đức Hà",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "handph11316@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11317",
+          "name": "Nguyễn Văn Khải",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "khainvph11317@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11324",
+          "name": "Trương Ngọc Tuấn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "tuantnph11324@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11330",
+          "name": "Nguyễn Việt Phương",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "phuongnvph11330@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11335",
+          "name": "Nguyễn Thị Thương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "thuongntph11335@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11336",
+          "name": "Tạ Thị Yến",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "yenttph11336@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11341",
+          "name": "Lê Hữu Tuấn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tuanlhph11341@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11355",
+          "name": "Nguyễn Minh Đức",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "ducnmph11355@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11359",
+          "name": "Nguyễn Văn Hà",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "hanvph11359@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11362",
+          "name": "Nguyễn Văn Hoàng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hoangnvph11362@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11363",
+          "name": "Nguyễn Thị Hạnh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hanhntph11363@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11374",
+          "name": "Đặng Giản Tuấn Hưng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hungdgtph11374@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11377",
+          "name": "Nguyễn Huy Hoàng Phi",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "phinhhph11377@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11378",
+          "name": "Lưu Xuân Thắng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "thanglxph11378@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11380",
+          "name": "Đào Văn Quang",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "quangdvph11380@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11389",
+          "name": "Phạm Thị Xuân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "xuanptph11389@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11400",
+          "name": "Lê Hải Long",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "longlhph11400@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11405",
+          "name": "Vũ Tuấn Minh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "minhvtph11405@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11414",
+          "name": "Lã Quang Đức",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "duclqph11414@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11422",
+          "name": "Nguyễn Thành Phát",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "phatntph11422@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11427",
+          "name": "Nguyễn Thị Lan Anh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "anhntlph11427@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11437",
+          "name": "Lê Đình Long",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "longldph11437@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11446",
+          "name": "Đặng Hữu Hoàng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hoangdhph11446@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11447",
+          "name": "Mai Đức Khiêm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "khiemmdph11447@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11450",
+          "name": "Trần Tuấn Kiệt",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "kietttph11450@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11451",
+          "name": "Lê Phong Vũ",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "vulpph11451@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11453",
+          "name": "Tạ Quang Vinh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "vinhtqph11453@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11454",
+          "name": "Nguyễn Văn Cường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "cuongnvph11454@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11455",
+          "name": "Phạm Văn Thạnh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "thanhpvph11455@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11466",
+          "name": "Lê Kim Long",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "longlkph11466@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11472",
+          "name": "Hà Sơn Tùng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tunghsph11472@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11474",
+          "name": "Hoàng Mạnh Hùng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "hunghmph11474@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11482",
+          "name": "Lê Thị Diệu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "dieultph11482@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11485",
+          "name": "Vũ Tuấn Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "anhvtph11485@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11487",
+          "name": "Trịnh Xuân Phương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "phuongtxph11487@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11491",
+          "name": "Lê Đình Quý",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "quyldph11491@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11499",
+          "name": "Nguyễn Quang Huy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "huynqph11499@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11510",
+          "name": "Đỗ Mạnh Cương",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "cuongdmph11510@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11516",
+          "name": "Phạm Thị Ngân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "nganptph11516@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11522",
+          "name": "Lê Anh Tuấn",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "tuanlaph11522@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11525",
+          "name": "Lê Thị Linh Chi",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "chiltlph11525@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11528",
+          "name": "Đặng Quốc Tùng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "tungdqph11528@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11530",
+          "name": "Bùi Văn Hải Thượng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thuongbvhph11530@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11538",
+          "name": "Hoàng Thùy Nhung",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "nhunghtph11538@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11541",
+          "name": "Nguyễn Văn Hưng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hungnvph11541@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11542",
+          "name": "Phạm Minh Đức",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "ducpmph11542@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11550",
+          "name": "Trần Trường Giang",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "giangttph11550@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11552",
+          "name": "Trịnh Văn Tú",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "tutvph11552@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11560",
+          "name": "Trần Trung Đức",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "ducttph11560@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11561",
+          "name": "Nguyễn Thị Thùy Trang",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "trangnttph11561@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11571",
+          "name": "Đặng Thu Phương",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTKS",
+          "email": "phuongdtph11571@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11574",
+          "name": "Nguyễn Thị Phương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "phuongntph11574@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11579",
+          "name": "Vũ Ngọc Tùng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "tungvnph11579@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11591",
+          "name": "Lưu Đức Huy",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "QHCC",
+          "email": "huyldph11591@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11595",
+          "name": "Nguyễn Quang Vinh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "vinhnqph11595@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11599",
+          "name": "Lê Văn Quân",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "quanlvph11599@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11608",
+          "name": "Đỗ Tuấn Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "anhdtph11608@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11620",
+          "name": "Hoàng Trọng Kim",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "kimhtph11620@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11625",
+          "name": "Bùi Trọng Thắng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thangbtph11625@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11636",
+          "name": "Trần Sỹ Hậu",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "hautsph11636@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11638",
+          "name": "Nguyễn Tiến Đạt",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "datntph11638@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11643",
+          "name": "Lê Quốc Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "anhlqph11643@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11644",
+          "name": "Phạm Thanh Lâm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "lamptph11644@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11646",
+          "name": "Vũ Minh Đức",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "ducvmph11646@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11651",
+          "name": "Lâm Hồng Đức",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "QHCC",
+          "email": "duclhph11651@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11664",
+          "name": "Tạ Quốc Tuân",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tuantqph11664@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11671",
+          "name": "Bùi Đức Duy",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "duybdph11671@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11675",
+          "name": "Nguyễn Ngọc Thanh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "thanhnnph11675@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11681",
+          "name": "Vũ Thị Hoa",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "hoavtph11681@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11682",
+          "name": "Trần Mạnh Hùng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "hungtmph11682@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11683",
+          "name": "Nguyễn Anh Tuấn",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "tuannaph11683@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11689",
+          "name": "Ngọ Thị Minh Thuý",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "thuyntmph11689@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11704",
+          "name": "Nguyễn Thế Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "namntph11704@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11706",
+          "name": "Nguyễn Viết Thành",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thanhnvph11706@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11716",
+          "name": "Đỗ Đức Tùng Dương",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKTW",
+          "email": "duongddtph11716@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11719",
+          "name": "Trương Văn Kiên",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "kientvph11719@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11720",
+          "name": "Ngô Quốc Huy",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TMĐT",
+          "email": "huynqph11720@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11726",
+          "name": "Trần Thuý Hằng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "hangttph11726@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11730",
+          "name": "Nguyễn Anh Minh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "minhnaph11730@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11736",
+          "name": "Phạm Thanh Hà",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "haptph11736@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11750",
+          "name": "Lê Tuấn Anh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "anhltph11750@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11771",
+          "name": "Nguyễn Khánh Toàn",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "toannkph11771@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11775",
+          "name": "Đinh Hải Long",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "longdhph11775@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11788",
+          "name": "Ngô Đức Quảng",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "UDPM(Java)",
+          "email": "quangndph11788@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11790",
+          "name": "Lưu Tiến Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "anhltph11790@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11797",
+          "name": "Đặng Thị Thơm",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTDN",
+          "email": "thomdtph11797@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11800",
+          "name": "Phạm Hải Long",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTKS",
+          "email": "longphph11800@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11805",
+          "name": "Nguyễn Thị Hoan",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QHCC",
+          "email": "hoanntph11805@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11821",
+          "name": "Hoàng Ngọc Giầu",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "giauhnph11821@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11844",
+          "name": "Đỗ Đức Anh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "anhddph11844@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11849",
+          "name": "Nguyễn Thị Tuyết Mai",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "mainttph11849@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11868",
+          "name": "Lê Khánh Huyền",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "huyenlkph11868@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11870",
+          "name": "Quang Xuân Vũ",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "vuqxph11870@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11880",
+          "name": "Nguyễn Thị Mai Linh",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "linhntmph11880@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11885",
+          "name": "Nguyễn Tuấn Đức",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "ducntph11885@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11886",
+          "name": "Lê Thu Hà",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "haltph11886@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11910",
+          "name": "Lê Thị Trang",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "trangltph11910@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11915",
+          "name": "Nguyễn Thanh Thư",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "thuntph11915@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11947",
+          "name": "Nguyễn Minh Hiếu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "hieunmph11947@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11950",
+          "name": "Dương Thọ Tiến Hải",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "haidttph11950@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11957",
+          "name": "Laị Văn Nhân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "nhanlvph11957@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11965",
+          "name": "Trần Thị Hồng Thêu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "theutthph11965@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11980",
+          "name": "Dương Việt Long",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "longdvph11980@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11983",
+          "name": "Nguyễn Sơn Lâm",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "lamnsph11983@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11991",
+          "name": "Nguyễn Vũ Hoàng Quân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "quannvhph11991@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12001",
+          "name": "Tống Thị Thanh Tâm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "tamtttph12001@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12005",
+          "name": "Lại Thị Thanh Huyền",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "huyenlttph12005@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12013",
+          "name": "Hoàng Văn Vinh",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TMĐT",
+          "email": "vinhhvph12013@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12034",
+          "name": "Nguyễn Hoàng Đông Duy",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "duynhdph12034@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12037",
+          "name": "Nguyễn Hữu Quyết",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "quyetnhph12037@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12047",
+          "name": "Ngô Việt Cường",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "cuongnvph12047@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12049",
+          "name": "Hà Ngọc Kiên",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "kienhnph12049@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12055",
+          "name": "Kiều Trà My",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QHCC",
+          "email": "myktph12055@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12056",
+          "name": "Đỗ Thị Phương Nhung",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "nhungdtpph12056@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12062",
+          "name": "Phạm Đình Thái",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "thaipdph12062@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12068",
+          "name": "Lê Trọng Thắng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thangltph12068@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12075",
+          "name": "Nguyễn Văn Đông",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "dongnvph12075@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12081",
+          "name": "Nguyễn Thị Thủy",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "thuyntph12081@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12086",
+          "name": "Đàm Trọng Hiếu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hieudtph12086@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12089",
+          "name": "Lê Đình Thái",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thaildph12089@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12090",
+          "name": "Nguyễn Văn Hiếu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hieunvph12090@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12093",
+          "name": "Nguyễn Thị Hồng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "hongntph12093@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12108",
+          "name": "Cao Việt Thái",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "thaicvph12108@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12121",
+          "name": "Trần Minh Phú",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "phutmph12121@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12123",
+          "name": "Bùi Quang Thông",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thongbqph12123@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12130",
+          "name": "Hoàng Kim Long",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "longhkph12130@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12132",
+          "name": "Nghiêm Xuân Dương",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "duongnxph12132@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12136",
+          "name": "Hà Ngọc Doanh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "doanhhnph12136@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12137",
+          "name": "Nguyễn Tuấn An",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "anntph12137@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12142",
+          "name": "Trần Thế Dương",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "duongttph12142@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12149",
+          "name": "Bùi Đức Trường",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "truongbdph12149@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12153",
+          "name": "Phạm Đăng Đạt",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "datpdph12153@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12157",
+          "name": "Ngô Đắc Khánh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "khanhndph12157@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12165",
+          "name": "Trần Hải Lưu",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "luuthph12165@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12181",
+          "name": "Nguyễn Da Huy",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "huyndph12181@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12201",
+          "name": "Bùi Duy Quang",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "quangbdph12201@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12210",
+          "name": "Lê Minh Ngọc",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "ngoclmph12210@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12241",
+          "name": "Đặng Văn Long",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "longdvph12241@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12246",
+          "name": "Ngô Quang Tân",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "tannqph12246@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12248",
+          "name": "Mai Tùng Lâm",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "LTMT",
+          "email": "lammtph12248@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12258",
+          "name": "Lê Thị Hồng",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "hongltph12258@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12279",
+          "name": "Nguyễn Thiện Quang",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "quangntph12279@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12282",
+          "name": "Lê Thị Thu Hiền",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "hienlttph12282@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12292",
+          "name": "Giáp Thị Thùy Trang",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "tranggttph12292@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12303",
+          "name": "Hoàng Thị Phương Thảo",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thaohtpph12303@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12310",
+          "name": "Hà Hoàng Nam",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "namhhph12310@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12312",
+          "name": "Lê Thị Huyền",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TMĐT",
+          "email": "huyenltph12312@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12316",
+          "name": "Đoàn Thị Nga",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "ngadtph12316@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12321",
+          "name": "Nguyễn Quý Bồng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "bongnqph12321@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12323",
+          "name": "Thái Bá Thìn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thintbph12323@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12340",
+          "name": "Bùi Thị Yến",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "yenbtph12340@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12344",
+          "name": "Nguyễn Đức Sơn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "sonndph12344@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12356",
+          "name": "Cao Văn Vũ",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "vucvph12356@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12360",
+          "name": "Phạm Thị Lan Anh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QTKS",
+          "email": "anhptlph12360@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12363",
+          "name": "Nguyễn Tiến Dũng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "dungntph12363@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12364",
+          "name": "Vương Văn Chung",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "chungvvph12364@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12373",
+          "name": "Trần Thị Tùng Lâm",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "lamtttph12373@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12384",
+          "name": "Hồ Đức Nam",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "namhdph12384@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12387",
+          "name": "Lê Thị Thanh Huyền",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "huyenlttph12387@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12390",
+          "name": "Nguyễn Thị Quỳnh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "quynhntph12390@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12397",
+          "name": "Nguyễn Đình Khôi",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "khoindph12397@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12398",
+          "name": "Lê Văn Quang",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "quanglvph12398@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12405",
+          "name": "Trịnh Xuân Vũ",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "vutxph12405@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12406",
+          "name": "Phạm Đình Long",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "longpdph12406@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12410",
+          "name": "Ngô Thị Hà",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "hantph12410@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12411",
+          "name": "Kim Ngọc Long",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "longknph12411@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12419",
+          "name": "Trần Ngọc Trưởng",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "UDPM(Java)",
+          "email": "truongtnph12419@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12444",
+          "name": "Trần Hữu Nghĩa",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "nghiathph12444@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12445",
+          "name": "Nguyễn Tiến Vũ",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "vuntph12445@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12449",
+          "name": "Nguyễn Phương Bắc",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "bacnpph12449@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12453",
+          "name": "Vũ Ngọc Ánh",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TKĐH",
+          "email": "anhvnph12453@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12456",
+          "name": "Lê Minh Đức",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "HDDL",
+          "email": "duclmph12456@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12474",
+          "name": "Nguyễn Quang Thành",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "UDPM(Java)",
+          "email": "thanhnqph12474@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12492",
+          "name": "Hà Hoàng Lân",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "lanhhph12492@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12496",
+          "name": "Nguyễn Quang Hòa",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "hoanqph12496@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12502",
+          "name": "Nguyễn Bá Đạt",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "datnbph12502@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12505",
+          "name": "Nguyễn Huy Hưởng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "huongnhph12505@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12510",
+          "name": "Phạm Thị Minh Hiếu",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "hieuptmph12510@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12514",
+          "name": "Nguyễn Văn Luân",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TMĐT",
+          "email": "luannvph12514@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12524",
+          "name": "Bế Văn Đàn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "danbvph12524@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12532",
+          "name": "Lê Văn Thắng",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TMĐT",
+          "email": "thanglvph12532@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12546",
+          "name": "Nguyễn Kim Dương",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "QHCC",
+          "email": "duongnkph12546@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12585",
+          "name": "Đỗ Vũ Hiệp",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hiepdvph12585@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12586",
+          "name": "Phạm Hồng Sơn",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "sonphph12586@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12588",
+          "name": "Trần Bùi Hà",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "hatbph12588@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12593",
+          "name": "Lê Trung Văn",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "vanltph12593@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12594",
+          "name": "Bùi Đức Kính",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "kinhbdph12594@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12596",
+          "name": "Nguyễn Xuân Mạnh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "manhnxph12596@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12598",
+          "name": "Nguyễn Việt Hà",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "hanvph12598@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12599",
+          "name": "Trịnh Thanh Huyền",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "huyenttph12599@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12600",
+          "name": "Cầm Ngọc Huy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "huycnph12600@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12602",
+          "name": "Lương Đức Anh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhldph12602@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12604",
+          "name": "Lê Công Quý",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "quylcph12604@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12607",
+          "name": "Nguyễn Thị Tuyết",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tuyetntph12607@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12609",
+          "name": "Phạm Thị Thanh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "thanhptph12609@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12611",
+          "name": "Đỗ Minh Đức",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "ducdmph12611@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12612",
+          "name": "Phan Mạnh Quý",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "quypmph12612@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12613",
+          "name": "Nguyễn Ích Quang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "quangniph12613@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12614",
+          "name": "Dương Minh Sơn",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "sondmph12614@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12617",
+          "name": "Phạm Phú Điền",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "dienppph12617@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12619",
+          "name": "Tạ Hoàng Yến Linh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "linhthyph12619@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12624",
+          "name": "Nguyễn Bá Bình",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "binhnbph12624@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12625",
+          "name": "Nguyễn Tuấn Anh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "anhntph12625@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12627",
+          "name": "Nguyễn Duy Khiêm",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "khiemndph12627@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12628",
+          "name": "Ngô Văn Trọng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "trongnvph12628@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12631",
+          "name": "Nguyễn Duy Phương",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "phuongndph12631@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12634",
+          "name": "Phạm Đình Huy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "huypdph12634@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12637",
+          "name": "Trần Văn Quân",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "quantvph12637@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12638",
+          "name": "Vũ Đình Hiệp",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "hiepvdph12638@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12640",
+          "name": "Đặng Trung Kiên",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "kiendtph12640@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12644",
+          "name": "Mai Quang Hiếu",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hieumqph12644@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12647",
+          "name": "Đỗ Đức Minh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "minhddph12647@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12651",
+          "name": "Phạm Văn Hiếu",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "hieupvph12651@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12653",
+          "name": "Doãn Văn Kiên",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "kiendvph12653@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12658",
+          "name": "Phạm Thị Lan Anh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "anhptlph12658@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12660",
+          "name": "Nguyễn Thị Ngọc",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "ngocntph12660@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12665",
+          "name": "Phạm Văn Song",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "songpvph12665@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12669",
+          "name": "Nguyễn Thị Quỳnh Trang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "trangntqph12669@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12671",
+          "name": "Nguyễn Văn Đạt",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "datnvph12671@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12673",
+          "name": "Trần Anh Quang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "quangtaph12673@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12676",
+          "name": "Đinh Kế Huy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "huydkph12676@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12677",
+          "name": "Đặng Huyền Trang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "trangdhph12677@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12678",
+          "name": "Phạm Thanh Hiền",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hienptph12678@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12679",
+          "name": "Lê Hoàng Long",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "longlhph12679@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12682",
+          "name": "Phạm Công Bằng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "bangpcph12682@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12683",
+          "name": "Đinh Văn Minh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "minhdvph12683@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12686",
+          "name": "Bùi Thành Long",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "longbtph12686@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12687",
+          "name": "Nguyễn Gia Luân",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "luanngph12687@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12688",
+          "name": "Nguyễn Cao Cường",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "cuongncph12688@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12689",
+          "name": "Phạm Thị Trà My",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "mypttph12689@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12691",
+          "name": "Nguyễn Văn Thế",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thenvph12691@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12695",
+          "name": "Nguyễn Bá Thành",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "thanhnbph12695@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12699",
+          "name": "Dương Văn Tuyên",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tuyendvph12699@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12700",
+          "name": "Nguyễn Quang Mãi",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "mainqph12700@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12702",
+          "name": "Dương Thị Bích Loan",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "loandtbph12702@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12703",
+          "name": "Hoàng Thị Ngọc Mai",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "maihtnph12703@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12707",
+          "name": "Tạ Tân Cương",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "cuongttph12707@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12710",
+          "name": "Hoàng Hồng Quang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "quanghhph12710@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12711",
+          "name": "Đặng Tuấn Nam",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "namdtph12711@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12712",
+          "name": "Đỗ Văn Duy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "duydvph12712@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12714",
+          "name": "Hà Mạnh Hùng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "hunghmph12714@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12717",
+          "name": "Bùi Việt Đức",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "ducbvph12717@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12719",
+          "name": "Nguyễn Ngọc Sơn",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "sonnnph12719@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12721",
+          "name": "Trần Đình Tùng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tungtdph12721@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12724",
+          "name": "Hoàng Quốc Huy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "huyhqph12724@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12726",
+          "name": "Nguyễn Trung Hiệp",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "hiepntph12726@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12727",
+          "name": "Lê Huy Hoàng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "hoanglhph12727@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12728",
+          "name": "Vũ Minh Hiếu",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "hieuvmph12728@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12729",
+          "name": "Đỗ Thị Thùy Linh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "linhdttph12729@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12732",
+          "name": "Dương Thị Nhật Linh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "linhdtnph12732@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12736",
+          "name": "Nguyễn Quang Minh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "minhnqph12736@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12740",
+          "name": "Nguyễn Thị Hồng Nhung",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "nhungnthph12740@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12741",
+          "name": "Bùi Thị Quỳnh Trang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "trangbtqph12741@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12743",
+          "name": "Đậu Ngọc Đỉnh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "dinhdnph12743@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12744",
+          "name": "Nguyễn Tuấn Anh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "anhntph12744@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12746",
+          "name": "Chu Thị Ánh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "anhctph12746@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12748",
+          "name": "Đinh Viết Linh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "linhdvph12748@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12753",
+          "name": "Trần Thanh Tùng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tungttph12753@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12768",
+          "name": "Nguyễn Thùy Dương",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "duongntph12768@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12774",
+          "name": "Bùi Hoàng Điệp",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "diepbhph12774@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12775",
+          "name": "Nguyễn Minh Thái",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "thainmph12775@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12776",
+          "name": "Lê Thị Thục Chinh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "chinhlttph12776@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12783",
+          "name": "Nguyễn Đặng Thùy Linh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "linhndtph12783@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12784",
+          "name": "Hoàng Thị Thủy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "thuyhtph12784@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12785",
+          "name": "Nguyễn Thị Nhung",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "nhungntph12785@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12786",
+          "name": "Văn Đình Huy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "huyvdph12786@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12789",
+          "name": "Nguyễn Đức Mạnh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "manhndph12789@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12791",
+          "name": "Nguyễn Tài Duy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "duyntph12791@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12793",
+          "name": "Vũ Thị Quỳnh Trang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "trangvtqph12793@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12794",
+          "name": "Nguyễn Đức Thành",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM(Java)",
+          "email": "thanhndph12794@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12795",
+          "name": "Nguyễn Đức Anh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "anhndph12795@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12798",
+          "name": "Nguyễn Trung Kiên",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "kienntph12798@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12801",
+          "name": "Nguyễn Đức Duy",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "duyndph12801@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12803",
+          "name": "Trịnh Quang Hiểu",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "hieutqph12803@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12804",
+          "name": "Tạ Công Đức",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "ductcph12804@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12806",
+          "name": "Nguyễn Quang Ngọc",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "ngocnqph12806@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12807",
+          "name": "Lê Việt Dũng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "dunglvph12807@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12816",
+          "name": "Bùi Văn Trung",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "trungbvph12816@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12818",
+          "name": "Nguyễn Khánh Ly",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "lynkph12818@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12819",
+          "name": "Lê Hồng Lực",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "luclhph12819@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12823",
+          "name": "Hồ Viết Thành",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "thanhhvph12823@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12825",
+          "name": "Nguyễn Ngọc Đoan Trinh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "trinhnndph12825@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12827",
+          "name": "Phạm Thị Giang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "giangptph12827@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12829",
+          "name": "Đặng Gia Dũng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "dungdgph12829@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12830",
+          "name": "Nguyễn Hoàng Anh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhnhph12830@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12831",
+          "name": "Chu Việt Đức",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "duccvph12831@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12836",
+          "name": "Nguyễn Xuân Trường",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "truongnxph12836@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12841",
+          "name": "Đoàn Xuân Tùng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "tungdxph12841@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12845",
+          "name": "Nông Văn Tường",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "tuongnvph12845@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12847",
+          "name": "Khương Viết Giang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "giangkvph12847@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12849",
+          "name": "Trương Đình Thái",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thaitdph12849@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12850",
+          "name": "Bùi Huy Toàn",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "toanbhph12850@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12852",
+          "name": "Trịnh Văn Quang",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "quangtvph12852@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12855",
+          "name": "Trần Tuấn Hợp",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "hopttph12855@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12859",
+          "name": "Nguyễn Thuỳ Duyên",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "duyenntph12859@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12860",
+          "name": "Nguyễn Đức Trung",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "trungndph12860@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12861",
+          "name": "Dương Văn Tuấn",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "tuandvph12861@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12863",
+          "name": "Hà Thị Quỳnh Lan",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "lanhtqph12863@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12864",
+          "name": "Lê Văn Đại",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "dailvph12864@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12866",
+          "name": "Nguyễn Thu Hiền",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "hienntph12866@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12867",
+          "name": "Dương Biên Cương",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "cuongdbph12867@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12870",
+          "name": "Nguyễn Thị Thanh Tú",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "tunttph12870@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12871",
+          "name": "Nguyễn Thị Thanh Minh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "minhnttph12871@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12876",
+          "name": "Phạm Văn Nam",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "nampvph12876@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12878",
+          "name": "Nguyễn Văn Linh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "linhnvph12878@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12882",
+          "name": "Dương Thanh Nghị",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "nghidtph12882@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12884",
+          "name": "Đỗ Thị Trà My",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "mydttph12884@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12888",
+          "name": "Quản Quốc Long",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "longqqph12888@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12889",
+          "name": "Nguyễn Đình Thi",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "thindph12889@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12890",
+          "name": "Hồ Phi",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "phihph12890@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12897",
+          "name": "Phạm Minh Trí",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "tripmph12897@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12898",
+          "name": "Mai Văn Cường",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "cuongmvph12898@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12904",
+          "name": "Nguyễn Quốc Hoàng Long",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "longnqhph12904@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12905",
+          "name": "Nguyễn Văn Sơn",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "sonnvph12905@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12906",
+          "name": "Phạm Văn Anh",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhpvph12906@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12908",
+          "name": "Nguyễn Đức Trung",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "trungndph12908@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12909",
+          "name": "Lê Văn Nam",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "namlvph12909@fpt.edu.vn"
+        },
+        {
+          "mssv": "PS11199",
+          "name": "Lê Văn Cử",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "culvps11199@fpt.edu.vn"
+        },
+        {
+          "mssv": "PS13062",
+          "name": "Nguyễn Văn Tiến",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "UDPM(Java)",
+          "email": "tiennvps13062@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12907",
+          "name": "Nguyễn Thị Duyên",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "duyenntph12907@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12910",
+          "name": "Hoàng Hải Yến",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "yenhhph12910@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12984",
+          "name": "Cấn Kim Chi",
+          "course": "16.2.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "chickph12984@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13039",
+          "name": "Nguyễn Thành Trung",
+          "course": "16.2.1",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "trungntph13039@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13068",
+          "name": "Nguyễn Thị Thương",
+          "course": "16.2.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "thuongntph13068@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13093",
+          "name": "Phạm Tuấn Anh",
+          "course": "16.2.2",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "anhptph13093@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH13109",
+          "name": "Đỗ Thị Vân Anh",
+          "course": "16.2.2",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "anhdtvph13109@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07947",
+          "name": "Nguyễn Viết Sơn",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "QTDN",
+          "email": "sonnvph07947@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH02844",
+          "name": "Nguyễn Hoàng Anh",
+          "course": "9.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhnhph02844@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08018",
+          "name": "Nguyễn Kim Anh",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhnkph08018@fpt.edu.vn"
+        },
+        {
+          "mssv": "PS13191",
+          "name": "Trịnh Đình Thuận",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "thuantdps13191@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12452",
+          "name": "Cao Hữu Long",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "longchph12452@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11489",
+          "name": "Nguyễn Thị Quyên",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "quyenntph11489@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH14978",
+          "name": "Nguyễn Quang Trung",
+          "course": "16.3.2",
+          "status": "HDI",
+          "majors": "QTKS",
+          "email": "trungnqph14978@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07885",
+          "name": "Lê Trung Đoàn",
+          "course": "15.2",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "doanltph07885@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11318",
+          "name": "Nguyễn Đức Lăng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "langndph11318@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15075",
+          "name": "Bùi Hoàng Hải",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "CK",
+          "email": "haibhpf15075@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15006",
+          "name": "Hà Thanh Sơn",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "TĐH",
+          "email": "sonhtpf15006@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15063",
+          "name": "Lê Minh Tiến",
+          "course": "15.3",
+          "status": "TN2",
+          "majors": "TĐH",
+          "email": "tienlmpf15063@fpt.edu.vn"
+        },
+        {
+          "mssv": "PF15020",
+          "name": "Nguyễn Văn Đoan",
+          "course": "15.3",
+          "status": "TN1",
+          "majors": "Đ,ĐT",
+          "email": "doannvpf15020@fpt.edu.vn"
+        },
+        {
+          "mssv": "182ĐT027",
+          "name": "Nhữ Hồng Sơn",
+          "course": "15.3",
+          "status": "TN21",
+          "majors": "Đ,ĐT",
+          "email": "sonnh182dt027@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07298",
+          "name": "Nguyễn Huy Hoàng",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "TKĐH",
+          "email": "hoangnhph07298@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07725",
+          "name": "Trần Quang Thái",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "thaitqph07725@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH18611",
+          "name": "Phạm Trung Nghĩa",
+          "course": "17.1.2",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "nghiaptph18611@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH18677",
+          "name": "Trần Văn Giang",
+          "course": "17.1.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "giangtvph18677@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07480",
+          "name": "Nguyễn Thùy Linh",
+          "course": "14.3",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "linhntph07480@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08433",
+          "name": "Bùi Đức Long",
+          "course": "14.3",
+          "status": "TN21",
+          "majors": "LTMT",
+          "email": "longbdph08433@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08452",
+          "name": "Nguyễn Thị Mai",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "TKĐH",
+          "email": "maintph08452@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11383",
+          "name": "Lê Tuấn Sơn",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "sonltph11383@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07640",
+          "name": "Nguyễn Đức Mạnh",
+          "course": "14.3",
+          "status": "TN1",
+          "majors": "TKTW",
+          "email": "manhndph07640@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH04464",
+          "name": "Trương Tuấn Khương",
+          "course": "12.1",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "khuongttph04464@fpt.edu.vn",
+          "supplement": "Báo BL"
+        },
+        {
+          "mssv": "PH07801",
+          "name": "Lê Mạnh Duy",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "UDPM",
+          "email": "duylmph07801@fpt.edu.vn"
+        },
+        {
+          "mssv": "PD03816",
+          "name": "Lê Phương Huyền",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "huyenlppd03816@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH19262",
+          "name": "Nguyễn Huy Hoàng",
+          "course": "17.2.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "hoangnhph19262@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH19287",
+          "name": "Nguyễn Tấn Phúc",
+          "course": "17.2.2",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "phucntph19287@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12814",
+          "name": "Nguyễn Thị Tâm",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "QTDN",
+          "email": "tamntph12814@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH12694",
+          "name": "Vũ Văn Hùng",
+          "course": "16.1",
+          "status": "HDI",
+          "majors": "TMĐT",
+          "email": "hungvvph12694@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH09836",
+          "name": "Lệnh Sinh Thái",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "QHCC",
+          "email": "thailsph09836@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07601",
+          "name": "Vũ Đức Anh",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "UDPM",
+          "email": "anhvdph07601@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH10254",
+          "name": "Phạm Hoàng Anh",
+          "course": "16.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "anhphph10254@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH07986",
+          "name": "Phan Ngọc Quang",
+          "course": "14.3",
+          "status": "TN2",
+          "majors": "TKTW",
+          "email": "quangpnph07986@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11276",
+          "name": "Nguyễn Lê Hưng",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "hungnlph11276@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH11456",
+          "name": "Nguyễn Bá Ngọc",
+          "course": "15.3",
+          "status": "HDI",
+          "majors": "TKĐH",
+          "email": "ngocnbph11456@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH23373",
+          "name": "Nguyễn Văn Sơn",
+          "course": "17.3.2v2",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "sonnvph23373@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH24814",
+          "name": "Phan Văn Tùng Thái",
+          "course": "17.3.2v2",
+          "status": "HDI",
+          "majors": "LTMT",
+          "email": "thaipvtph24814@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH24816",
+          "name": "Trần Văn Toàn",
+          "course": "17.3.2v2",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "toantvph24816@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH24867",
+          "name": "Nông Tiến Dũng",
+          "course": "17.3.2v2",
+          "status": "HDI",
+          "majors": "TKTW",
+          "email": "dungntph24867@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH25092",
+          "name": "Nguyễn Ngọc Thiện",
+          "course": "17.3.2v2",
+          "status": "HDI",
+          "majors": "UDPM",
+          "email": "thiennnph25092@fpt.edu.vn"
+        },
+        {
+          "mssv": "PH08460",
+          "name": "Nguyễn Anh Tuấn",
+          "majors": "TMĐT",
+          "email": "tuannaph08460@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PF15051",
+          "name": "Trần Đức Mạnh",
+          "majors": "UDPM(Java)",
+          "email": "manhtdpf15051@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH09954",
+          "name": "Trần Quốc Đạt",
+          "majors": "UDPM(Java)",
+          "email": "dattqph09954@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH11612",
+          "name": "Đào Quý Nam",
+          "majors": "UDPM(Java)",
+          "email": "namdqph11612@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH11669",
+          "name": "Hoa Quốc Phong",
+          "majors": "UDPM(Java)",
+          "email": "phonghqph11669@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH05774",
+          "name": "Nguyễn Anh Hào",
+          "majors": "TKĐH",
+          "email": "haonaph05774@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH07897",
+          "name": "Hồ Long Vũ",
+          "majors": "TKĐH",
+          "email": "vuhlph07897@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH08982",
+          "name": "Đỗ Tuấn Anh",
+          "majors": "TKĐH",
+          "email": "anhdtph08982@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH09040",
+          "name": "Dương Quang Đăng",
+          "majors": "TKĐH",
+          "email": "dangdqph09040@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PH11292",
+          "name": "Nguyễn Văn Nam",
+          "majors": "TKĐH",
+          "email": "namnvph11292@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        },
+        {
+          "mssv": "PS10664",
+          "name": "Hồ Mỹ Anh",
+          "majors": "TKĐH",
+          "email": "anhhmps10664@fpt.edu.vn",
+          "supplement": "bổ sung ngày 15/11"
+        }
+      ],
+      "name": "summer 2022",
+      "id": 1
+    }
+  ],
   "students": [
     {
       "id": 1,
@@ -28,7 +5938,7 @@
       "link_cv": "https://www.topcv.vn/xem-cv/UgMHA1RRUlBYAQ1SVlIFBgYCVAcKBwYPWQBVBgc18a",
       "status": "1",
       "status_detail": "Sinh viên thực tập không tập chung bị công ty cho nghỉ việc",
-      "user_id": 4,
+      "user_id": "1",
       "classify": "1"
     },
     {
@@ -58,7 +5968,7 @@
       "link_cv": "https://www.topcv.vn/xem-cv/UgMHA1RRUlBYAQ1SVlIFBgYCVAcKBwYPWQBVBgc18a",
       "status": "0",
       "status_detail": "Đã bị tạch do không đáp ứng như cầu",
-      "user_id": 4,
+      "user_id": "1",
       "classify": "1"
     },
     {

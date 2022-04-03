@@ -3,12 +3,15 @@ import * as XLSX from 'xlsx';
 import { UploadOutlined } from '@ant-design/icons';
 import '../../../common/styles/upfile.css';
 import DataAPI from '../../../API/Data';
-import {Input} from 'antd'
+import { Input } from 'antd'
+import { useNavigate } from 'react-router-dom';
 const UpFile = () => {
+  let navigate=useNavigate()
   const [data, setData] = useState();
   const [header, setHeader] = useState([]);
   const [dataNew, setDataNew] = useState([]);
   const [nameFile, setNameFile] = useState('');
+  const [nameSemester, setNameSemester] = useState('');
 
   const importData = (e) => {
     const file = e.target.files[0];
@@ -39,15 +42,7 @@ const UpFile = () => {
     };
     reader.readAsBinaryString(file);
   };
-  // let arrayNew =[]
-  // const convert = () => {
-  //   return  dataNew.map((item, index) => {
-  //       const newObject = {}
-  //       newObject['name'] = item['Họ tên']
-  //       newObject['zz'] = item['Khóa nhập học']
-  //       return arrayNew.push(newObject)
-  //   })
-  // }
+
   const submitSave = () => {
     const data = []
     dataNew.map((item) => {
@@ -62,7 +57,13 @@ const UpFile = () => {
       newObject['supplement'] = item['bổ sung']
       data.push(newObject)
     })
-    DataAPI.add({ data: data })
+    if (nameSemester == '') {
+      alert("Bạn chưa điền tên năm học này !")
+    } else {
+      DataAPI.add({ data: data, name: nameSemester })
+      alert("Lưu thành công ")
+      navigate("/quan-ly/sinh-vien/danh-sach-dang-ky")
+    }
 
   };
   const submitCole = () => {
@@ -83,7 +84,7 @@ const UpFile = () => {
         <input type="file" onChange={(e) => importData(e)} id="up-file" />
         {data && (
           <div className="button_save">
-            <Input placeholder="Tên kỳ (ví dụ : Summer 2021...)" style={{width:'230px'}}/>
+            <Input placeholder="Tên kỳ (ví dụ : Summer 2021...)" onChange={(e) => setNameSemester(e.target.value)} style={{ width: '230px' }} />
             <button onClick={() => submitSave()}>Lưu</button>
             <button onClick={() => submitCole()}>Hủy</button>
           </div>
