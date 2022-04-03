@@ -36,7 +36,7 @@ console.log("admin")
           </div>
 
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            {/* <SubMenu
+            <SubMenu
               title="Đăng ký thực tập"
               key="0"
               icon={<PieChartOutlined className="icon-link" />}
@@ -48,7 +48,7 @@ console.log("admin")
               <Menu.Item key="1">
                 <Link to="/support-school">Nhà trường hỗ trợ</Link>
               </Menu.Item>
-            </SubMenu> */}
+            </SubMenu>
             <Menu.Item key="2" icon={<ProfileOutlined className="icon-link" />}>
               <Link to="sinh-vien/danh-sach-dang-ky">Danh sách sinh viên</Link>
             </Menu.Item>
