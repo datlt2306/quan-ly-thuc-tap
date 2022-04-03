@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Layout, Menu} from 'antd';
 import {
+  ProfileOutlined,
   UploadOutlined,
-  PieChartOutlined
+  TeamOutlined,
+  LoginOutlined,
+  FolderViewOutlined,
+  ReadOutlined,
 } from '@ant-design/icons';
 import { Link, Outlet } from 'react-router-dom';
 import GlobalHeader from '../components/GlobalHeader.js/index.js';
@@ -10,7 +14,7 @@ import './layoutAdmin.css';
 import { Content } from 'antd/lib/layout/layout';
 import SubMenu from 'antd/lib/menu/SubMenu';
 const { Sider } = Layout;
-function LayoutWebsite() {
+function LayoutAdmin() {
   const [state, setState] = useState(false);
 
   const onCollapse = () => {
@@ -32,7 +36,7 @@ console.log("admin")
           </div>
 
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            <SubMenu
+            {/* <SubMenu
               title="Đăng ký thực tập"
               key="0"
               icon={<PieChartOutlined className="icon-link" />}
@@ -44,10 +48,21 @@ console.log("admin")
               <Menu.Item key="1">
                 <Link to="/support-school">Nhà trường hỗ trợ</Link>
               </Menu.Item>
-            </SubMenu>
-         
+            </SubMenu> */}
+            <Menu.Item key="2" icon={<ProfileOutlined className="icon-link" />}>
+              <Link to="sinh-vien/danh-sach-dang-ky">Danh sách sinh viên</Link>
+            </Menu.Item>
+            <Menu.Item key="3" icon={<TeamOutlined className="icon-link" />}>
+              <Link to="up-file">Nhân viên</Link>
+            </Menu.Item>
+            <Menu.Item key="4" icon={<FolderViewOutlined className="icon-link" />}>
+              <Link to="xem-cv">Review CV</Link>
+            </Menu.Item>
+            <Menu.Item key="5" icon={<ReadOutlined className="icon-link" />}>
+              <Link to="xem-bao-cao">Review báo cáo</Link>
+            </Menu.Item>
             <Menu.Item key="6" icon={<UploadOutlined className="icon-link" />}>
-              <Link to="up-file">Trạng thái đăng ký</Link>
+              <Link to="up-file">Up File</Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -64,6 +79,6 @@ console.log("admin")
   );
 }
 
-LayoutWebsite.propTypes = {};
+LayoutAdmin.propTypes = {};
 
-export default LayoutWebsite;
+export default LayoutAdmin;

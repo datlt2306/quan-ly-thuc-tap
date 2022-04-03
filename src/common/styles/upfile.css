@@ -28,10 +28,14 @@
 .header>label>.icon{
     margin-right: 5px;
 }
-.button_save>button:nth-child(1),.button_save>button:nth-child(2){
+.button_save{
+    display: flex;
+}
+.button_save>button:nth-child(2),.button_save>button:nth-child(3){
     border: 1px solid rgb(214, 214, 214);
     background-color: #fff;
     padding: 5px 10px;
+    margin-left: 10px;
 }
 .button_save>button:nth-child(1){
     margin-right: 10px;

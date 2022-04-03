@@ -1,6 +1,3 @@
-body{
-    font-family: '';
-}
 .status>h4{
     border-bottom: 1px solid rgb(214, 214, 214);
     padding: 10px 0;
@@ -18,15 +15,15 @@ thead>tr> th{
     text-align: center !important;
 
 }
-.status-fail,.status-not-reached,.status-true,.status-up{
+.status-fail,.status-true,.status-up{
     font-weight: 600;
 }
-.status-fail>button,.status-not-reached>button,.status-up>button,.status-true>button,.status-check>button{
+.status-fail>button,.status-up>button,.status-true>button,.status-check>button{
     background-color: #fff;
     color: blue;
     border: 0;
 }
-.status-fail>button:hover,.status-not-reached>button:hover,.status-up>button:hover,.status-true>button:hover,.status-check>button:hover{
+.status-fail>button:hover,.status-up>button:hover,.status-true>button:hover,.status-check>button:hover{
     text-decoration: underline;
 }
 

@@ -22,6 +22,7 @@ const userSlice=createSlice({
         builder.addCase(getUser.fulfilled,(state,action)=>{
             state.value = action.payload
         })
+        
     }
     
 })

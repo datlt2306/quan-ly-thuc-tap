@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import StudentAPI from '../../../API/StudentAPI'
-import { EyeOutlined } from '@ant-design/icons'
+import { EyeOutlined,EditOutlined } from '@ant-design/icons'
 import '../../../common/styles/status.css'
 import { Select, Input, Table } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import { getStudent } from '../../../features/StudentSlice/StudentSlice';
 import { getUser } from '../../../features/UserSlice/UserSilce';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const { Option } = Select;
 const Status = () => {
     const dispatch = useDispatch()
     let navigate = useNavigate();
-    const {infoUser} = useSelector(state => state.auth)
+    const { infoUser } = useSelector(state => state.auth)
     const students = useSelector(data => data.students.value);
-    const users = useSelector(data => data.users.value);
+    const users = useSelector(data => data.users);
     const [studentSearch, setStudentSearch] = useState([])
     const [chooseIdStudent, setChooseIdStudent] = useState([])
 
@@ -87,7 +87,7 @@ const Status = () => {
         {
             title: 'Người review',
             dataIndex: 'user_id',
-            render: (user_id) => users.map(item => user_id == item.id && item.email.slice(0, -11))
+            render: (user_id) =>users.map(item => user_id == item.id && item.email.slice(0, -11))
         }
         ,
         {
@@ -95,17 +95,22 @@ const Status = () => {
             dataIndex: 'status',
             render: (status, student) => {
                 if (status == 0) {
-                    return <span className='status-fail' style={{ color: 'red' }}>Đã tạch <br /><Link to={`/edit-cv/id=${student.key}`}>Sửa</Link></span>
+                    return <span className='status-fail' style={{ color: 'red' }}>Trượt thực tập</span>
                 } else if (status == 1) {
-                    return <span className='status-up' style={{ color: 'red' }}>Sửa lại<br /><Link to={`/ed/id=${student.key}`}>Sửa</Link></span>
+                    return <span className='status-up' style={{ color: 'red' }}>Sửa lại</span>
                 } else if (status == 2) {
-                    return <span className='status-check' style={{ color: 'rgb(255, 106, 0)' }}>Chờ kiểm tra <br /><Link to={`/ed/id=${student.key}`}>Sửa</Link></span>
+                    return <span className='status-check' style={{ color: 'rgb(255, 106, 0)' }}>Chờ kiểm tra </span>
                 } else if (status == 3) {
-                    return <span className='status-true' style={{ color: 'rgb(44, 194, 21)' }}>Đã kiểm tra <br /><Link to={`/ed/id=${student.key}`}>Sửa</Link></span>
+                    return <span className='status-true' style={{ color: 'rgb(44, 194, 21)' }}>Đã kiểm tra </span>
                 }
             }
         }
-
+        ,
+        {
+          title: 'Hành động',
+          dataIndex: 'key',
+          render: (key) =><Link to={`/thay-doi-trang-thai/id=${key}`}><EditOutlined /></Link> ,
+        }
     ];
 
     const data = [];
@@ -146,7 +151,7 @@ const Status = () => {
             StudentAPI.upload(item.id, { ...item, "user_id": `${user.id}` })
         })
         alert("Thêm thành công ")
-         navigate("/review-cv");
+        navigate("/quan-ly/review-cv");
     }
 
 
@@ -188,81 +193,6 @@ const Status = () => {
                 dataSource={data}
             />
 
-
-
-            {/* 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Chọn</th>
-                        <th>STT</th>
-                        <th>MSSV</th>
-                        <th>Họ và Tên</th>
-                        <th>Email</th>
-                        <th>Điện thoại</th>
-                        <th>Ngành</th>
-                        <th>CV</th>
-                        <th>Phân loại</th>
-                        <th>Trạng thái</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        (studentSearch.length == 0 ? students : studentSearch).map((item, index) => {
-
-                            return (
-                                <tr key={index}>
-                                    <td className='checkbox'>
-                                        <Checkbox onChange={(e) => chooseId(item.id, e)}></Checkbox>
-                                    </td>
-
-                                    <td>{index + 1}</td>
-                                    <td>{item.mssv}</td>
-                                    <td>{item.name}</td>
-                                    <td>{item.email}</td>
-                                    <td>{item.phone}</td>
-                                    <td>{item.internship_industry}</td>
-                                    <td>
-                                        {item.classify == 0 && <EyeOutlined className='icon-cv' onClick={() => window.open(item.link_cv)} />}
-                                    </td>
-                                    <td>{item.classify == 0 ? 'Tự đăng ký' : 'Hỗ trợ'}</td>
-
-                                    <td className='list-status'>
-                                        {item.status == 0 && <span className='status-fail' style={{ color: 'red' }}>Đã tạch <br /><button onClick={() => openDetail(item.id, 'error')}>Đã tạch</button></span>}
-
-                                        {item.status == 1 && <span className='status-up' style={{ color: 'red' }}>Sửa lại<br /><button onClick={() => editCv(item.id, index)}>Sửa</button>
-
-                                        </span>}
-                                        {item.status == 2 && <span className='status-check' style={{ color: 'rgb(255, 106, 0)' }}>Chờ kiểm tra</span>}
-
-                                        {item.status == 3 && <span className='status-true' style={{ color: 'rgb(44, 194, 21)' }}>Đã kiểm tra</span>}
-                                    </td>
-
-                                </tr>
-                            )
-
-                        })
-                    }
-                </tbody>
-            </table>
-
-            {/* sửa cv *
-
-            <div className="edit-cv " >
-                <div className="form-edit-cv">
-                    <h3>Sửa CV</h3>
-                    <div className="input-edit-cv">
-                        <div className="name">Tên sinh viên : <span className='name-student'></span></div>
-                        <br />
-                        <label htmlFor="ediv-cv">
-                            <span>Sửa CV</span><FilePdfOutlined className='icon-edit-cv' />
-                        </label>
-                        <input type="file" id='ediv-cv' />
-                    </div>
-
-                    <button>Sửa</button>
-                </div>
-            </div> */}
         </div>
     )
 }

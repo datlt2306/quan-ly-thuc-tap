@@ -12,9 +12,9 @@ const studentSlice=createSlice({
     initialState:{
         value:[]
     },
-    reducers:{
-        addStudent(state,action){
-            state.value.push(action.payload)
+    reducers: {
+        updateStudent(state, action){
+            state.value = action.payload
         }
     },
     extraReducers:(builder)=>{
@@ -22,5 +22,7 @@ const studentSlice=createSlice({
             state.value = action.payload
         })
     }
-})
+});
+
+export const { updateStudent } =  studentSlice.actions
 export default studentSlice.reducer

@@ -3,6 +3,7 @@ import * as XLSX from 'xlsx';
 import { UploadOutlined } from '@ant-design/icons';
 import '../../../common/styles/upfile.css';
 import DataAPI from '../../../API/Data';
+import {Input} from 'antd'
 const UpFile = () => {
   const [data, setData] = useState();
   const [header, setHeader] = useState([]);
@@ -82,6 +83,7 @@ const UpFile = () => {
         <input type="file" onChange={(e) => importData(e)} id="up-file" />
         {data && (
           <div className="button_save">
+            <Input placeholder="Tên kỳ (ví dụ : Summer 2021...)" style={{width:'230px'}}/>
             <button onClick={() => submitSave()}>Lưu</button>
             <button onClick={() => submitCole()}>Hủy</button>
           </div>
@@ -89,7 +91,6 @@ const UpFile = () => {
       </div>
       {data !== undefined && (
         <table>
-          <thead></thead>
           <tbody>
             {data !== undefined &&
               data.map((r, i) => (
