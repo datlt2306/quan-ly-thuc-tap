@@ -1,11 +1,13 @@
 import { axiosClient } from "./Link";
+import {stringify} from 'qs'
 const StudentAPI = {
-    getAll() {
-        const url = `/students`;
+    getAll(page) {
+        console.log(stringify(page));
+        const url = `/student?${stringify(page)}`;
         return axiosClient.get(url);
     },
     get(id) {
-        const url = `/students/${id}`;
+        const url = `/student/${id}`;
         return axiosClient.get(url);
     }
     ,
@@ -14,10 +16,11 @@ const StudentAPI = {
         return axiosClient.get(url);
     },
     add(product) {
-        const url = `/students`;
+        const url = `/student`;
         return axiosClient.post(url, product);
     },
     remove(id) {
+        
         const url = `/students/${id}`;
         return axiosClient.delete(url);
     },

@@ -1,16 +1,19 @@
-import { SettingOutlined, UserOutlined } from '@ant-design/icons';
+import { SettingOutlined } from '@ant-design/icons';
 import { Menu, Dropdown, Button, Avatar } from 'antd';
 
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import { logoutAuth } from '../../features/slice/authSlice';
+import { useNavigate } from "react-router";
 import './index.css'
+import {logout} from '../../features/authSlice/authSlice'
 
 const Rightcontent = () => {
     const dispatch = useDispatch()
-   const logout = () => {
-    // dispatch(logoutAuth())
+    const navigate = useNavigate()
+    const {infoUser} = useSelector( state => state.auth)
+   const handleLogout = () => {
+         dispatch(logout())
+         navigate('/login')
    }
     const menu = (
         <Menu  >
@@ -18,7 +21,7 @@ const Rightcontent = () => {
             <SettingOutlined /> <span>Tài khoản</span>
             </Menu.Item>
             <Menu.Item>
-                <Button type='text' onClick={logout()}>Đăng xuất</Button>
+                <Button type='text' onClick={handleLogout}>Đăng xuất</Button>
             </Menu.Item>
             <Menu.Item>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -34,7 +37,7 @@ const Rightcontent = () => {
         }} >
             <Dropdown overlay={menu} placement="bottomLeft" arrow>
                 <span>
-                 <Avatar size={44} icon={<UserOutlined />} />  <span> Dương điệp</span>
+                 <Avatar size={44} src={infoUser.picture}  />  <span>{infoUser.name}</span>
                 </span>
             </Dropdown>
 

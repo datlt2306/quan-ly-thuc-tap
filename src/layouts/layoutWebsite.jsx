@@ -45,17 +45,17 @@ function LayoutWebsite() {
               style={{color:'black'}}
             >
               <Menu.Item key="7">
-                <NavLink to="/self-registration">Tự đăng ký</NavLink>
+                <NavLink to="/proactive-student">Tự đăng ký</NavLink>
               </Menu.Item>
               <Menu.Item key="1">
-                <NavLink to="/support-school">Nhà trường hỗ trợ</NavLink>
+                <NavLink to="/support-student">Nhà trường hỗ trợ</NavLink>
               </Menu.Item>
             </SubMenu>
             <Menu.Item key="2" icon={<ProfileOutlined className="icon-link" />}>
               <NavLink to="status">Danh sách đăng ký</NavLink>
             </Menu.Item>
             <Menu.Item key="3" icon={<TeamOutlined className="icon-link" />}>
-              <NavLink to="up-file">Nhân viên</NavLink>
+              <NavLink to="employee-manager">Nhân viên</NavLink>
             </Menu.Item>
             <Menu.Item key="4" icon={<FolderViewOutlined className="icon-link" />}>
               <NavLink to="review-cv">Review CV</NavLink>

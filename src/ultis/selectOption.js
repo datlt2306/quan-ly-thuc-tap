@@ -1,5 +1,9 @@
 export const filterBranch = [
     {
+        title: 'Tất cả',
+        value: 0
+    },
+    {
         title: 'Quản trị doanh nghiệp',
         value: 'QTDN'
     },
@@ -17,41 +21,34 @@ export const filterBranch = [
     },
     {
         title: 'Lập trình máy trính',
-        value: 'QTDN'
+        value: 'LTMT'
     },
     {
         title: 'Thiết kế Website',
-        value: 'QTDN'
+        value: 'TKTW'
     },
     {
         title: 'Quan hệ công chúng',
         value: 'QHCC'
     },
 ]
-export const filterStatus = [
+export const filterStatuss = [
     {
-        title: 'Chưa đạt',
-    }
-    ,
+        title :'Tất cả'
+    },
     {
         title: 'Đã tạch',
     },
     {
-        title: 'Sửa CV',
+        title: 'Sửa lại',
     },
     {
-        title: 'Đang kiểm tra',
+        title: 'Đã kiểm tra',
     },
     {
-        title: 'CV đã ổn',
+        title: 'Chờ kiểm tra',
     },
-    {
-        title: 'Đi phỏng vấn',
-    }, {
-        title: 'Trượt phỏng ấn',
-    }, {
-        title: 'Đang thực tập',
-    },
+  
 
 ]
 export const status = [

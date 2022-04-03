@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
 import { UploadOutlined } from '@ant-design/icons';
-import '../../../common/styles/upfile.css';
-import DataAPI from '../../../API/Data';
+import '../../common/styles/upfile.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { insertStudent } from '../../features/StudentSlice/StudentSlice';
 const UpFile = () => {
   const [data, setData] = useState();
   const [header, setHeader] = useState([]);
   const [dataNew, setDataNew] = useState([]);
   const [nameFile, setNameFile] = useState('');
-
+  const dispatch = useDispatch()
+  const {infoUser} = useSelector(state => state.auth)
   const importData = (e) => {
     const file = e.target.files[0];
     setNameFile(file.name);
@@ -38,30 +40,25 @@ const UpFile = () => {
     };
     reader.readAsBinaryString(file);
   };
-  // let arrayNew =[]
-  // const convert = () => {
-  //   return  dataNew.map((item, index) => {
-  //       const newObject = {}
-  //       newObject['name'] = item['Họ tên']
-  //       newObject['zz'] = item['Khóa nhập học']
-  //       return arrayNew.push(newObject)
-  //   })
-  // }
   const submitSave = () => {
     const data = []
     dataNew.map((item) => {
       const newObject = {}
-      newObject['mssv'] = item['MSSV']
-      newObject['name'] = item['Họ tên']
-      newObject['course'] = item['Khóa nhập học']
-      newObject['status'] = item['Trạng thái FA21']
-      newObject['majors'] = item['Ngành FA21']
-      newObject['name'] = item['Họ tên']
-      newObject['email'] = item['Email']
-      newObject['supplement'] = item['bổ sung']
-      data.push(newObject)
+      if (infoUser.manager) {
+        newObject['mssv'] = item['MSSV']
+        newObject['name'] = item['Họ tên']
+        newObject['course'] = item['Khóa nhập học']
+        newObject['status'] = item['Trạng thái FA21']
+        newObject['majors'] = item['Ngành FA21']
+        newObject['name'] = item['Họ tên']
+        newObject['email'] = item['Email']
+        newObject['supplement'] = item['bổ sung']
+        newObject['campus_id'] = infoUser.manager.cumpus
+         data.push(newObject)
+      }
+    
     })
-    DataAPI.add({ data: data })
+    dispatch(insertStudent(data))
 
   };
   const submitCole = () => {

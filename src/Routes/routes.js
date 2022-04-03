@@ -2,15 +2,14 @@ import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import LayoutWebsite from "../layouts/layoutWebsite";
 import LayoutAdmin from "../layouts/layoutAdmin";
-import Login from "../containers/website/login/Login";
-import Home from "../containers/website/home/Home";
-import Status from "../components/website/import-excel/Status";
-import ReviewCV from "../components/website/import-excel/ReviewCV";
-import UpFile from "../components/website/import-excel/UpFile";
-import SupportStudent from "../containers/website/supportStudent/SupportStudent";
-import ProactiveStudent from "../containers/website/proactiveStudent/ProactiveStudent";
+import Login from "../pages/login/Login";
+import SupportStudent from "../pages/supportStudent/SupportStudent"
+import ProactiveStudent from "../pages/proactiveStudent/ProactiveStudent";
 import Privateroute from "./private/privateRoute";
-
+import Status from "../pages/import-excel/Status";
+import ReviewCV from "../pages/import-excel/ReviewCV"
+import UpFile from "../pages/import-excel/UpFile";
+import EmployeeManager from "../pages/employee-manager/Employee-Manager";
 const Router = () => {
   return (
     <Routes>
