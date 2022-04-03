@@ -38,19 +38,30 @@ const UpFile = () => {
     };
     reader.readAsBinaryString(file);
   };
-  let arrayNew =[]
-  const convert = () => {
-    return  dataNew.map((item, index) => {
-        const newObject = {}
-        newObject['name'] = item['Họ tên']
-        newObject['zz'] = item['Khóa nhập học']
-        return arrayNew.push(newObject)
-    })
-  }
+  // let arrayNew =[]
+  // const convert = () => {
+  //   return  dataNew.map((item, index) => {
+  //       const newObject = {}
+  //       newObject['name'] = item['Họ tên']
+  //       newObject['zz'] = item['Khóa nhập học']
+  //       return arrayNew.push(newObject)
+  //   })
+  // }
   const submitSave = () => {
-    // DataAPI.add({ data: dataNew });
-        convert()
-    console.log(arrayNew);
+    const data = []
+    dataNew.map((item) => {
+      const newObject = {}
+      newObject['mssv'] = item['MSSV']
+      newObject['name'] = item['Họ tên']
+      newObject['course'] = item['Khóa nhập học']
+      newObject['status'] = item['Trạng thái FA21']
+      newObject['majors'] = item['Ngành FA21']
+      newObject['name'] = item['Họ tên']
+      newObject['email'] = item['Email']
+      newObject['supplement'] = item['bổ sung']
+      data.push(newObject)
+    })
+    DataAPI.add({ data: data })
 
   };
   const submitCole = () => {

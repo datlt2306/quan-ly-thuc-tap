@@ -1,5 +1,5 @@
 import React from "react";
-import {  Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import LayoutWebsite from "../layouts/layoutWebsite";
 import LayoutAdmin from "../layouts/layoutAdmin";
 import Login from "../containers/website/login/Login";
@@ -17,15 +17,14 @@ const Router = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/" element={<Privateroute><LayoutWebsite /></Privateroute>}>
         {/* <Route index element={<Home/>} /> */}
-        <Route path="/support-student" element={<SupportStudent/>} />
-        <Route path="/proactive-student" element={<ProactiveStudent/>} />
-        <Route path="/status" element={<Status />} />
-        <Route path="/review-cv" element={<ReviewCV />} />
-        <Route path="/up-file" element={<UpFile />} />
+        <Route path="/support-student" element={<SupportStudent />} />
+        <Route path="/proactive-student" element={<ProactiveStudent />} />
       </Route>
 
-      <Route path="admin/*" element={<LayoutAdmin />}>
-        <Route index element={<Navigate to="dashboard" />} />
+      <Route path="admin/" element={<LayoutWebsite />}>
+        <Route path="sinh-vien/danh-sach-dang-ky" element={<Status />} />
+        <Route path="review-cv" element={<ReviewCV />} />
+        <Route path="up-file" element={<UpFile />} />
       </Route>
     </Routes>
   );
