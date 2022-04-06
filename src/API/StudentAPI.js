@@ -2,12 +2,11 @@ import { axiosClient } from "./Link";
 import {stringify} from 'qs'
 const StudentAPI = {
     getAll(page) {
-        console.log(stringify(page));
-        const url = `/student?${stringify(page)}`;
+        const url = `/students`;
         return axiosClient.get(url);
     },
     get(id) {
-        const url = `/student/${id}`;
+        const url = `/students/${id}`;
         return axiosClient.get(url);
     }
     ,

@@ -19,7 +19,7 @@ const Router = () => {
         <Route path="/support-student" element={<ProactiveStudent />} />
         <Route path="/proactive-student" element={<SupportStudent />} />  
         <Route path="/employee-manager" element={<EmployeeManager/>} />
-        <Route path="status" element={<Status />} />
+        <Route path="sinh-vien/danh-sach-dang-ky" element={<Status />} />
         <Route path="info-student" element={<InfoStudent/>} />
         <Route path="review-cv" element={<ReviewCV />} />
         <Route path="up-file" element={<UpFile />} />

@@ -5,9 +5,11 @@ import studentSlice from "../features/StudentSlice/StudentSlice";
 import userSlice from "../features/UserSlice/UserSilce";
 import specializationSlice from "../features/specializationSlice/specializationSlice";
 import managerSlice from "../features/managerSlice/managerSlice";
+import dataSlice from "../features/DataSlice/DataSlice";
 const rootReducer = combineReducers(
     {
     students:studentSlice,
+    data:dataSlice,
     users:userSlice,
     auth: authSlice,
     cumpus:cumpusSlice,

@@ -1,246 +1,203 @@
-import React, { useState, useEffect } from 'react';
-import StudentAPI from '../../API/StudentAPI';
-import { EyeOutlined } from '@ant-design/icons';
-import '../../common/styles/status.css';
-import { Select, Input, Table } from 'antd';
+import React, { useState, useEffect } from 'react'
+import StudentAPI from '../../API/StudentAPI'
+import { EyeOutlined, EditOutlined } from '@ant-design/icons'
+import '../../common/styles/status.css'
+import { Select, Input, Table, Tag } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import { getStudent } from '../../features/StudentSlice/StudentSlice';
+import { getUser } from '../../features/UserSlice/UserSilce';
 import { Link, useNavigate } from 'react-router-dom';
-import { filterBranch, filterStatuss } from '../../ultis/selectOption';
-import {omit} from 'lodash'
+import { getData, upData } from '../../features/DataSlice/DataSlice';
+import DataAPI from '../../API/Data';
 const { Option } = Select;
-
 const Status = () => {
-  const dispatch = useDispatch();
-  let navigate = useNavigate();
-  const { infoUser } = useSelector((state) => state.auth);
-  
-  const {
-    listStudent: { list, total },
-    loading,
-  } = useSelector((state) => state.students);
-  const users = useSelector((data) => data.users.value);
-  const [studentSearch, setStudentSearch] = useState([]);
-  const [chooseIdStudent, setChooseIdStudent] = useState([]);
-  const [page, setPage] = useState({
-    page: 1,
-    limit: 10,
-    campus_id: infoUser.manager.cumpus,
-  });
-  const [filter, setFiler] = useState({})
-  useEffect(() => {
-      const data = {
-          ...page, ...filter
-      }
-      console.log(data)
-    dispatch(getStudent(data));
-    setStudentSearch([]);
-  }, [filter, page]);
+    const dispatch = useDispatch()
+    let navigate = useNavigate();
+    // const { infoUser } = useSelector(state => state.auth)
+    const dataExcel = useSelector(data => data.data.listData);
+    const users = useSelector(data => data.users.value);
 
-  const columns = [
-    {
-      title: 'MSSV',
-      dataIndex: 'mssv',
-    },
-    {
-      title: 'Họ và Tên',
-      dataIndex: 'name',
-    },
-    {
-      title: 'Email',
-      dataIndex: 'email',
-    },
-    {
-      title: 'Điện thoại',
-      dataIndex: 'phone',
-    },
-    {
-      title: 'Ngành',
-      dataIndex: 'majors',
-    },
-    // {
-    //   title: 'Phân loại',
-    //   dataIndex: 'classify',
-    //   render: (classify) => (classify == 0 ? 'Tự đăng ký' : 'Hỗ trợ'),
-    // },
-    {
-      title: 'CV',
-      dataIndex: 'CV',
-      render: (link_cv) =>
-        list.CV ? <EyeOutlined className="icon-cv" onClick={() => window.open(link_cv)} /> : '',
-    },
-    {
-      title: 'Người review',
-      dataIndex: 'user_id',
-      render: (user_id) => users.map((item) => user_id == item.id && item.email.slice(0, -11)),
-    },
-    {
-      title: 'Trạng thái',
-      dataIndex: 'status',
-      render: (status, student) => {
-        if (status == 0) {
-          return (
-            <span className="status-fail" style={{ color: 'red' }}>
-              Đã tạch <br />
-              <Link to={`/edit-cv/id=${student.key}`}>Sửa</Link>
-            </span>
-          );
-        } else if (status == 1) {
-          return (
-            <span className="status-up" style={{ color: 'red' }}>
-              Sửa lại
-              <br />
-              <Link to={`/ed/id=${student.key}`}>Sửa</Link>
-            </span>
-          );
-        } else if (status == 2) {
-          return (
-            <span className="status-check" style={{ color: 'rgb(255, 106, 0)' }}>
-              Chờ kiểm tra <br />
-              <Link to={`/ed/id=${student.key}`}>Sửa</Link>
-            </span>
-          );
-        } else if (status == 3) {
-          return (
-            <span className="status-true" style={{ color: 'rgb(44, 194, 21)' }}>
-              Đã kiểm tra <br />
-              <Link to={`/ed/id=${student.key}`}>Sửa</Link>
-            </span>
-          );
-        } else {
-          return (
-            <span className="status-true" style={{ color: 'rgb(44, 194, 21)' }}>
-              Chưa đăng ký
-            </span>
-          );
+    const [dataSearch, setDataSearch] = useState([])
+    const [chooseIdStudent, setChooseIdStudent] = useState([])
+
+    useEffect(() => {
+        dispatch(getStudent())
+        dispatch(getUser())
+        dispatch(getData())
+        // setDataSearch([])
+    }, [])
+
+
+    // lọc theo ngành
+    const filterMajors = async (value) => {
+        setDataSearch(dataExcel.filter(item => item.majors.toLowerCase().includes(value.toLowerCase())))
+    }
+    // lọc theo trạng thái
+    const filterStatus = async (value) => {
+        setDataSearch(dataExcel.filter(item => item.status.toLowerCase().includes(value.toLowerCase())))
+    }
+    // lọc theo phân loại
+    const filterClassify = async (value) => {
+        setDataSearch(dataExcel.filter(item => item.classify.toLowerCase().includes(value.toLowerCase())))
+    }
+    // tìm kiếm theo tên
+    const filterInput = async (e) => {
+        setDataSearch(dataExcel.filter(item => item.name.toLowerCase().includes(e.toLowerCase())))
+    }
+    // xóa tìm kiếm
+    const deleteFilter = () => {
+        setDataSearch([])
+    }
+
+    const columns = [
+        {
+            title: 'MSSV',
+            dataIndex: 'mssv',
+        },
+        {
+            title: 'Họ và Tên',
+            dataIndex: 'name',
+        },
+        {
+            title: 'Email',
+            dataIndex: 'email',
         }
-      },
-    },
-  ];
-  // lọc theo ngành
-  const filterMajors = async (value) => {
-    setStudentSearch(
-      list.filter((item) => item.majors.toLowerCase().includes(value.toLowerCase())),
-    );
-  };
-  // lọc theo trạng thái
-  const filterStatus = async (value) => {
-    setStudentSearch(
-      list.filter((item) => item.status.toLowerCase().includes(value.toLowerCase())),
-    );
-  };
-  // lọc theo phân loại
-  const filterClassify = async (value) => {
-    setStudentSearch(
-      list.filter((item) => item.classify.toLowerCase().includes(value.toLowerCase())),
-    );
-  };
-  // tìm kiếm theo tên
-  const filterInput = async (e) => {
-    setStudentSearch(list.filter((item) => item.name.toLowerCase().includes(e.toLowerCase())));
-  };
-  // xóa tìm kiếm
-  const deleteFilter = () => {
-    setStudentSearch([]);
-  };
+        ,
+        {
+            title: 'Điện thoại',
+            dataIndex: 'phone',
+        }
+        ,
+        {
+            title: 'Ngành',
+            dataIndex: 'majors',
+        }
+        ,
+        {
+            title: 'Phân loại',
+            dataIndex: 'classify',
+            render: classify => classify == 1 ? "Tự tìm" : "Hỗ trợ"
+            
+        },
+        {
+            title: 'CV',
+            dataIndex: 'link_cv',
+            render: (link_cv, dataExcel) => dataExcel.classify == 1 ? <EyeOutlined className='icon-cv' onClick={() => window.open(link_cv)} /> : '',
+        }
+        ,
+        {
+            title: 'Người review',
+            dataIndex: 'user_id',
+            render: (user_id) => users.map(item => user_id == item.id && item.email.slice(0, -11))
+          }
+        ,
+        {
+            title: 'Trạng thái',
+            dataIndex: 'statuscheck',
+            render: (statuscheck, data) => {
+                if (statuscheck == 0) {
+                    return <span className='status-fail' style={{ color: 'red' }}>Chưa đăng ký</span>
+                } else if (statuscheck == 1) {
+                    return <span className='status-up' style={{ color: 'red' }}>Trượt thực tập</span>
+                } else if (statuscheck == 2) {
+                    return <span className='status-up' style={{ color: 'rgb(255, 106, 0)' }}>Sửa lại</span>
+                } else if (statuscheck == 3) {
+                    return <span className='status-check' style={{ color: 'rgb(255, 106, 0)' }}>Chờ kiểm tra</span>
+                } else if (statuscheck == 4) {
+                    return <span className='status-true' style={{ color: 'rgb(44, 194, 21)' }}>Đã nhận</span>
+                }
+            }
 
 
-  const rowSelection = {
-    onChange: (selectedRows) => {
-      setChooseIdStudent(selectedRows);
-    },
-  };
-  const chooseStudent = () => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    const newStudents = [];
-    list.filter((item) => {
-      chooseIdStudent.map((id) => {
-        id == item.id && newStudents.push(item);
-      });
-    });
-    newStudents.map((item) => {
-      StudentAPI.upload(item.id, { ...item, user_id: `${user.id}` });
-    });
-    alert('Thêm thành công ');
-    navigate('/review-cv');
-  };
+        }
 
-  const handleStandardTableChange = (key, value) => {
-    const newValue = value.length > 0 || value > 0 ? {
-        ...filter,
-        [key]: value
-      }
-      : omit(filter, [key]);
-      setFiler(newValue)
-  };
+        ,
+        {
+            title: 'Hành động',
+            dataIndex: 'key',
+            render: (key) => <Link key={key} to={`/thay-doi-trang-thai/id=${key}`}><EditOutlined /></Link>,
+        }
+    ];
 
-  return (
-    <div className="status">
-      <h4>Sinh viên đăng ký thực tập</h4>
+    const data = [];
+    for (let i = 0; i < dataExcel.length; i++) {
+        data.push({
+            "key": dataExcel[i].id,
+            "mssv": dataExcel[i].mssv,
+            "name": dataExcel[i].name,
+            "email": dataExcel[i].email,
+            "phone": dataExcel[i].phone,
+            "address": dataExcel[i].address,
+            "internship_industry": dataExcel[i].internship_industry,
+            "majors": dataExcel[i].majors,
+            "link_cv": dataExcel[i].link_cv,
+            "statuscheck": dataExcel[i].statuscheck,
+            "status_detail": dataExcel[i].status_detail,
+            "user_id": dataExcel[i].user_id,
+            "classify": dataExcel[i].classify
+        });
+    }
 
-      <div className="filter">
-        <Select style={{ width: 200 }} onChange={val =>handleStandardTableChange('majors', val)} placeholder="Lọc theo ngành">
-          {filterBranch.map((item, index) => (
-              <>
-            <Option value={item.value} key={index}>
-              {item.title}
-            </Option>
-            </>
-          ))}
-        </Select>
-        <Select
-          className="filter-status"
-          style={{ width: 200 }}
-          onChange={val =>handleStandardTableChange('statusCheck', val)}
-          placeholder="Lọc theo trạng thái"
-        >
-          {filterStatuss.map((item, index) => (
-            <Option value={index} key={index}>
-              {item.title}
-            </Option>
-          ))}
-        </Select>
-        {/* <Select
-          className="filter-status"
-          style={{ width: 200 }}
-          onChange={val =>handleStandardTableChange('classify', val)}
-          placeholder="Lọc theo phân loại"
-        >
-          <Option value="0">Tự tìm</Option>
-          <Option value="1">Nhờ nhà trường</Option>
-        </Select> */}
-        <Input
-          style={{ width: 200 }}
-          placeholder="Tìm kiếm theo tên"
-          onChange={val => setTimeout(()=> handleStandardTableChange('name',val.target.value),3000)}
-        />
-        {studentSearch.length > 0 && <button onClick={() => deleteFilter()}>Xóa lọc</button>}
-        {chooseIdStudent.length > 0 && <button onClick={() => chooseStudent()}>Xác nhận</button>}
-      </div>
 
-      <Table
-        rowSelection={{
-          type: 'checkbox',
-          ...rowSelection,
-        }}
-        rowKey="id"
-        pagination={{
-          pageSize: page.limit,
-          total: total,
-          onChange: (page, pageSize) => {
-            setPage({
-                page: page,
-                limit: pageSize,
-                campus_id: infoUser.manager.cumpus,
-             });
-          },
-        }}
-        loading={loading}
-        columns={columns}
-        dataSource={list}
-      />
-    </div>
-  );
-};
+    const rowSelection = {
+        onChange: (selectedRows) => {
+            setChooseIdStudent(selectedRows)
+        },
+    };
+    const chooseStudent = () => {
+        const user = JSON.parse(localStorage.getItem('user'))
+        const newStudents = []
+        dataExcel.filter(item => {
+            chooseIdStudent.map(id => {
+                id == item.id && newStudents.push(item)
+            })
+        })
+        newStudents.map(item => {
+            StudentAPI.upload(item.id, { ...item, "user_id": `${user.id}` })
+        })
+        alert("Thêm thành công ")
+        navigate("/quan-ly/review-cv");
+    }
 
-export default Status;
+    return (
+        <div className='status'>
+            <h4>Sinh viên đăng ký thực tập</h4>
+            <div className="filter">
+                <Select style={{ width: 200 }} onChange={filterMajors} placeholder="Lọc theo ngành">
+                    <Option value="QTDN">Quản trị doanh nghiệp</Option>
+                    <Option value="TKĐH">Thiết kế đồ họa</Option>
+                    <Option value="UDPM">Ứng dụng phần mềm</Option>
+                    <Option value="TMĐT">Thương mại điện tử</Option>
+                    <Option value="LTMT">Lập trình máy trính</Option>
+                    <Option value="TKTW">Thiết kế Website</Option>
+                    <Option value="QHCC">Quan hệ công chúng</Option>
+                </Select>
+                <Select className='filter-status' style={{ width: 200 }} onChange={filterStatus} placeholder="Lọc theo trạng thái">
+                    <Option value="0">Đã tạch</Option>
+                    <Option value="1">Sửa lại</Option>
+                    <Option value="2">Chờ kiểm tra</Option>
+                    <Option value="3">Đã kiểm tra</Option>
+                </Select>
+                <Select className='filter-status' style={{ width: 200 }} onChange={filterClassify} placeholder="Lọc theo phân loại">
+                    <Option value="0">Tự tìm</Option>
+                    <Option value="1">Nhờ nhà trường</Option>
+                </Select>
+                <Input style={{ width: 200 }} placeholder="Tìm kiếm theo tên" onChange={(e) => filterInput(e.target.value)} />
+                {dataSearch.length > 0 && <button onClick={() => deleteFilter()}>Xóa lọc</button>}
+                {chooseIdStudent.length > 0 && <button onClick={() => chooseStudent()}>Xác nhận</button>}
+            </div>
+
+            <Table
+                rowSelection={{
+                    type: 'checkbox',
+                    ...rowSelection,
+                }}
+                columns={columns}
+                dataSource={data}
+            />
+
+        </div>
+    )
+}
+
+export default Status

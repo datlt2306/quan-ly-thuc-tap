@@ -16,7 +16,7 @@ export const filterBranch = [
         value: 'UDPM'
     },
     {
-        title: 'Maketing',
+        title: 'Thương mại điện tử',
         value: 'TMĐT'
     },
     {

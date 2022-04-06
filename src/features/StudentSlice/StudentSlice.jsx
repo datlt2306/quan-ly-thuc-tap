@@ -3,8 +3,8 @@ import StudentAPI from "../../API/StudentAPI";
 export const getStudent=createAsyncThunk(
     "student/getStudent",
     async (page)=>{
-        const {data}=await StudentAPI.getAll(page)
-        return data
+        const {data:students}=await StudentAPI.getAll(page)
+        return students
     }
 )
 export const insertStudent = createAsyncThunk(
@@ -17,13 +17,18 @@ export const insertStudent = createAsyncThunk(
 const studentSlice=createSlice({
     name:"student",
     initialState:{
-        listStudent:{},
+        listStudent:{
+        },
         loading: false,
         error: ''
     },
     reducers:{
         addStudent(state,action){
             state.listStudent.push(action.payload)
+        },
+        updateStudent(state,action){
+            state.listStudent = action.payload
+
         }
     },
     extraReducers:(builder)=>{
@@ -48,4 +53,5 @@ const studentSlice=createSlice({
         // })
     }
 })
+export const {updateStudent}=studentSlice.actions
 export default studentSlice.reducer

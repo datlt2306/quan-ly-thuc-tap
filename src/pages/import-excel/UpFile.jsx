@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
 import { UploadOutlined } from '@ant-design/icons';
-import '../../common/styles/upfile.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { insertStudent } from '../../features/StudentSlice/StudentSlice';
+import '../../common/styles/upfile.css';
+import DataAPI from '../../API/Data';
+import { Input } from 'antd'
+import { useNavigate } from 'react-router-dom';
 const UpFile = () => {
+  let navigate = useNavigate()
   const [data, setData] = useState();
   const [header, setHeader] = useState([]);
   const [dataNew, setDataNew] = useState([]);
   const [nameFile, setNameFile] = useState('');
-  const dispatch = useDispatch()
-  const {infoUser} = useSelector(state => state.auth)
+  const [nameSemester, setNameSemester] = useState('');
+
   const importData = (e) => {
     const file = e.target.files[0];
     setNameFile(file.name);
@@ -40,25 +42,38 @@ const UpFile = () => {
     };
     reader.readAsBinaryString(file);
   };
+
   const submitSave = () => {
     const data = []
     dataNew.map((item) => {
-      const newObject = {}
-      if (infoUser.manager) {
-        newObject['mssv'] = item['MSSV']
-        newObject['name'] = item['Họ tên']
-        newObject['course'] = item['Khóa nhập học']
-        newObject['status'] = item['Trạng thái FA21']
-        newObject['majors'] = item['Ngành FA21']
-        newObject['name'] = item['Họ tên']
-        newObject['email'] = item['Email']
-        newObject['supplement'] = item['bổ sung']
-        newObject['campus_id'] = infoUser.manager.cumpus
-         data.push(newObject)
+      const newObject = {
+        "statuscheck": 0, 
+        "id": `${Math.random()}`,
+        "phone": "",
+        "address": "",
+        "internship_industry": "",
+        "link_cv": "https://www.topcv.vn/xem-cv/UgMHA1RRUlBYAQ1SVlIFBgYCVAcKBwYPWQBVBgc18a",
+        "status_detail": "",
+        "user_id":'' ,
+        "classify": ""
       }
-    
+      newObject['mssv'] = item['MSSV']
+      newObject['name'] = item['Họ tên']
+      newObject['course'] = item['Khóa nhập học']
+      newObject['status'] = item['Trạng thái FA21']
+      newObject['majors'] = item['Ngành FA21']
+      newObject['name'] = item['Họ tên']
+      newObject['email'] = item['Email']
+      newObject['supplement'] = item['bổ sung']
+      data.push(newObject)
     })
-    dispatch(insertStudent(data))
+    if (nameSemester == '') {
+      alert("Bạn chưa điền tên năm học này !")
+    } else {
+      DataAPI.add({ data: data, name: nameSemester })
+      alert("Lưu thành công ")
+      navigate("/sinh-vien/danh-sach-dang-ky")
+    }
 
   };
   const submitCole = () => {
@@ -79,6 +94,7 @@ const UpFile = () => {
         <input type="file" onChange={(e) => importData(e)} id="up-file" />
         {data && (
           <div className="button_save">
+            <Input placeholder="Tên kỳ (ví dụ : Summer 2021...)" onChange={(e) => setNameSemester(e.target.value)} style={{ width: '230px' }} />
             <button onClick={() => submitSave()}>Lưu</button>
             <button onClick={() => submitCole()}>Hủy</button>
           </div>
@@ -86,7 +102,6 @@ const UpFile = () => {
       </div>
       {data !== undefined && (
         <table>
-          <thead></thead>
           <tbody>
             {data !== undefined &&
               data.map((r, i) => (

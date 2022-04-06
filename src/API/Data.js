@@ -1,7 +1,8 @@
 import { axiosClient } from "./Link";
+import {stringify} from 'qs'
 const DataAPI = {
-    getAll() {
-        const url = `/data`;
+    getAll(page) {
+        const url = `/data?${stringify(page)}`;
         return axiosClient.get(url);
     },
     get(id) {
@@ -15,6 +16,10 @@ const DataAPI = {
     remove(id) {
         const url = `/data/${id}`;
         return axiosClient.delete(url);
+    },
+    upload(id, data) {
+        const url = `/data/${id}`;
+        return axiosClient.put(url, data);
     },
 
 };
