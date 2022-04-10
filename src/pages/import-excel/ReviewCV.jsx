@@ -13,6 +13,7 @@ import {
 import {  useNavigate } from 'react-router-dom';
 import { filterBranch, filterStatuss } from '../../ultis/selectOption';
 import { omit } from 'lodash';
+
 const { Option } = Select;
 
 const ReviewCV = () => {
@@ -24,6 +25,10 @@ const ReviewCV = () => {
     loading,
   } = useSelector((state) => state.reviewer);
 
+  console.log({
+    listStudentAssReviewer: { total, list },
+    loading,
+  })
 
   const [chooseIdStudent, setChooseIdStudent] = useState([]);
   const [listIdStudent, setListIdStudent] = useState([]);
@@ -223,10 +228,13 @@ const ReviewCV = () => {
     dispatch(uploadStudent(dataNew))
     setChooseIdStudent([])
   }
+
+
+ 
   return (
     <div className="status">
       <h4>Review CV</h4>
-
+    
       <div className="filter">
         <span>Ngành: </span>
 
@@ -268,8 +276,8 @@ const ReviewCV = () => {
           onChange={(val) => handleStandardTableChange('classify', val)}
           placeholder="Lọc theo phân loại"
         >
-          <Option value="0">Tự tìm</Option>
-          <Option value="1">Nhờ nhà trường</Option>
+          <Option value="0" key='1'>Tự tìm</Option>
+          <Option value="1" key='2'>Nhờ nhà trường</Option>
         </Select>
         <span
           style={{
@@ -295,10 +303,10 @@ const ReviewCV = () => {
               onChange={actionOnchange}
               placeholder="Chọn"
             >
-              <Option value='assgin'>
+              <Option value='assgin' key='1'>
                 Kéo việc
               </Option>
-              <Option value='edit' >
+              <Option value='edit' key='1'>
                 Sửa lại
               </Option>
             </Select>
@@ -310,22 +318,22 @@ const ReviewCV = () => {
                 onChange={(e) => selectStatus(e)}
                 placeholder="Chọn trạng thái"
               >
-                <Option value='0'>
+                <Option value='0' key='0'>
                   Chờ kiểm tra
                 </Option>
-                <Option value='1' >
+                <Option value='1' key='1'>
                   Đang kiểm tra
                 </Option>
-                <Option value='2' >
+                <Option value='2' key='2'>
                   Đã nhận
                 </Option>
-                <Option value='3' >
+                <Option value='3' key='3'>
                   Không đủ điều
                 </Option>
-                <Option value='4' >
+                <Option value='4' key='4'>
                   Trượt
                 </Option>
-                <Option value='5' >
+                <Option value='5' key='5'>
                   Chưa đăng ký
                 </Option>
               </Select>

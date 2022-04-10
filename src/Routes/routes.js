@@ -14,6 +14,7 @@ import Privateadmin from "./private/privateAdmin";
 import Notfound from "../pages/404/404";
 import ReportForm from "../pages/reportForm/ReportForm";
 import Formrp from "../pages/form/Form";
+import Reviewform from "../pages/mywork/Reviewform";
 const Router = () => {
   return (
     <Routes>
@@ -54,6 +55,14 @@ const Router = () => {
           element={
             <Privateadmin>
               <ReviewCV />
+            </Privateadmin>
+          }
+        />
+           <Route
+          path="review-form"
+          element={
+            <Privateadmin>
+              <Reviewform />
             </Privateadmin>
           }
         />

@@ -61,6 +61,7 @@ const reviewerSlice = createSlice({
         })
         builder.addCase(getListStudentAssReviewer.fulfilled, (state, action) => {
             state.loading = false
+            console.log(action.payload)
             state.listStudentAssReviewer = action.payload
         })
         builder.addCase(getListStudentAssReviewer.rejected, (state, action) => {
@@ -68,5 +69,5 @@ const reviewerSlice = createSlice({
         })
     }
 })
-export const {uploadStudent}=reviewerSlice.actions
+export const { uploadStudent } = reviewerSlice.actions
 export default reviewerSlice.reducer

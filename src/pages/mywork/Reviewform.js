@@ -12,6 +12,8 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import { filterBranch, filterStatuss } from '../../ultis/selectOption';
 import { omit } from 'lodash';
+import * as FileSaver from 'file-saver';
+import * as XLSX from 'xlsx';
 const { Option } = Select;
 
 const Reviewform = () => {
@@ -179,10 +181,23 @@ const Reviewform = () => {
     };
     dispatch(getStudent(data));
   };
+
+  const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+  const fileExtension = '.xlsx';
+
+  const exportToCSV = (list) => {
+      const ws = XLSX.utils.json_to_sheet(list);
+      const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
+      const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+      const data = new Blob([excelBuffer], {type: fileType});
+      FileSaver.saveAs(data, fileExtension);
+  }
   return (
     <div className="status">
-      <h4>Review CV</h4>
-
+      <h4>Review biểu mẫu</h4>
+      <Button variant="warning" onClick={(e) => exportToCSV(list)}>Export</Button>
+      <br />
+      <br />
       <div className="filter">
         <span>Ngành: </span>
 

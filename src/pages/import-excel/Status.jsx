@@ -9,6 +9,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { filterBranch, filterStatuss } from '../../ultis/selectOption';
 import { omit } from 'lodash';
+import * as FileSaver from 'file-saver';
+import * as XLSX from 'xlsx';
 const { Option } = Select;
 
 const Status = () => {
@@ -170,10 +172,47 @@ const Status = () => {
     navigate('/review-cv');
   }
 
+
+  const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+  const fileExtension = '.xlsx';
+
+  const exportToCSV = (list) => {
+    let newDataStudent = []
+    list.filter(item => {
+      const newList = {}
+      newList['Mssv'] = item['mssv']
+      newList['Họ và Tên'] = item['name']
+      newList['Email'] = item['email']
+      newList['Chuyên ngành'] = item['majors']
+      newList['Số điện thoại'] = item['phoneNumber']
+      newList['Địa chỉ'] = item['address']
+      newList['Tên Công ty'] = item['nameCompany']
+      newList['Địa chỉ Công ty'] = item['addressCompany']
+      newList['Số điện thoại Công ty'] = item['phoneNumberCompany']
+      newList['Email công ty'] = item['emailEnterprise']
+      newList['Thái độ Điểm'] = item['attitudePoint']
+      newList['Khóa học'] = item['course']
+      newList['Hình thức'] = item['form']
+      newList['Thời gian thực tập'] = item['internshipTime']
+      newList['Vị trí'] = item['position']
+      newList['Mã bài'] = item['postCode']
+      newList['Báo cáo'] = item['report']
+      newList['Kết quả Điểm'] = item['resultScore']
+      newList['Bổ sung'] = item['supplement']
+      newList['Hỗ trợ'] = item['support']
+      newDataStudent.push(newList)
+    })
+    const ws = XLSX.utils.json_to_sheet(newDataStudent);
+    const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
+    const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+    const data = new Blob([excelBuffer], { type: fileType });
+    FileSaver.saveAs(data, fileExtension);
+  }
   return (
     <div className="status">
       <h4>Sinh viên đăng ký thực tập</h4>
-
+      <Button variant="warning" onClick={(e) => exportToCSV(list)}>Export</Button>
+      <br /><br />
       <div className="filter">
         <span>Ngành:  </span>
 
