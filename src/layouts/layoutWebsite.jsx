@@ -14,25 +14,15 @@ import { Content } from 'antd/lib/layout/layout';
 import { useSelector } from 'react-redux';
 import './layout.css';
 import SubMenu from 'antd/lib/menu/SubMenu';
-import { getCookie, removeCookie, STORAGEKEY } from '../ultis/storage.js';
-import jwt_decode from 'jwt-decode';
-import { setAuthHeader } from '../API/Link.js';
 
 const { Sider } = Layout;
 function LayoutWebsite() {
-  const accessToken = getCookie(STORAGEKEY.ACCESS_TOKEN)
   const [state, setState] = useState(false);
   const { infoUser: { isAdmin } } = useSelector((state) => state.auth);
   const onCollapse = () => {
     setState(!state);
   };
   
-  useEffect(()=>{
-    if (accessToken) {
-      setAuthHeader(accessToken)
-    }
-  },[accessToken])
-
   return (
     <div>
       <Layout style={{ minHeight: '100vh' }}>
