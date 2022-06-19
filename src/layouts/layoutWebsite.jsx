@@ -94,6 +94,18 @@ function LayoutWebsite() {
                 >
                   <NavLink to="major">Danh sách ngành học</NavLink>
                 </Menu.Item>
+                <Menu.Item
+                  key="124"
+                  icon={<ProfileOutlined className="icon-link" />}
+                >
+                  <NavLink to="/employee-manager">Danh sách nhân viên</NavLink>
+                </Menu.Item>
+                <Menu.Item
+                  key="125s"
+                  icon={<ProfileOutlined className="icon-link" />}
+                >
+                  <NavLink to="/campus-manager">Danh sách cơ sở</NavLink>
+                </Menu.Item>
               </>
             ) : (
               <>

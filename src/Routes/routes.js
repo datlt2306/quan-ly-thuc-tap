@@ -20,6 +20,7 @@ import ListOfBusiness from '../pages/business/ListOfBusiness';
 import FormSemester from '../pages/semesters/semesters';
 import Major from '../pages/major/major';
 import PrivateStudent from './private/privateStudent';
+import CampusManager from '../pages/campus/Campus';
 // import Company from "../pages/company/company";
 const Router = () => {
   return (
@@ -99,6 +100,14 @@ const Router = () => {
           element={
               <Privateadmin>
                 <EmployeeManager />
+              </Privateadmin>
+          }
+        />
+        <Route
+          path="/campus-manager"
+          element={
+              <Privateadmin>
+                <CampusManager />
               </Privateadmin>
           }
         />
