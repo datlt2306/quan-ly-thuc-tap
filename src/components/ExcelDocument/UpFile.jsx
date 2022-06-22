@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as XLSX from 'xlsx';
 import { insertBusiness } from '../../features/businessSlice/businessSlice';
 import { insertStudent } from '../../features/StudentSlice/StudentSlice';
-import styles from "../../common/styles/upfile.css"
 const UpFile = ({  keys, parentMethods}) => {
   const {major, smester_id, campus_id} = parentMethods
   const [dataNew, setDataNew] = useState([]);
@@ -135,16 +134,16 @@ const UpFile = ({  keys, parentMethods}) => {
   const refInput = useRef();
 
   return (
-    <div className={styles.header}>
+    <div className="header">
       <label htmlFor="up-file">
-        <div className={styles.buttonUpfile}>
-          <UploadOutlined className={styles.icon} /> Tải file excel
+        <div className="button-upfile">
+          <UploadOutlined className="icon" /> Tải file excel
         </div>
-        {nameFile && dataNew.length > 0 && <span className={styles.spanUploadName}>{nameFile}</span>}
+        {nameFile && dataNew.length > 0 && <span className="span-upload-name">{nameFile}</span>}
       </label>
       <input type="file" ref={refInput} onChange={(e) => importData(e)} id="up-file" />
       {dataNew.length > 0 && (
-        <div className={styles.button}>
+        <div className="button">
           <Button style={{ marginRight: 10 }} onClick={() => submitSave()} type="primary">
             Lưu
           </Button>

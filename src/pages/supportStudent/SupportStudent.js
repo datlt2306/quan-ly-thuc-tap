@@ -166,6 +166,7 @@ const SupportStudent = ({
     setValue(e.target.value);
   };
 
+  console.log(listNarrow);
 
   const check = time.endTime > new Date().getTime();
   const isCheck =

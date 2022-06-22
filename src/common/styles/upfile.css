@@ -3,7 +3,7 @@
     border-bottom: 1px solid rgb(214, 214, 214);
     padding: 10px 0;
 }
-.spanUploadName{
+.span-upload-name{
     margin: 0 10px;
 }
 #up-file{
@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
 }
-.buttonUpfile{
+.button-upfile{
     border: 1px solid rgb(214, 214, 214);
     padding: 5px 10px;
     cursor: pointer;

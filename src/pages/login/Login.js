@@ -37,7 +37,7 @@ const Login = () => {
   };
   const redirect = ({ payload: { isAdmin } }) => {
     message.success("Đăng nhập thành công");
-    return isAdmin ? navigate("/status") : navigate("/info-student");
+    return isAdmin ? navigate("/") : navigate("/info-student");
   };
   const handleChange = (value) => {
     setCumpus(value);

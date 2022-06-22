@@ -53,7 +53,7 @@ function LayoutWebsite() {
                     key="4"
                     icon={<ProfileOutlined className="icon-link" />}
                   >
-                    <NavLink to="/status">Danh sách đăng ký</NavLink>
+                    <NavLink to="/">Danh sách đăng ký</NavLink>
                   </Menu.Item>
                   <Menu.Item key="111" icon={<BankOutlined />}>
                     <NavLink to="company">Danh sách Công Ty</NavLink>
@@ -73,21 +73,6 @@ function LayoutWebsite() {
                       <NavLink to="review-report">Báo cáo</NavLink>
                     </Menu.Item>
                   </SubMenu>
-                  <SubMenu
-                    key="sub2"
-                    icon={<UnorderedListOutlined />}
-                    title="Ngành học"
-                  >
-                   <Menu.Item
-                    key="123"
-                  >
-                    <NavLink to="major">Danh sách ngành học</NavLink>
-                  </Menu.Item>
-                    <Menu.Item key="109">
-                      <NavLink to="narrows">Ngành hẹp</NavLink>
-                    </Menu.Item>
-              
-                  </SubMenu>
                   <Menu.Item
                     key="125"
                     icon={<CalendarOutlined className="icon-link" />}
@@ -100,11 +85,13 @@ function LayoutWebsite() {
                   >
                     <NavLink to="form-register">Thời gian đăng ký</NavLink>
                   </Menu.Item>
-               
-
-                  
-
-                  {Number(infoUser?.manager?.role) === 2 && (
+                  <Menu.Item
+                    key="123"
+                    icon={<ProfileOutlined className="icon-link" />}
+                  >
+                    <NavLink to="major">Danh sách ngành học</NavLink>
+                  </Menu.Item>
+                  {Number(infoUser?.manager?.role) == 2 && (
                     <Menu.Item
                       key="124"
                       icon={<ProfileOutlined className="icon-link" />}
@@ -114,7 +101,7 @@ function LayoutWebsite() {
                       </NavLink>
                     </Menu.Item>
                   )}
-                  {Number(infoUser?.manager?.role) === 2 && (
+                  {Number(infoUser?.manager?.role) == 2 && (
                     <Menu.Item
                       key="125s"
                       icon={<ProfileOutlined className="icon-link" />}

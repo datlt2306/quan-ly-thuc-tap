@@ -5,7 +5,7 @@ import { getLocal } from '../../ultis/storage';
 const PrivateRoute = ({children}) => {
   const user  = getLocal()
   if (!user) {
-   return  <Navigate to='/login' replace />
+   return <Navigate to='/login' replace />
   }
   return children
 }

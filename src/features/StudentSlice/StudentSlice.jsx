@@ -1,8 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import StudentAPI from '../../API/StudentAPI';
+import _ from 'lodash'
+import { Button } from 'antd';
 export const getStudent = createAsyncThunk('student/getStudent', async (page) => {
+  const {onShowDetail} = page
   const { data } = await StudentAPI.getAll(page);
-  return data
+  return {data: data,
+    func: onShowDetail}
 });
 export const insertStudent = createAsyncThunk('student/insertStudent', async (action) => {
   const { data } = await StudentAPI.add(action);
@@ -38,8 +42,18 @@ const studentSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getStudent.fulfilled, (state, {payload}) => {
+      const {data, func} = payload
       state.loading = false;
-      state.listStudent = payload
+      state.listStudent = {
+        ...data,
+        list: _.reduce(data.list, (res, item)=>{
+          res.push({
+            ...item,
+            mssv: (<Button type='link' onClick={() => func(item.mssv, item) } >{item.mssv}</Button>)
+          })
+          return res
+        },[])
+      }
     });
     builder.addCase(getStudent.pending, (state, action) => {
       state.loading = true;

@@ -4,10 +4,7 @@ export const getListMajor = createAsyncThunk("major/getListMajor", async () => {
   const { data } = await majorAPI.getList();
   return data?.majors;
 });
-export const createMajor = createAsyncThunk("major/createMajor", async z => {
-  const {data} = await majorAPI.create(z)
-  return data
-})
+
 export const updateMajor = createAsyncThunk("major/updateMajor", async (z) => {
   const { data } = await majorAPI.update(z._id, z);
   return data;
@@ -38,20 +35,21 @@ const majorSlice = createSlice({
       state.loading = false;
     });
 
-    builder.addCase(createMajor.pending, (state, { payload }) => {
-      state.loading = true;
-    });
-    builder.addCase(createMajor.fulfilled, (state, {payload}) => {
-      state.listMajor=[
-        payload,
-        ...state.listMajor
-      ]
-      state.loading = false;
-    });
-    builder.addCase(createMajor.rejected, (state) => {
-      state.loading = false;
-      state.success = false;
-    });
+    //createMajor
+    // builder.addCase(majoradd.pending, (state, { payload }) => {
+    //   state.listMajor.push(payload.major)
+    //   state.message = payload.message
+    //   state.loading = true;
+    // });
+    // builder.addCase(majoradd.fulfilled, (state, action) => {
+    //   state.message = action.payload;
+    //   state.success = true;
+    //   state.loading = false;
+    // });
+    // builder.addCase(majoradd.rejected, (state) => {
+    //   state.loading = false;
+    //   state.success = false;
+    // });
 
     //updateMajor
     builder.addCase(updateMajor.pending, (state) => {
