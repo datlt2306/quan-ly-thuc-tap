@@ -1,9 +1,8 @@
 import axios from "axios";
 const token = localStorage.getItem("token");
-console.log("dssdadsadsa", token);
 export const axiosClient = axios.create({
   // Localhost
-  // baseURL: "http://localhost:8000/api",
+  //baseURL: "http://localhost:8000/api",
   // DEV
   // baseURL: "http://hbgreen.com.vn/api",
   // Main

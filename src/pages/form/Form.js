@@ -1,14 +1,5 @@
 import { UploadOutlined } from "@ant-design/icons";
-import {
-  Form,
-  Input,
-  Button,
-  Upload,
-  message,
-  Spin,
-  Space,
-  DatePicker,
-} from "antd";
+import { Input, Button, message, Spin, Form, Upload, DatePicker } from "antd";
 import { object } from "prop-types";
 import React, { useEffect, useState } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
@@ -64,15 +55,17 @@ const Formrp = ({ studentById }) => {
   const datePicker = (date, dateString) => {
     setStartDate(date._d);
   };
+
   useEffect(() => {
     dispatch(
       getTimeForm({
         typeNumber: 2,
-        semester_id: infoUser.student.smester_id,
+        semester_id: infoUser.student?.smester_id,
       })
     );
     dispatch(getStudentId(infoUser));
-  }, []);
+  }, [dispatch, infoUser, spin]);
+
   function guardarArchivo(files, data) {
     const file = files; //the file
     const urlGGDriveCV = `https://script.google.com/macros/s/AKfycbzu7yBh9NkX-lnct-mKixNyqtC1c8Las9tGixv42i9o_sMYfCvbTqGhC5Ps8NowC12N/exec
@@ -136,7 +129,6 @@ const Formrp = ({ studentById }) => {
     },
   };
 
-  
   let timeCheck = time;
   if (studentById.listTimeForm && studentById.listTimeForm.length > 0) {
     const checkTimeStudent = studentById.listTimeForm.find(
@@ -151,28 +143,54 @@ const Formrp = ({ studentById }) => {
     timeCheck.endTime > new Date().getTime() &&
     timeCheck.startTime < new Date().getTime();
   const isCheck =
-    (studentById && studentById.statusCheck === 2) ||
-    studentById.statusCheck === 5;
+    (studentById && studentById?.statusCheck === 2) ||
+    studentById?.statusCheck === 5;
   const nameCompany =
     studentById.support === 0 ? studentById.nameCompany : studentById.business;
-    const onFinish = async (values) => {
-      setSpin(true);
-      try {
-        const newData = {
-          ...values,
-          mssv: mssv,
-          email: email,
-          typeNumber: time.typeNumber,
-          internshipTime: startDate,
-          semester_id: infoUser.student.smester_id,
-          checkTime: check,
-        };
-        await guardarArchivo(file, newData);
-      } catch (error) {
-        const dataErr = await error.response.data;
-        message.error(dataErr.message);
+  const onFinish = async (values) => {
+    setSpin(true);
+    try {
+      const newData = {
+        ...values,
+        mssv: mssv,
+        email: email,
+        typeNumber: time.typeNumber,
+        internshipTime: startDate,
+        semester_id: infoUser.student.smester_id,
+        checkTime: check,
+      };
+
+      if (values.upload === undefined || values.upload === null) {
+        message.error(
+          "Vui lòng tải file Biên bản định dạng PDF của bạn lên FORM biên bản"
+        );
+        setSpin(false);
+        return;
       }
-    };
+      await guardarArchivo(file, newData);
+    } catch (error) {
+      const dataErr = await error.response.data;
+      message.error(dataErr.message);
+    }
+  };
+  const config = {
+    rules: [
+      {
+        type: "object",
+        required: true,
+        message: "Vui lòng nhập ngày bắt đầu thực tập!",
+      },
+    ],
+  };
+
+  const configNameCompany = {
+    rules: [
+      {
+        required: true,
+        message: "Vui lòng nhập tên doanh nghiệp",
+      },
+    ],
+  };
   return (
     <>
       {check ? (
@@ -183,54 +201,33 @@ const Formrp = ({ studentById }) => {
             <Spin spinning={spin}>
               <Form
                 {...formItemLayout}
-                form={form}
                 className={styles.form}
                 name="register"
                 onFinish={onFinish}
-                initialValues={{
-                  residence: ["zhejiang", "hangzhou", "xihu"],
-                  prefix: "86",
-                }}
-                scrollToFirstError
               >
                 {nameCompany ? null : (
                   <Form.Item
                     name="nameCompany"
                     label="Tên doanh nghiệp"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Vui lòng nhập tên doanh nghiệp",
-                      },
-                    ]}
+                    {...(nameCompany ? null : configNameCompany)}
                   >
                     <Input placeholder="Tên doanh nghiệp" />
                   </Form.Item>
                 )}
-
-                <Form.Item
-                  // name="user_code"
-                  label="Mã sinh viên"
-                >
+                <Form.Item label="Mã sinh viên">
                   <p className={styles.text_form_label}>
                     {studentById.mssv.toUpperCase()}
                   </p>
                 </Form.Item>
-
                 <Form.Item label="Họ và Tên">
                   <p className={styles.text_form_label}>{studentById.name}</p>
                 </Form.Item>
                 <Form.Item
                   name="internshipTime"
                   label="Thời gian bắt đầu thực tập"
-                  // rules={[{}]}
+                  {...config}
                 >
-                  <Space direction="vertical">
-                    <DatePicker
-                      onChange={datePicker}
-                      placeholder="Bắt đầu thực tập"
-                    />
-                  </Space>
+                  <DatePicker onChange={datePicker} placeholder="Bắt đầu" />
                 </Form.Item>
                 <Form.Item
                   name="upload"
@@ -241,7 +238,18 @@ const Formrp = ({ studentById }) => {
                     <Button icon={<UploadOutlined />}>Click to upload</Button>
                   </Upload>
                 </Form.Item>
-                <Form.Item {...tailFormItemLayout}>
+                <Form.Item
+                  wrapperCol={{
+                    xs: {
+                      span: 24,
+                      offset: 0,
+                    },
+                    sm: {
+                      span: 16,
+                      offset: 8,
+                    },
+                  }}
+                >
                   <Button type="primary" htmlType="submit">
                     Submit
                   </Button>
@@ -252,6 +260,11 @@ const Formrp = ({ studentById }) => {
         ) : !studentById.form ? (
           "Bạn phải nộp thành công CV trước"
         ) : (
+          // studentById.statusCheck === 3 ? (
+          //   "Sinh viên đã trượt kỳ thực tập. Chúc em sẽ cố gắng hơn vào kỳ thực tập sau"
+          // ) : studentById.statusCheck === 9 ? (
+          //   "Chúc mừng sinh viên đã hoàn thành kỳ thực tập"
+          // ) :
           "Bạn đã nộp biên bản thành công."
         )
       ) : (

@@ -235,6 +235,7 @@ const Reviewform = ({
       },
     },
   ];
+
   // xóa tìm kiếm
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
@@ -293,6 +294,7 @@ const Reviewform = ({
     if (id.length === chooseIdStudent.length) {
       setStatus({
         listIdStudent: id,
+        listEmailStudent: listEmailStudent,
         email: infoUser?.manager?.email,
         status: value,
       });
@@ -507,72 +509,72 @@ const Reviewform = ({
               </Col>
               {chooseIdStudent.length > 0 && (
                 <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                    <Row gutter={[10, 10]}>
-                      <Col xs={24} sm={24} md={24} lg={4} xl={4}>
-                        <span style={{ whiteSpace: "nowrap" }}>Lựa chọn:</span>
-                      </Col>
+                  <Row gutter={[10, 10]}>
+                    <Col xs={24} sm={24} md={24} lg={4} xl={4}>
+                      <span style={{ whiteSpace: "nowrap" }}>Lựa chọn:</span>
+                    </Col>
+                    <Col xs={24} sm={12} md={12} lg={10} xl={10}>
+                      <Select
+                        className="comfirm-click"
+                        style={{ width: "100%" }}
+                        onChange={actionOnchange}
+                        placeholder="Chọn"
+                      >
+                        <Option value="assgin" key="1">
+                          Kéo việc
+                        </Option>
+                        <Option value="edit" key="2">
+                          Cập nhật trạng thái
+                        </Option>
+                      </Select>
+                    </Col>
+                    {Object.keys(status).length >= 1 && (
                       <Col xs={24} sm={12} md={12} lg={10} xl={10}>
                         <Select
-                          className="comfirm-click"
-                          style={{ width: "100%" }}
-                          onChange={actionOnchange}
-                          placeholder="Chọn"
+                          className="upload-status"
+                          style={
+                            window.innerWidth > 1024
+                              ? {
+                                  width: "100%",
+                                }
+                              : { width: "100%" }
+                          }
+                          onChange={(e) => selectStatus(e)}
+                          placeholder="Chọn trạng thái"
                         >
-                          <Option value="assgin" key="1">
-                            Kéo việc
-                          </Option>
-                          <Option value="edit" key="2">
-                            Cập nhật trạng thái
-                          </Option>
+                          {statusConfigForm.map((item, index) => (
+                            <Option value={item.value} key={index}>
+                              {item.title}
+                            </Option>
+                          ))}
                         </Select>
                       </Col>
-                      {Object.keys(status).length >= 1 && (
-                        <Col xs={24} sm={12} md={12} lg={10} xl={10}>
-                          <Select
-                            className="upload-status"
-                            style={
-                              window.innerWidth > 1024
-                                ? {
-                                    width: "100%",
-                                  }
-                                : { width: "100%" }
-                            }
-                            onChange={(e) => selectStatus(e)}
-                            placeholder="Chọn trạng thái"
-                          >
-                            {statusConfigForm.map((item, index) => (
-                              <Option value={item.value} key={index}>
-                                {item.title}
-                              </Option>
-                            ))}
-                          </Select>
-                        </Col>
-                      )}
-                      {note === 1 || note === 5 ? (
-                        <Col span={24}>
-                          <TextArea
-                            // value={value}
-                            onChange={handleNote}
-                            placeholder="Ghi chú..."
-                            autoSize={{ minRows: 3, maxRows: 5 }}
-                          />
-                        </Col>
-                      ) : null}
-                      {Object.keys(status).length > 0 && (
-                        <Col xs={24} sm={12} md={12} lg={4} xl={4}>
-                          <Button
-                            style={{
-                              color: "#fff",
-                              background: "#ee4d2d",
-                              minWidth: "90px",
-                            }}
-                            onClick={() => comfirm()}
-                          >
-                            Xác nhận
-                          </Button>
-                        </Col>
-                      )}
-                    </Row>
+                    )}
+                    {note === 1 || note === 5 ? (
+                      <Col span={24}>
+                        <TextArea
+                          // value={value}
+                          onChange={handleNote}
+                          placeholder="Ghi chú..."
+                          autoSize={{ minRows: 3, maxRows: 5 }}
+                        />
+                      </Col>
+                    ) : null}
+                    {Object.keys(status).length > 0 && (
+                      <Col xs={24} sm={12} md={12} lg={4} xl={4}>
+                        <Button
+                          style={{
+                            color: "#fff",
+                            background: "#ee4d2d",
+                            minWidth: "90px",
+                          }}
+                          onClick={() => comfirm()}
+                        >
+                          Xác nhận
+                        </Button>
+                      </Col>
+                    )}
+                  </Row>
                 </Col>
               )}
             </Row>

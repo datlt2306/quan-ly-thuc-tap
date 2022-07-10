@@ -69,9 +69,6 @@ const SupportStudent = ({
 
   useEffect(() => {
     dispatch(getStudentId(infoUser));
-  }, []);
-
-  useEffect(() => {
     dispatch(
       getTimeForm({
         typeNumber: value,
@@ -80,15 +77,24 @@ const SupportStudent = ({
     );
     dispatch(
       getBusiness({
-        campus_id: infoUser.student.campus_id,
-        smester_id: infoUser.student.smester_id,
-        majors: infoUser.student.majors,
+        campus_id: studentById.student?.campus_id,
+        smester_id: studentById.student?.smester_id,
+        majors: studentById.student?.majors,
       })
     );
     dispatch(getListMajor());
     dispatch(getNarow());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, value, status]);
+  }, [
+    dispatch,
+    infoUser.student?.smester_id,
+    spin,
+    studentById.student?.campus_id,
+    studentById.student?.majors,
+    studentById.student?.smester_id,
+    value,
+  ]);
+
   function guardarArchivo(files, data) {
     const file = files; //the file
 
@@ -108,13 +114,14 @@ const SupportStudent = ({
       ) //send to Api
         .then((res) => res.json())
         .then((a) => {
-          const newData = { ...data, CV: a.url };
+          let newData = { ...data, CV: a.url };
           RegisterInternAPI.upload(newData)
             .then((res) => {
               setSpin(true);
-              message.success(res.data.message);
-              setStatus(2);
-              setSpin(false);
+              message.success(res.data.message).then(() => {
+                setValue(2);
+                setSpin(false);
+              });
             })
             .catch(async (err) => {
               const dataErr = await err.response.data;
@@ -124,6 +131,8 @@ const SupportStudent = ({
                 message.error(`${dataErr.message}`);
               }
             });
+          setStatus(2);
+          setSpin(false);
         })
         .catch((e) => {
           message.success("Có lỗi xảy ra! Vui lòng đăng ký lại");
@@ -167,7 +176,6 @@ const SupportStudent = ({
     timeCheck.startTime < new Date().getTime();
   const isCheck =
     studentById?.statusCheck === 10 || studentById?.statusCheck === 1;
-
   const dataNarrow =
     studentById &&
     studentById?.majors &&
@@ -199,11 +207,11 @@ const SupportStudent = ({
         typeNumber: value,
         semester_id: infoUser.student.smester_id,
         checkTime: check,
-        ///dispatch Redux
       };
+
       if (value === 0) {
         setSpin(true);
-        const resData = await RegisterInternAPI.upload(data);
+        const resData = await RegisterInternAPI.upload({ ...data, CV: null });
         message.success(resData.data.message);
         setStatus(2);
         setSpin(false);
@@ -285,7 +293,9 @@ const SupportStudent = ({
                           required: true,
                           min: 10,
                           max: 13,
-                          pattern: new RegExp("(84|0[3|5|7|8|9])+([0-9]{8})"),
+                          pattern: new RegExp(
+                            "^(0|84)(2(0[3-9]|1[0-6|8|9]|2[0-2|5-9]|3[2-9]|4[0-9]|5[1|2|4-9]|6[0-3|9]|7[0-7]|8[0-9]|9[0-4|6|7|9])|3[2-9]|5[5|6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])([0-9]{7})$"
+                          ),
                           message: "Vui lòng nhập đúng số điện thoại",
                         },
                       ]}
@@ -340,6 +350,7 @@ const SupportStudent = ({
                         rules={[
                           {
                             required: true,
+
                             message: "Vui lòng chọn doanh nghiệp",
                           },
                         ]}
@@ -448,6 +459,9 @@ const SupportStudent = ({
                           rules={[
                             {
                               required: true,
+                              pattern: new RegExp(
+                                "^(0|84)(2(0[3-9]|1[0-6|8|9]|2[0-2|5-9]|3[2-9]|4[0-9]|5[1|2|4-9]|6[0-3|9]|7[0-7]|8[0-9]|9[0-4|6|7|9])|3[2-9]|5[5|6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])([0-9]{7})$"
+                              ),
                               message:
                                 "Vui lòng nhập Số điện thoại doanh nghiệp",
                             },
@@ -488,6 +502,11 @@ const SupportStudent = ({
               </>
             </>
           ) : (
+            // studentById.statusCheck === 3 ? (
+            //   "Sinh viên đã trượt kỳ thực tập. Chúc em sẽ cố gắng hơn vào kỳ thực tập sau"
+            // ) : studentById.statusCheck === 9 ? (
+            //   "Chúc mừng sinh viên đã hoàn thành kỳ thực tập"
+            // ) :
             "Đăng ký thông tin thành công"
           )}
         </Form>

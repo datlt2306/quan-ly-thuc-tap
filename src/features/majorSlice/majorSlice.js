@@ -1,37 +1,36 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import majorAPI from '../../API/majorAPi';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import majorAPI from "../../API/majorAPi";
 
-export const getListMajor = createAsyncThunk('major/getListMajor', async () => {
+export const getListMajor = createAsyncThunk("major/getListMajor", async () => {
   const { data } = await majorAPI.getList();
   return data?.majors;
 });
-export const getMajor = createAsyncThunk('major/getMajor', async (id) => {
+export const getMajor = createAsyncThunk("major/getMajor", async (id) => {
   const { data } = await majorAPI.get(id);
   return data?.major;
 });
-export const createMajor = createAsyncThunk('major/createMajor', async (z) => {
+export const createMajor = createAsyncThunk("major/createMajor", async (z) => {
   const { data } = await majorAPI.create(z.data);
   z.callback(data.status, data.msg);
   return data;
 });
-export const updateMajor = createAsyncThunk('major/updateMajor', async (z) => {
-  const {data} = await majorAPI.update(z.data._id, z.data);
-  console.log(data);
+export const updateMajor = createAsyncThunk("major/updateMajor", async (z) => {
+  const { data } = await majorAPI.update(z.data._id, z.data);
   z.callback(data.status, data.message);
   return data.data;
 });
 
-export const removeMajor = createAsyncThunk('major,removeMajor', async (id) => {
+export const removeMajor = createAsyncThunk("major,removeMajor", async (id) => {
   const { data } = await majorAPI.remove(id);
   return data;
 });
 const majorSlice = createSlice({
-  name: 'major',
+  name: "major",
   initialState: {
     listMajor: [],
     loading: false,
     major: {},
-    message: '',
+    message: "",
     success: false,
   },
   extraReducers: (builder) => {
@@ -63,8 +62,8 @@ const majorSlice = createSlice({
       state.loading = true;
     });
     builder.addCase(createMajor.fulfilled, (state, { payload }) => {
-      if(payload.status === 'ok'){
-      state.listMajor = [payload.data, ...state.listMajor];
+      if (payload.status === "ok") {
+        state.listMajor = [payload.data, ...state.listMajor];
       }
       state.loading = false;
     });
@@ -75,13 +74,11 @@ const majorSlice = createSlice({
 
     //updateMajor
     builder.addCase(updateMajor.pending, (state) => {
-      console.log(123);
       state.loading = true;
     });
     builder.addCase(updateMajor.fulfilled, (state, { payload }) => {
-      console.log(payload);
       let data = state.listMajor.filter((item) => item._id !== payload._id);
-      state.listMajor = [ payload ,...data, ];
+      state.listMajor = [payload, ...data];
       state.loading = false;
     });
     builder.addCase(updateMajor.rejected, (state, payload) => {
@@ -94,8 +91,9 @@ const majorSlice = createSlice({
       state.loading = true;
     });
     builder.addCase(removeMajor.fulfilled, (state, { payload }) => {
-      console.log(payload);
-      state.listMajor = state.listMajor.filter((item) => item._id !== payload.major._id);
+      state.listMajor = state.listMajor.filter(
+        (item) => item._id !== payload.major._id
+      );
       state.message = payload.message;
       state.loading = false;
     });

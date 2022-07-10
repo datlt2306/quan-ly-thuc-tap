@@ -57,6 +57,12 @@ const ReportForm = ({ infoUser, studentById }) => {
   const [file, setFile] = useState();
   const [endDate, setEndDate] = useState();
   const [form] = Form.useForm();
+
+  const lForm = studentById.CV;
+  const dispatch = useDispatch();
+  const datePicker = (date, dateString) => {
+    setEndDate(date._d);
+  };
   useEffect(() => {
     dispatch(
       getTimeForm({
@@ -66,12 +72,7 @@ const ReportForm = ({ infoUser, studentById }) => {
     );
     dispatch(getStudentId(infoUser));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  const lForm = studentById.CV;
-  const dispatch = useDispatch();
-  const datePicker = (date, dateString) => {
-    setEndDate(date._d);
-  };
+  }, [dispatch, infoUser.student.smester_id, spin]);
   function guardarArchivo(files, data) {
     const file = files; //the file
     const urlGGDriveCV = `https://script.google.com/macros/s/AKfycbzu7yBh9NkX-lnct-mKixNyqtC1c8Las9tGixv42i9o_sMYfCvbTqGhC5Ps8NowC12N/exec
@@ -167,6 +168,15 @@ const ReportForm = ({ infoUser, studentById }) => {
         semester_id: infoUser.student.smester_id,
         checkTime: check,
       };
+
+      if (values.upload === undefined || values.upload === null) {
+        message.error(
+          "Vui lòng tải file Báo cáo định dạng PDF hoặc Docx của bạn lên FORM biên bản"
+        );
+        setSpin(false);
+        return;
+      }
+
       await guardarArchivo(file, newData);
     } catch (error) {
       const dataErr = await error.response.data;
@@ -182,6 +192,15 @@ const ReportForm = ({ infoUser, studentById }) => {
     );
   }
 
+  const config = {
+    rules: [
+      {
+        type: "object",
+        required: true,
+        message: "Vui lòng nhập ngày kết thúc thực tập!",
+      },
+    ],
+  };
   return (
     <>
       {check ? (
@@ -191,15 +210,9 @@ const ReportForm = ({ infoUser, studentById }) => {
             <Spin spinning={spin}>
               <Form
                 {...formItemLayout}
-                form={form}
                 className={styles.form}
                 name="register"
                 onFinish={onFinish}
-                initialValues={{
-                  residence: ["zhejiang", "hangzhou", "xihu"],
-                  prefix: "86",
-                }}
-                scrollToFirstError
               >
                 <Form.Item label="Họ và Tên">
                   <p className={styles.text_form_label}>{studentById.name}</p>
@@ -216,55 +229,6 @@ const ReportForm = ({ infoUser, studentById }) => {
                       : infoUser?.student?.nameCompany?.toUpperCase()}
                   </p>
                 </Form.Item>
-
-                <Form.Item
-                  label="Thời gian bắt đầu thực tập"
-                  // rules={[{}]}
-                >
-                  <Space direction="vertical">
-                    <DatePicker
-                      defaultValue={moment(
-                        studentById.internshipTime,
-                        dateFormat
-                      )}
-                      disabled
-                      placeholder="Bắt đầu thực tập"
-                    />
-                  </Space>
-                </Form.Item>
-                <Form.Item
-                  name="EndInternshipTime"
-                  label="Thời gian kết thúc thực tập"
-                  // rules={[{}]}
-                >
-                  <Space direction="vertical">
-                    <DatePicker
-                      disabledDate={disabledDate}
-                      onChange={datePicker}
-                      placeholder="Kết thúc thực tập"
-                    />
-                  </Space>
-                </Form.Item>
-                <Form.Item
-                  name="attitudePoint"
-                  label="Điểm thái độ"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Vui lòng nhập điểm thái độ",
-                    },
-                  ]}
-                >
-                  <InputNumber
-                    style={{
-                      width: "50%",
-                    }}
-                    min={0}
-                    max={10}
-                    placeholder="Nhập điểm thái độ thực tập"
-                  />
-                </Form.Item>
-
                 <Form.Item
                   name="resultScore"
                   label="Điểm kết quả"
@@ -285,6 +249,51 @@ const ReportForm = ({ infoUser, studentById }) => {
                   />
                 </Form.Item>
                 <Form.Item
+                  name="attitudePoint"
+                  label="Điểm thái độ"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Vui lòng nhập điểm thái độ",
+                    },
+                  ]}
+                >
+                  <InputNumber
+                    style={{
+                      width: "50%",
+                    }}
+                    min={0}
+                    max={10}
+                    placeholder="Nhập điểm thái độ thực tập"
+                  />
+                </Form.Item>
+                <Form.Item
+                  label="Thời gian bắt đầu thực tập"
+                  // rules={[{}]}
+                >
+                  <Space direction="vertical">
+                    <DatePicker
+                      defaultValue={moment(
+                        studentById.internshipTime,
+                        dateFormat
+                      )}
+                      disabled
+                      placeholder="Bắt đầu thực tập"
+                    />
+                  </Space>
+                </Form.Item>
+                <Form.Item
+                  name="internshipTime"
+                  label="Thời gian kết thúc thực tập"
+                  {...config}
+                >
+                  <DatePicker
+                    onChange={datePicker}
+                    disabledDate={disabledDate}
+                    placeholder="Kết thúc"
+                  />
+                </Form.Item>
+                <Form.Item
                   name="upload"
                   label="Upload báo cáo (Docx hoặc PDF)"
                   valuePropName="upload"
@@ -293,7 +302,19 @@ const ReportForm = ({ infoUser, studentById }) => {
                     <Button icon={<UploadOutlined />}>Click to upload</Button>
                   </Upload>
                 </Form.Item>
-                <Form.Item {...tailFormItemLayout}>
+                <Form.Item
+                  wrapperCol={{
+                    xs: {
+                      span: 24,
+                      offset: 0,
+                    },
+                    sm: {
+                      span: 16,
+                      offset: 8,
+                    },
+                  }}
+                  {...tailFormItemLayout}
+                >
                   <Button type="primary" htmlType="submit">
                     Submit
                   </Button>
@@ -310,8 +331,12 @@ const ReportForm = ({ infoUser, studentById }) => {
               </Form>
             </Spin>
           </>
-        ) : !studentById.form ? (
+        ) : studentById.statusCheck === 3 ? (
+          "Sinh viên đã trượt kỳ thực tập. Chúc em sẽ cố gắng hơn vào kỳ thực tập sau"
+        ) : studentById.statusCheck === 4 ? (
           "Bạn phải nộp thành công biên bản trước"
+        ) : studentById.statusCheck === 9 ? (
+          "Chúc mừng sinh viên đã hoàn thành kỳ thực tập"
         ) : (
           "Bạn đã nộp báo cáo thành công"
         )

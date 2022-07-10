@@ -39,7 +39,6 @@ const Formtimepicker = () => {
     (state) => state.semester
   );
 
-  console.log(listSemesters);
   const {
     formTime: { times },
     loading,
