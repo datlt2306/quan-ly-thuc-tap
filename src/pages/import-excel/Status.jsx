@@ -298,9 +298,9 @@ const Status = ({
         newObject['Báo cáo'] = item['report'];
         newObject['Người review'] = item['reviewer'];
         newObject['Số điện thoại'] = item['phoneNumber'] === null ? null : '0' + item['phoneNumber'];
-        newObject['Tên công ty'] = item['business']?.name;
-        newObject['Địa chỉ công ty'] = item['business']?.address;
-        newObject['Vị trí thực tập'] = item['business']?.internshipPosition;
+        newObject['Tên công ty'] = item?.nameCompany ? item['nameCompany'] :  item['business']?.name;
+        newObject['Địa chỉ công ty'] = item?.addressCompany ? item['addressCompany'] : item['business']?.address;
+        newObject['Vị trí thực tập'] = item?.dream ? item['dream'] : item['business']?.internshipPosition;
         newObject['Mã số thuế'] = item['taxCode'];
         newObject['Điểm thái độ'] = item['attitudePoint'];
         newObject['Điểm kết quả'] = item['resultScore'];
