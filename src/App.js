@@ -1,14 +1,19 @@
-// import './common/styles/App.css'
 import 'antd/dist/antd.css';
-import Router from './Routes/routes';
-import './App.css'
+import './App.css';
+import { renderRoutes, routerData } from './Routes/router';
+import { BrowserRouter, Routes } from 'react-router-dom';
+import { Suspense } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <Router />
-    </div>
-  );
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Suspense fallback={<div>Loading ...</div>}>
+					<Routes>{renderRoutes(routerData)}</Routes>
+				</Suspense>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
