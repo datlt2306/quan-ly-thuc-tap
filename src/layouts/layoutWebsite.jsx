@@ -23,6 +23,7 @@ import Media from 'react-media';
 import { connect } from 'react-redux';
 import { updateIsMobile } from '../features/global.js';
 import { path } from '../config/path.jsx';
+import { roles } from '../ultis.js';
 const { Sider } = Layout;
 function LayoutWebsite({ isMobile }) {
 	const [state, setState] = useState(false);
@@ -62,7 +63,7 @@ function LayoutWebsite({ isMobile }) {
 						<Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
 							{infoUser?.isAdmin ? (
 								<>
-									{infoUser?.manager?.role === 1 ? (
+									{infoUser?.manager?.role === roles.MANAGER ? (
 										<>
 											<Menu.Item
 												key="4"

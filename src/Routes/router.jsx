@@ -3,6 +3,7 @@ import { lazy } from 'react';
 import { Navigate, Route } from 'react-router-dom';
 import { path } from '../config/path';
 import LayoutWebsite from '../layouts/layoutWebsite';
+import { roles } from '../ultis';
 import { getLocal } from '../ultis/storage';
 import Privateadmin from './private/privateAdmin';
 import PrivateRoute from './private/privateRoute';
@@ -152,7 +153,7 @@ function PageLayout() {
 		<Navigate
 			to={
 				getLocal().isAdmin
-					? getLocal()?.manager?.role === 1
+					? getLocal()?.manager?.role === roles.MANAGER
 						? path.STATUS
 						: path.EMPLOYEE_MANAGER
 					: path.INFO_STUDENT

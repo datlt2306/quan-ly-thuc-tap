@@ -20,6 +20,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { logout } from '../../features/authSlice/authSlice';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { path } from '../../config/path';
+import { roles } from '../../ultis';
 
 const Rightcontent = () => {
 	const dispatch = useDispatch();
@@ -107,7 +108,7 @@ const Rightcontent = () => {
 						<Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
 							{isAdmin ? (
 								<>
-									{infoUser?.manager?.role === 1 ? (
+									{infoUser?.manager?.role === roles.MANAGER ? (
 										<>
 											<Menu.Item
 												key="4"
