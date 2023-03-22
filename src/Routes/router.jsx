@@ -4,7 +4,7 @@ import { Navigate, Route } from 'react-router-dom';
 import { path } from '../config/path';
 import LayoutWebsite from '../layouts/layoutWebsite';
 import { roles } from '../ultis';
-import { getLocal } from '../ultis/storage';
+import { getLocal } from '../utils/storage';
 import Privateadmin from './private/privateAdmin';
 import PrivateRoute from './private/privateRoute';
 import PrivateStudent from './private/privateStudent';

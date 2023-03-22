@@ -7,7 +7,7 @@ import { Select, Empty, message } from 'antd';
 import { useNavigate } from 'react-router';
 import { getListCumpus } from '../../features/cumpusSlice/cumpusSlice';
 import { defaultTime } from '../../features/semesters/semestersSlice';
-import { roles } from '../../ultis';
+import { roles } from '../../utils/constConfig';
 const { Option } = Select;
 
 const Login = () => {

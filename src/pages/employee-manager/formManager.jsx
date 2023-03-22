@@ -1,8 +1,8 @@
 import { Form, Input, Button, Select } from 'antd';
 import _ from 'lodash';
 import React, { useState } from 'react';
-import { roles } from '../../ultis';
-import { getLocal } from '../../ultis/storage';
+import { roles } from '../../utils/constConfig';
+import { getLocal } from '../../utils/storage';
 const { Option } = Select;
 const FormManager = ({ onFinish, forms, listCumpus, current }) => {
 	const onFinishForm = (values) => {

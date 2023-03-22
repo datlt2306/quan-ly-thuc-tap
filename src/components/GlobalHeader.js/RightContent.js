@@ -20,7 +20,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { logout } from '../../features/authSlice/authSlice';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { path } from '../../config/path';
-import { roles } from '../../ultis';
+import { roles } from '../../utils/constConfig';
 
 const Rightcontent = () => {
 	const dispatch = useDispatch();
