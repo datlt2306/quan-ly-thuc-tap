@@ -3,7 +3,7 @@ import { lazy } from 'react';
 import { Navigate, Route } from 'react-router-dom';
 import { path } from '../config/path';
 import LayoutWebsite from '../layouts/layoutWebsite';
-import { roles } from '../ultis';
+import { roles } from '../utils/constConfig';
 import { getLocal } from '../utils/storage';
 import Privateadmin from './private/privateAdmin';
 import PrivateRoute from './private/privateRoute';
