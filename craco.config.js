@@ -1,11 +1,11 @@
 module.exports = {
-    devServer: {
-        proxy: {
-          '/api': {
-            target: process.env.REACT_APP_API,
-            changeOrigin: true,
-            pathRewrite: { '^/api': '' }
-          },
-        },
-      },
-  };
+	devServer: {
+		proxy: {
+			'/api': {
+				target: 'https://hungthinhland.org.vn/api',
+				changeOrigin: true,
+				pathRewrite: { '^/api': '' },
+			},
+		},
+	},
+};

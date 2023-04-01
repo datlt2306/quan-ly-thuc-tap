@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getLocal } from '../ultis/storage';
 const axiosClient = axios.create({
-	baseURL: process.env.REACT_APP_API,
+	baseURL: 'https://hungthinhland.org.vn/api',
 });
 
 axiosClient.interceptors.request.use((req) => {
