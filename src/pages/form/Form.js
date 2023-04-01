@@ -117,14 +117,9 @@ const Formrp = ({ studentById }) => {
 
 	const props = {
 		beforeUpload: (file) => {
-			const isFile =
-				file.type === 'application/pdf' ||
-				file.type === 'image/jpeg' ||
-				file.type === 'image/jpg' ||
-				file.type ===
-					'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+			const isFile = file.type === 'application/pdf';
 			if (!isFile) {
-				message.error(`${file.name} không phải là file PDF hoặc ảnh`);
+				message.error(`${file.name} không phải là file PDF`);
 			}
 
 			return isFile || Upload.LIST_IGNORE;
