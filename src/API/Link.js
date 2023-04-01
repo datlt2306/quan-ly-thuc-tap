@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getLocal } from '../ultis/storage';
 const axiosClient = axios.create({
-	baseURL: 'http://localhost:8000/api',
+	baseURL: process.env.REACT_APP_API,
 });
 
 axiosClient.interceptors.request.use((req) => {
