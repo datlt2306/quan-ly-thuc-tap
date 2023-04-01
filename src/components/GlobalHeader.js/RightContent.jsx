@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import "./index.css";
 import { Link, NavLink } from "react-router-dom";
-import { logout } from "../../features/authSlice/authSlice";
+import { logout } from "../../features/authSlice";
 import SubMenu from "antd/lib/menu/SubMenu";
 
 const Rightcontent = () => {

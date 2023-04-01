@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import cumpusSlice from '../features/cumpusSlice/cumpusSlice';
-import authSlice from '../features/authSlice/authSlice';
+import authSlice from '../features/authSlice';
 import studentSlice from '../features/StudentSlice/StudentSlice';
 import userSlice from '../features/UserSlice/UserSilce';
 import specializationSlice from '../features/specializationSlice/specializationSlice';

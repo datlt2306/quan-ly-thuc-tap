@@ -1,55 +1,43 @@
-.login_wrapper{
-    height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color:#fff;
-}
-.campus{
-    margin-top:20px;
-    width:40vw;
-}
-.button_login{
-    margin-top:20px;
-    width:40vw;
-    display: flex;
-    justify-content: center;
-}
-.logo{
-    width:30vw;
+.campus {
+	width: 35vw;
+	padding: 5rem;
+	background: white;
+
+	border-radius: 5%;
+	box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48),
+		-6px -2px 16px 0px rgba(255, 255, 255, 0.8);
 }
 
-@media screen and (max-width: 800px) {
-    .campus{
-        margin-top:20px;
-        width:60vw;
-    }
-    .button_login{
-        margin-top:20px;
-        width:60vw;
-        display: flex;
-        justify-content: center;
-    }
-    .logo{
-        width:60vw;
-    }
-    
+.w_full {
+	width: 100%;
 }
 
-@media screen and (max-width: 550px) {
-    .campus{
-        margin-top:20px;
-        width:80vw;
-    }
-    .button_login{
-        margin-top:20px;
-        width:80vw;
-        display: flex;
-        justify-content: center;
-    }
-    .logo{
-        width:80vw;
-    }
-    
+.button_login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: auto;
+
+	font-size: 18px;
+	padding: 10px;
 }
+
+.button_login span {
+	padding-left: 0.25rem;
+}
+
+.image_logo {
+	display: block;
+	object-fit: contain;
+}
+
+@media only screen and (max-width: 768px) {
+	.campus {
+		width: 80vw;
+	}
+	.button_login {
+		font-size: initial;
+	}
+  }
