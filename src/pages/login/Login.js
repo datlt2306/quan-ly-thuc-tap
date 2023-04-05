@@ -86,7 +86,7 @@ const Login = () => {
 				<GoogleLogin
 					disabled={cumpus === '' ? true : false}
 					className={styles.button_login}
-					clientId="650354261161-f7lhh1o5130u6cvfdjcafh399mt4mo5u.apps.googleusercontent.com"
+					clientId="1067928155142-p5bbhemla2u56m72vtelfvmgk5qhm4a9.apps.googleusercontent.com"
 					buttonText="Login With Google"
 					onSuccess={handleLogin}
 					onFailure={handleFailure}
