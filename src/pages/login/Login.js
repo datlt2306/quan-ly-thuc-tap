@@ -1,95 +1,104 @@
 import React, { useEffect, useState } from 'react';
-import GoogleLogin from 'react-google-login';
 import styles from './Login.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginGoogle } from '../../features/authSlice/authSlice';
-import { Select, Empty, message } from 'antd';
+import { Select, message } from 'antd';
 import { useNavigate } from 'react-router';
 import { getListCumpus } from '../../features/cumpusSlice/cumpusSlice';
 import { defaultTime } from '../../features/semesters/semestersSlice';
+import { GoogleLogin } from '@react-oauth/google';
 const { Option } = Select;
 
 const Login = () => {
-  const dispatch = useDispatch();
-  const [cumpus, setCumpus] = useState('');
-  const navigate = useNavigate();
-  const { listCumpus } = useSelector((state) => state.cumpus);
-  const handleFailure = (result) => {
-    message.error('error');
-  };
+	const dispatch = useDispatch();
+	const [campus, setCampus] = useState('');
+	const navigate = useNavigate();
+	const { listCumpus } = useSelector((state) => state.cumpus);
 
-  const handleLogin = (googleData) => {
-    dispatch(
-      defaultTime({
-        filter: { campus_id: cumpus },
-        callback: (data) => {
-          if (data.status === 'ok') {
-            const dataForm = {
-              token: googleData.tokenId,
-              cumpusId: cumpus,
-              smester_id: data?.result?._id,
-            };
-            dispatch(loginGoogle({ val: dataForm, callback: cbMessage }));
-          }
-        },
-      }),
-    );
-  };
-  const cbMessage = (payload) => {
-    const { isAdmin, manager } = payload;
-    if (payload?.success) {
-      message.success('Đăng nhập thành công');
-      return isAdmin
-        ? manager.role === 2
-          ? navigate('/employee-manager')
-          : navigate('/status')
-        : navigate('/info-student');
-    } else {
-      message.success('Đăng nhập thất bại');
-    }
-  };
+	const handleFailure = (err) => {
+		message.error(err);
+	};
 
-  const handleChange = (value) => {
-    setCumpus(value);
-  };
+	const handleLogin = (credentialResponse) => {
+		dispatch(
+			defaultTime({
+				filter: { campus_id: campus },
+				callback: (data) => {
+					if (data.status === 'ok') {
+						const dataForm = {
+							token: credentialResponse.credential,
+							cumpusId: campus,
+							smester_id: data?.result?._id,
+						};
+						dispatch(loginGoogle({ val: dataForm, callback: callbackRedirect }));
+					}
+				},
+			})
+		);
+	};
 
-  useEffect(() => {
-    dispatch(getListCumpus());
-  }, [dispatch]);
+	const callbackRedirect = (payload) => {
+		const { isAdmin, manager } = payload;
+		if (!payload?.success) {
+			message.error('Đăng nhập thất bại');
+			return;
+		}
 
-  return (
-    <div className={styles.login_wrapper}>
-      <img
-        alt="diep"
-        className={styles.logo}
-        src="https://career.fpt.edu.vn/Content/images/logo_unit/Poly.png"
-      />
+		message.success('Đăng nhập thành công');
 
-      <div>
-        <Select className={styles.campus} defaultValue="Lựa chọn cơ sở" onChange={handleChange}>
-          {listCumpus ? (
-            listCumpus.map((item, index) => (
-              <Option key={index} value={item._id}>
-                {item.name}
-              </Option>
-            ))
-          ) : (
-            <Empty />
-          )}
-        </Select>
-      </div>
-      <div className={styles.button_login}>
-        <GoogleLogin
-          disabled={cumpus === '' ? true : false}
-          className={styles.button_login}
-          clientId="116205081385-umqm7s5qlspf4s0tc4jke7tafpvgj2k7.apps.googleusercontent.com"
-          buttonText="Login With Google"
-          onSuccess={handleLogin}
-          onFailure={handleFailure}
-        />
-      </div>
-    </div>
-  );
+		return isAdmin
+			? manager.role === 2
+				? navigate('/employee-manager')
+				: navigate('/status')
+			: navigate('/info-student');
+	};
+
+	const handleChange = (value) => {
+		setCampus(value);
+	};
+
+	useEffect(() => {
+		dispatch(getListCumpus());
+	}, [dispatch]);
+
+	return (
+		<div className={styles.login_wrapper}>
+			<img
+				alt="LOGO"
+				className={styles.logo}
+				src="https://career.fpt.edu.vn/Content/images/logo_unit/Poly.png"
+			/>
+			<div>
+				<Select
+					className={styles.campus}
+					defaultValue="Lựa chọn cơ sở"
+					onChange={handleChange}
+				>
+					{listCumpus &&
+						listCumpus.map((item, index) => (
+							<Option key={index} value={item._id}>
+								{item.name}
+							</Option>
+						))}
+				</Select>
+			</div>
+			<div
+				style={{
+					margin: '1rem',
+					pointerEvents: campus ? 'all' : 'none',
+					opacity: campus ? 1 : 0.5,
+				}}
+			>
+				<GoogleLogin
+					theme={campus ? 'filled_blue' : 'outline'}
+					size="large"
+					text="Đăng nhập bằng Google"
+					onSuccess={handleLogin}
+					onError={handleFailure}
+				/>
+			</div>
+		</div>
+	);
 };
 
 export default Login;
