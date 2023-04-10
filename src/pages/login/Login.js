@@ -11,6 +11,7 @@ const { Option } = Select;
 
 const Login = () => {
 	const dispatch = useDispatch();
+  
 	const [campus, setCampus] = useState('');
 	const navigate = useNavigate();
 	const { listCumpus } = useSelector((state) => state.cumpus);
@@ -68,6 +69,7 @@ const Login = () => {
 				className={styles.logo}
 				src="https://career.fpt.edu.vn/Content/images/logo_unit/Poly.png"
 			/>
+      
 			<div>
 				<Select
 					className={styles.campus}
