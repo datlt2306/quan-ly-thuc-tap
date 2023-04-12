@@ -1,21 +1,21 @@
 import * as yup from 'yup';
 
 export const statusValidationSchema = yup.object().shape({
-	mssv: yup.string().required('MSSV is required'),
-	name: yup.string().required('Name is required'),
+	mssv: yup.string().required('Yêu cầu MSSV'),
+	name: yup.string().required('Yêu cầu tên'),
 	course: yup.string(),
 	status: yup.string(),
-	majors: yup.string().required('Majors is required'),
-	email: yup.string().email('Invalid email').required('Email is required'),
+	majorCode: yup.string().required('Yêu cầu chuyên ngành'),
+	email: yup.string().email('Email không hợp lệ').required('Yêu cầu email'),
 	supplement: yup.string(),
 });
 
 export const businessValidationSchema = yup.object().shape({
-	name: yup.string().required('Name is required'),
-	internshipPosition: yup.string().required('Internship position is required'),
-	amount: yup.number().required('Amount is required'),
-	address: yup.string().required('Address is required'),
-	majors: yup.string().required('Majors is required'),
+	name: yup.string().required('Yêu cầu tên'),
+	internshipPosition: yup.string().required('Yêu cầu vị trí thực tập'),
+	amount: yup.number().required('Yêu cầu số lượng'),
+	address: yup.string().required('Yêu cầu địa chỉ'),
+	majorCode: yup.string().required('Yêu cầu chuyên ngành'),
 	description: yup.string(),
 	request: yup.string(),
 	code_request: yup.string(),
