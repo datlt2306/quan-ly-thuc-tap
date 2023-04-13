@@ -21,7 +21,6 @@ import { getLocal } from '../../ultis/storage';
 import confirm from 'antd/lib/modal/confirm';
 const { Option } = Select;
 const Status = ({
-	// listStudent: { list, total },
 	listAllStudent: { list, total },
 	loading,
 	listSemesters,
@@ -45,7 +44,6 @@ const Status = ({
 				: '',
 		smester_id: defaultSemester?._id ? defaultSemester?._id : '',
 	});
-	const [majorImport, setMajorImport] = useState('');
 	const [filter, setFiler] = useState();
 
 	useEffect(() => {
@@ -277,6 +275,7 @@ const Status = ({
 			smester_id: page.smester_id,
 			campus_id: page.campus_id,
 		};
+
 		dispatch(
 			getDataExport({
 				filter: dataFilter,
@@ -351,31 +350,27 @@ const Status = ({
 		setVisible(false);
 	};
 	let parentMethods = {
-		majorImport,
-		...page,
 		closeVisible,
 	};
-
-	if (page.smester_id === '') {
-		parentMethods = {
-			majorImport,
-			...page,
-			smester_id: defaultSemester?._id,
-			closeVisible,
-		};
-	}
+	// if (page.smester_id === '') {
+	// 	parentMethods = {
+	// 		...page,
+	// 		smester_id: defaultSemester?._id,
+	// 		closeVisible,
+	// 	};
+	// }
 
 	return (
 		<div className={style.status}>
 			<div className={style.flex_header}>
-				<h4 className={style.flex_header.h4}>Sinh viên đăng ký thực tập</h4>
+				<h4 className={style.flex_header.h4}>Sinh viên đăng ký thực tập </h4>
 				<Col span={8} className="d-flex">
 					<Select
 						style={{
 							width: '100%',
 						}}
 						onChange={(val) => setPage({ ...filter, ...page, smester_id: val })}
-						placeholder="Chọn kỳ`"
+						placeholder="Chọn kỳ"
 						defaultValue={
 							defaultSemester && defaultSemester?._id ? defaultSemester?._id : ''
 						}
@@ -412,7 +407,7 @@ const Status = ({
 								// onClick={(e) => exportToCSV(getListAllStudent)}
 								onClick={handleExport}
 							>
-								Export
+								Tải file
 							</Button>
 							<Button
 								type="primary"
@@ -840,88 +835,27 @@ const Status = ({
 					closeModal={onCloseModal}
 				/>
 			)}
-
-			<div>
-				<Drawer
-					title="Thêm Sinh Viên"
-					placement="left"
-					onClose={closeVisible}
-					visible={visible}
-				>
-					<Row>
-						<Col span={6}>
-							<p className={style.pDrawer}>Học Kỳ : </p>
-						</Col>
-						<Col span={18}>
-							<Select
-								style={{
-									width: '100%',
-								}}
-								onChange={(val) => setPage({ ...filter, ...page, smester_id: val })}
-								placeholder="Chọn kỳ"
-								defaultValue={
-									defaultSemester && defaultSemester?._id
-										? defaultSemester?._id
-										: ''
-								}
-							>
-								{!defaultSemester?._id && (
-									<Option value={''} disabled>
-										Chọn kỳ
-									</Option>
-								)}
-								{listSemesters &&
-									listSemesters.length > 0 &&
-									listSemesters?.map((item, index) => (
-										<Option value={item?._id} key={index}>
-											{item?.name}
-										</Option>
-									))}
-							</Select>
-						</Col>
-					</Row>
-
-					<Row
-						style={{
-							marginTop: 20,
-						}}
-					>
-						<Col span={6}>
-							<p className={style.pDrawer}>Ngành:</p>
-						</Col>
-						<Col span={18}>
-							<Select
-								style={{
-									width: '100%',
-								}}
-								onChange={(val) => setMajorImport(val)}
-								placeholder="Chọn ngành"
-							>
-								{listMajors &&
-									listMajors?.map((item, index) => (
-										<Option value={item?._id} key={index}>
-											{item?.name}
-										</Option>
-									))}
-							</Select>
-						</Col>
-					</Row>
-					<div className={style.upFile}>
-						<UpFile parentMethods={parentMethods} keys="status" />
-						<br />
-						<div>
-							<b className={text.red}>Lưu ý</b>
-							<p className={text.red}>
-								* Giữ nguyên định dạng file mẫu xlsx không thay đổi
-							</p>
-							<p className={text.red}>
-								* Chỉ cập thêm công tin đúng theo các cột trong file excel mẫu
-							</p>
-						</div>
-						<DownloadFile keys="status" name="sinh viên" />
+			<Drawer
+				title="Thêm Sinh Viên"
+				placement="left"
+				onClose={closeVisible}
+				visible={visible}
+			>
+				<div className={style.upFile}>
+					<UpFile parentMethods={parentMethods} keys="status" />
+					<br />
+					<div>
+						<b className={text.red}>Lưu ý</b>
+						<p className={text.red}>
+							* Giữ nguyên định dạng file mẫu xlsx không thay đổi
+						</p>
+						<p className={text.red}>
+							* Chỉ cập thêm công tin đúng theo các cột trong file excel mẫu
+						</p>
 					</div>
-				</Drawer>
-			</div>
+					<DownloadFile keys="status" name="sinh viên" />
+				</div>
+			</Drawer>
 		</div>
 	);
 };
