@@ -124,7 +124,10 @@ const Status = ({
 			dataIndex: 'majors',
 			width: 100,
 			render: (val) => {
+				if (!listMajors || !Object.keys(listMajors).length) return '';
+
 				const major = listMajors.find((m) => m._id === val);
+
 				if (!major) return '';
 				return major.name ?? '';
 			},
