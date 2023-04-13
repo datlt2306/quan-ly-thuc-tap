@@ -117,12 +117,6 @@ const UpFile = ({ keys, parentMethods }) => {
 					}
 				});
 
-			if (!categorizedFileData.length || categorizedFileData.length < mappedFileData.length) {
-				submitCole();
-				message.error('Lỗi dữ liệu!');
-				return;
-			}
-
 			//validate
 			Promise.all(
 				categorizedFileData.map((data) => {
@@ -142,7 +136,14 @@ const UpFile = ({ keys, parentMethods }) => {
 					return;
 				});
 			setDataNew(categorizedFileData);
+
+			if (!categorizedFileData.length || categorizedFileData.length < mappedFileData.length) {
+				submitCole();
+				message.error('Lỗi dữ liệu!');
+				return;
+			}
 		};
+
 		refInput.current.value = '';
 		reader.readAsBinaryString(file);
 	};
