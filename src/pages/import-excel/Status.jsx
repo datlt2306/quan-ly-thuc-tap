@@ -35,6 +35,7 @@ const Status = ({
 	const dispatch = useDispatch();
 	const [chooseIdStudent, setChooseIdStudent] = useState([]);
 	const [listIdStudent, setListIdStudent] = useState([]);
+	const [filteredStudentList, setFilteredStudentList] = useState();
 	const [page, setPage] = useState({
 		page: 1,
 		limit: 20,
@@ -44,13 +45,18 @@ const Status = ({
 				: '',
 		smester_id: defaultSemester?._id ? defaultSemester?._id : '',
 	});
-	const [filter, setFiler] = useState();
+	const [filter, setFilter] = useState();
 
 	useEffect(() => {
 		setChooseIdStudent([]);
 		dispatch(getAllStudent(page));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [page]);
+
+	//set danh sách sinh viên kỳ mặc định(default)
+	useEffect(() => {
+		setFilteredStudentList(list);
+	}, [list]);
 
 	useEffect(() => {
 		dispatch(getSemesters({ campus_id: infoUser?.manager?.campus_id }));
@@ -85,6 +91,13 @@ const Status = ({
 			},
 		},
 		{
+			title: 'Kỳ Học',
+			dataIndex: 'smester_id',
+			width: 100,
+			fixed: 'left',
+			render: (val, key) => <p style={{ textAlign: 'left', margin: 0 }}>{val.name}</p>,
+		},
+		{
 			title: 'Họ và Tên',
 			dataIndex: 'name',
 			width: 150,
@@ -101,14 +114,20 @@ const Status = ({
 		{
 			title: 'Điện thoại',
 			dataIndex: 'phoneNumber',
-			render: (text) => (text === null ? null : `0${text}`),
+			render: (_, { phoneNumber }) => {
+				return phoneNumber ?? null;
+			},
 			width: 160,
 		},
 		{
 			title: 'Ngành',
 			dataIndex: 'majors',
 			width: 100,
-			render: (val) => val?.name,
+			render: (val) => {
+				const major = listMajors.find((m) => m._id === val);
+				if (!major) return '';
+				return major.name ?? '';
+			},
 		},
 		{
 			title: 'Phân loại',
@@ -135,90 +154,83 @@ const Status = ({
 			title: 'Người review',
 			dataIndex: 'reviewer',
 			width: 230,
-			render: (val) => {
-				if (val) {
-					const name = val.split('@');
-					return name[0];
-				} else {
-					return val;
-				}
-			},
+			render: (val) => (val ? val.split('@')[0] : val),
 		},
 		{
 			title: 'Trạng thái',
 			dataIndex: 'statusCheck',
 			render: (status, student) => {
-				if (status === 0) {
-					return (
-						<span className="status-fail" style={{ color: 'orange' }}>
-							Chờ kiểm tra
-						</span>
-					);
-				} else if (status === 1) {
-					return (
-						<span className="status-up" style={{ color: 'grey' }}>
-							Sửa lại CV
-						</span>
-					);
-				} else if (status === 2) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							{student.support === 0 ? ' Chờ nộp biên bản' : ' Nhận CV'}
-						</span>
-					);
-				} else if (status === 3) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							Trượt
-						</span>
-					);
-				} else if (status === 4) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							{student?.form ? 'Đã nộp biên bản' : 'Chờ nộp biên bản'} <br />
-						</span>
-					);
-				} else if (status === 5) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							Sửa biên bản <br />
-						</span>
-					);
-				} else if (status === 6) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							Đang thực tập <br />
-						</span>
-					);
-				} else if (status === 7) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							{student?.report ? 'Đã nộp báo cáo' : 'Chờ nộp báo cáo'}
-							<br />
-						</span>
-					);
-				} else if (status === 8) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							Sửa báo cáo <br />
-						</span>
-					);
-				} else if (status === 9) {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							Hoàn thành <br />
-						</span>
-					);
-				} else {
-					return (
-						<span className="status-fail" style={{ color: 'red' }}>
-							Chưa đăng ký
-						</span>
-					);
-				}
+				// TODO update this once BE changed, this should not be hardcoded.
+				const statusMap = {
+					0: {
+						message: 'Chờ kiểm tra',
+						className: 'status-fail',
+						style: { color: '#ff8c00' }, // orange
+					},
+					1: {
+						message: 'Sửa lại CV',
+						className: 'status-up',
+						style: { color: 'grey' },
+					},
+					2: {
+						message: student.support === 0 ? ' Chờ nộp biên bản' : ' Nhận CV',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					3: {
+						message: 'Trượt',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					4: {
+						message: student?.form ? 'Đã nộp biên bản' : 'Chờ nộp biên bản',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					5: {
+						message: 'Sửa biên bản',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					6: {
+						message: 'Đang thực tập',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					7: {
+						message: student?.report ? 'Đã nộp báo cáo' : 'Chờ nộp báo cáo',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					8: {
+						message: 'Sửa báo cáo',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					9: {
+						message: 'Hoàn thành',
+						className: 'status-fail',
+						style: { color: '#ff5733' }, // red
+					},
+					default: {
+						message: 'Chưa đăng ký',
+						className: 'status-up',
+						style: { color: 'grey' },
+					},
+				};
+				const statusInfo = statusMap[status] || statusMap.default;
+				const { message, className, style } = statusInfo;
+
+				return (
+					<span className={className} style={style}>
+						{message}
+						<br />
+					</span>
+				);
 			},
 		},
 	];
+
 	const rowSelection = {
 		onChange: (selectedRowKeys, selectedRows) => {
 			setListIdStudent(selectedRowKeys);
@@ -235,11 +247,16 @@ const Status = ({
 			delete newValue[key];
 		}
 
-		setFiler(newValue);
+		setFilter(newValue);
 	};
 	const handleSearch = () => {
 		setChooseIdStudent([]);
 		dispatch(getAllStudent({ ...page, ...filter }));
+	};
+
+	const handleSemesterChange = (semesterID) => {
+		// setPage({ ...filter, ...page, smester_id: semesterID });
+		setFilteredStudentList(list.filter(({ smester_id: { _id } }) => _id === semesterID));
 	};
 
 	const comfirms = () => {
@@ -284,52 +301,35 @@ const Status = ({
 		);
 	};
 
-	const exportToCSV = (list) => {
+	const exportToCSV = (response) => {
 		const fileType =
 			'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
 		const fileExtension = '.xlsx';
-		const newData = [];
-		list &&
-			list.map((item) => {
-				const newObject = {};
-				newObject['Kỳ học'] = item['smester_id']?.name;
-				newObject['Cơ sở'] = item['campus_id']?.name;
-				newObject['MSSV'] = item['mssv'];
-				newObject['Họ tên'] = item['name'];
-				newObject['Email'] = item['email'];
-				newObject['Ngành'] = item['majors']?.name;
-				newObject['Mã ngành'] = item['majors']?.majorCode;
-				newObject['CV'] = item['CV'];
-				newObject['Biên bản'] = item['form'];
-				newObject['Báo cáo'] = item['report'];
-				newObject['Người review'] = item['reviewer'];
-				newObject['Số điện thoại'] =
-					item['phoneNumber'] === null ? null : '0' + item['phoneNumber'];
-				newObject['Tên công ty'] = item?.nameCompany
-					? item['nameCompany']
-					: item['business']?.name;
-				newObject['Địa chỉ công ty'] = item?.addressCompany
-					? item['addressCompany']
-					: item['business']?.address;
-				newObject['Vị trí thực tập'] = item?.dream
-					? item['dream']
-					: item['business']?.internshipPosition;
-				newObject['Mã số thuế'] = item['taxCode'];
-				newObject['Điểm thái độ'] = item['attitudePoint'];
-				newObject['Điểm kết quả'] = item['resultScore'];
-				newObject['Thời gian thực tập'] = item['internshipTime'];
-				newObject['Hình thức'] = item['support'];
-				newObject['Ghi chú'] = item['note'];
-				return newData.push(newObject);
-			});
-		// eslint-disable-next-line array-callback-return
-		newData.map((item) => {
-			if (item['Hình thức'] === 1) {
-				item['Hình thức'] = 'Hỗ trợ';
-			} else if (item['Hình thức'] === 0) {
-				item['Hình thức'] = 'Tự tìm';
-			} else {
-			}
+		const newData = (response || []).map((item) => {
+			const newObject = {
+				'Kỳ học': item.smester_id?.name,
+				'Cơ sở': item.campus_id?.name,
+				MSSV: item.mssv,
+				'Họ tên': item.name,
+				Email: item.email,
+				Ngành: item.majors?.name,
+				'Mã ngành': item.majors?.majorCode,
+				CV: item.CV,
+				'Biên bản': item.form,
+				'Báo cáo': item.report,
+				'Người review': item.reviewer,
+				'Số điện thoại': item.phoneNumber ? `0${item.phoneNumber}` : '',
+				'Tên công ty': item.nameCompany || item.business?.name,
+				'Địa chỉ công ty': item.addressCompany || item.business?.address,
+				'Vị trí thực tập': item.dream || item.business?.internshipPosition,
+				'Mã số thuế': item.taxCode,
+				'Điểm thái độ': item.attitudePoint,
+				'Điểm kết quả': item.resultScore,
+				'Thời gian thực tập': item.internshipTime,
+				'Hình thức': item.support === 1 ? 'Hỗ trợ' : !item.support ? 'Tự tìm' : '',
+				'Ghi chú': item.note,
+			};
+			return newObject;
 		});
 
 		const ws = XLSX.utils.json_to_sheet(newData);
@@ -352,13 +352,6 @@ const Status = ({
 	let parentMethods = {
 		closeVisible,
 	};
-	// if (page.smester_id === '') {
-	// 	parentMethods = {
-	// 		...page,
-	// 		smester_id: defaultSemester?._id,
-	// 		closeVisible,
-	// 	};
-	// }
 
 	return (
 		<div className={style.status}>
@@ -369,7 +362,7 @@ const Status = ({
 						style={{
 							width: '100%',
 						}}
-						onChange={(val) => setPage({ ...filter, ...page, smester_id: val })}
+						onChange={handleSemesterChange}
 						placeholder="Chọn kỳ"
 						defaultValue={
 							defaultSemester && defaultSemester?._id ? defaultSemester?._id : ''
@@ -404,7 +397,6 @@ const Status = ({
 									minWidth: '90px',
 								}}
 								className={style.button}
-								// onClick={(e) => exportToCSV(getListAllStudent)}
 								onClick={handleExport}
 							>
 								Tải file
@@ -688,7 +680,7 @@ const Status = ({
 					rowKey="_id"
 					loading={loading}
 					columns={columns}
-					dataSource={list}
+					dataSource={filteredStudentList ?? []}
 					scroll={{ x: 'calc(700px + 50%)' }}
 				/>
 			) : (
@@ -729,7 +721,7 @@ const Status = ({
 					}}
 					rowKey="_id"
 					loading={loading}
-					dataSource={list}
+					dataSource={filteredStudentList ?? []}
 				>
 					<Column
 						title="Mssv"
