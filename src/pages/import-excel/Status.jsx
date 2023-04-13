@@ -276,7 +276,6 @@ const Status = ({
 			campus_id: page.campus_id,
 		};
 
-
 		dispatch(
 			getDataExport({
 				filter: dataFilter,
@@ -360,20 +359,13 @@ const Status = ({
 	// 		closeVisible,
 	// 	};
 	// }
-	// if (page.smester_id === '') {
-	// 	parentMethods = {
-	// 		...page,
-	// 		smester_id: defaultSemester?._id,
-	// 		closeVisible,
-	// 	};
-	// }
 
 	return (
 		<div className={style.status}>
 			<div className={style.flex_header}>
 				<h4 className={style.flex_header.h4}>Sinh viên đăng ký thực tập </h4>
 				<Col span={8} className="d-flex">
-					{/* <Select
+					<Select
 						style={{
 							width: '100%',
 						}}
@@ -395,7 +387,7 @@ const Status = ({
 									{item?.name}
 								</Option>
 							))}
-					</Select> */}
+					</Select>
 				</Col>
 				{!isMobile && (
 					<>
@@ -415,7 +407,6 @@ const Status = ({
 								// onClick={(e) => exportToCSV(getListAllStudent)}
 								onClick={handleExport}
 							>
-								Tải file
 								Tải file
 							</Button>
 							<Button
@@ -844,28 +835,6 @@ const Status = ({
 					closeModal={onCloseModal}
 				/>
 			)}
-			<Drawer
-				title="Thêm Sinh Viên"
-				placement="left"
-				onClose={closeVisible}
-				visible={visible}
-			>
-				<div className={style.upFile}>
-					<UpFile parentMethods={parentMethods} keys="status" />
-					<br />
-					<div>
-						<b className={text.red}>Lưu ý</b>
-						<p className={text.red}>
-							* Giữ nguyên định dạng file mẫu xlsx không thay đổi
-						</p>
-						<p className={text.red}>
-							* Chỉ cập thêm công tin đúng theo các cột trong file excel mẫu
-						</p>
-					</div>
-					<DownloadFile keys="status" name="sinh viên" />
-				</div>
-			</Drawer>
-		</div>
 			<Drawer
 				title="Thêm Sinh Viên"
 				placement="left"
