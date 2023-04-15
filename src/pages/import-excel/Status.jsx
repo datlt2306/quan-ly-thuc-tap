@@ -36,6 +36,7 @@ const Status = ({
 	const dispatch = useDispatch();
 	const [chooseIdStudent, setChooseIdStudent] = useState([]);
 	const [listIdStudent, setListIdStudent] = useState([]);
+	const [currentSemester, setCurrentSemester] = useState('');
 	const [page, setPage] = useState({
 		page: 1,
 		limit: 20,
@@ -52,6 +53,7 @@ const Status = ({
 		dispatch(getSemesters({ campus_id: infoUser?.manager?.campus_id }));
 		dispatch(getListMajor());
 		dispatch(fetchManager());
+		setCurrentSemester(defaultSemester._id);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [dispatch]);
 
@@ -105,10 +107,8 @@ const Status = ({
 		{
 			title: 'Số Điện Thoại',
 			dataIndex: 'phoneNumber',
-			render: (_, { phoneNumber }) => {
-				return phoneNumber === '' ? null : '0' + phoneNumber;
-			},
-			width: 130,
+			render: (_, { phoneNumber }) => (phoneNumber ? '0' + phoneNumber : null),
+			width: 100,
 		},
 		{
 			title: 'Ngành',
@@ -290,14 +290,25 @@ const Status = ({
 			...filter,
 		};
 
-		console.log(dataFilter);
-
 		dispatch(
 			getDataExport({
 				filter: dataFilter,
-				callback: (res) => exportToCSV(res),
+				callback: (res) => {
+					//* Temp fix
+					const resData = _.map(res, (item) => {
+						if (item.majors) {
+							item.majors = listMajor.find((major) => item.majors === major._id);
+						}
+						return item;
+					});
+					exportToCSV(resData);
+				},
 			})
 		);
+	};
+
+	const handleExportSelection = (ID) => {
+		setCurrentSemester(ID);
 	};
 
 	const exportToCSV = (response) => {
@@ -325,7 +336,7 @@ const Status = ({
 				'Điểm thái độ': item.attitudePoint,
 				'Điểm kết quả': item.resultScore,
 				'Thời gian thực tập': item.internshipTime,
-				'Hình thức': item.support === 1 ? 'Hỗ trợ' : !item.support ? 'Tự tìm' : '',
+				'Hình thức': item.support === 1 ? 'Hỗ trợ' : item.support === 0 ? 'Tự tìm' : '',
 				'Ghi chú': item.note,
 			};
 			return newObject;
@@ -348,7 +359,10 @@ const Status = ({
 		});
 		setVisible(false);
 	};
-	let parentMethods = {
+
+	const parentMethods = {
+		smester_id: currentSemester,
+		campus_id: infoUser?.manager?.campus_id,
 		closeVisible,
 	};
 
@@ -361,7 +375,6 @@ const Status = ({
 						style={{
 							width: '100%',
 						}}
-						// (val) => setPage({ ...filter, ...page, smester_id: val })
 						onChange={(val) => handleStandardTableChange('smester_id', val)}
 						placeholder="Chọn kỳ"
 						defaultValue={
@@ -568,7 +581,7 @@ const Status = ({
 									defaultValue=""
 								>
 									<Option value="">Tất cả</Option>
-									{listMajor &&
+									{Array.isArray(listMajor) &&
 										listMajor.map((item, index) => (
 											<>
 												<Option value={item?._id} key={index}>
@@ -833,6 +846,36 @@ const Status = ({
 				onClose={closeVisible}
 				visible={visible}
 			>
+				<Row>
+					<Col span={6}>
+						<p className={style.pDrawer}>Học Kỳ : </p>
+					</Col>
+					<Col span={18}>
+						<Select
+							style={{
+								width: '100%',
+							}}
+							onChange={(val) => handleExportSelection(val)}
+							placeholder="Chọn kỳ"
+							defaultValue={
+								defaultSemester && defaultSemester?._id ? defaultSemester?._id : ''
+							}
+						>
+							{!defaultSemester?._id && (
+								<Option value={''} disabled>
+									Chọn kỳ
+								</Option>
+							)}
+							{listSemesters &&
+								listSemesters.length > 0 &&
+								listSemesters?.map((item, index) => (
+									<Option value={item?._id} key={index}>
+										{item?.name}
+									</Option>
+								))}
+						</Select>
+					</Col>
+				</Row>
 				<div className={style.upFile}>
 					<UpFile parentMethods={parentMethods} keys="status" />
 					<br />

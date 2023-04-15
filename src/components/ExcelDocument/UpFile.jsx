@@ -10,7 +10,7 @@ import { businessValidationSchema, statusValidationSchema } from './Validate';
 import _ from 'lodash';
 
 const UpFile = ({ keys, parentMethods }) => {
-	const { closeVisible } = parentMethods;
+	const { closeVisible, campus_id, smester_id } = parentMethods;
 	const [dataNew, setDataNew] = useState([]);
 	const [nameFile, setNameFile] = useState('');
 	const dispatch = useDispatch();
@@ -149,9 +149,11 @@ const UpFile = ({ keys, parentMethods }) => {
 	};
 
 	const submitSave = () => {
+		const payload = { data: dataNew, campus_id, smester_id };
+		console.log(payload);
 		switch (keys) {
 			case 'status':
-				dispatch(insertStudent(dataNew)).then((res) => {
+				dispatch(insertStudent(payload)).then((res) => {
 					notifications(res.payload);
 					setDataNew([]);
 					setNameFile('');
@@ -171,9 +173,9 @@ const UpFile = ({ keys, parentMethods }) => {
 		}
 	};
 	const notifications = (payload) => {
-		if (loading === false && payload !== undefined) {
+		if (loading === false && payload.statusCode === 200) {
 			message.success('Thành công');
-		}
+		} else message.error('Lỗi server!');
 	};
 	const submitCole = () => {
 		setDataNew([]);
