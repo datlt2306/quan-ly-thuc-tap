@@ -323,7 +323,16 @@ const SupportStudent = ({ studentById, listBusiness: { list }, narrow: { listNar
 												marginLeft: '20px',
 											}}
 										>
-											{dataNarrow.map((v, i) => (
+											{[
+												{
+													_id: '640abe8d4ed73d86530a5ee7',
+													name: 'frontend dev 1',
+												},
+												{
+													_id: '642ba05ed91a388355f5f46a',
+													name: 'asdsa',
+												},
+											].map((v, i) => (
 												<Option key={i} value={v._id}>
 													{v.name}
 												</Option>

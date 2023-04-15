@@ -18,6 +18,7 @@ import { defaultTime, getSemesters } from '../../features/semesters/semestersSli
 import { getAllStudent, getDataExport } from '../../features/StudentSlice/StudentSlice';
 import { filterStatuss } from '../../ultis/selectOption';
 import { getLocal } from '../../ultis/storage';
+import _ from 'lodash';
 import confirm from 'antd/lib/modal/confirm';
 const { Option } = Select;
 const Status = ({
@@ -25,7 +26,7 @@ const Status = ({
 	loading,
 	listSemesters,
 	defaultSemester,
-	listMajors,
+	listMajor,
 	isMobile,
 }) => {
 	const infoUser = getLocal();
@@ -35,15 +36,9 @@ const Status = ({
 	const dispatch = useDispatch();
 	const [chooseIdStudent, setChooseIdStudent] = useState([]);
 	const [listIdStudent, setListIdStudent] = useState([]);
-	const [filteredStudentList, setFilteredStudentList] = useState();
 	const [page, setPage] = useState({
 		page: 1,
 		limit: 20,
-		campus_id:
-			infoUser && infoUser.manager && infoUser.manager.campus_id
-				? infoUser.manager.campus_id
-				: '',
-		smester_id: defaultSemester?._id ? defaultSemester?._id : '',
 	});
 	const [filter, setFilter] = useState();
 
@@ -53,17 +48,13 @@ const Status = ({
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [page]);
 
-	//set danh sách sinh viên kỳ mặc định(default)
-	useEffect(() => {
-		setFilteredStudentList(list);
-	}, [list]);
-
 	useEffect(() => {
 		dispatch(getSemesters({ campus_id: infoUser?.manager?.campus_id }));
 		dispatch(getListMajor());
 		dispatch(fetchManager());
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [dispatch]);
+
 	const onShowDetail = (mssv, key) => {
 		setStudentDetail(key);
 		setModal(true);
@@ -112,24 +103,24 @@ const Status = ({
 			width: 200,
 		},
 		{
-			title: 'Điện thoại',
+			title: 'Số Điện Thoại',
 			dataIndex: 'phoneNumber',
 			render: (_, { phoneNumber }) => {
-				return phoneNumber ?? null;
+				return phoneNumber === '' ? null : '0' + phoneNumber;
 			},
-			width: 160,
+			width: 130,
 		},
 		{
 			title: 'Ngành',
 			dataIndex: 'majors',
-			width: 100,
+			width: 150,
 			render: (val) => {
-				if (!listMajors || !Object.keys(listMajors).length) return '';
+				if (listMajor) {
+					const major = listMajor.find((m) => m._id === val);
 
-				const major = listMajors.find((m) => m._id === val);
-
-				if (!major) return '';
-				return major.name ?? '';
+					if (!major) return '';
+					return major.name ?? '';
+				}
 			},
 		},
 		{
@@ -156,7 +147,7 @@ const Status = ({
 		{
 			title: 'Người review',
 			dataIndex: 'reviewer',
-			width: 230,
+			width: 150,
 			render: (val) => (val ? val.split('@')[0] : val),
 		},
 		{
@@ -240,6 +231,7 @@ const Status = ({
 			setChooseIdStudent(selectedRows);
 		},
 	};
+
 	const handleStandardTableChange = (key, value) => {
 		const newValue = {
 			...filter,
@@ -252,14 +244,10 @@ const Status = ({
 
 		setFilter(newValue);
 	};
+
 	const handleSearch = () => {
 		setChooseIdStudent([]);
 		dispatch(getAllStudent({ ...page, ...filter }));
-	};
-
-	const handleSemesterChange = (semesterID) => {
-		// setPage({ ...filter, ...page, smester_id: semesterID });
-		setFilteredStudentList(list.filter(({ smester_id: { _id } }) => _id === semesterID));
 	};
 
 	const comfirms = () => {
@@ -290,11 +278,19 @@ const Status = ({
 	};
 
 	const handleExport = () => {
+		const campusID =
+			infoUser && infoUser.manager && infoUser.manager.campus_id
+				? infoUser.manager.campus_id
+				: '';
+		const semesterID = defaultSemester?._id ? defaultSemester?._id : '';
+
 		const dataFilter = {
+			smester_id: semesterID,
+			campus_id: campusID,
 			...filter,
-			smester_id: page.smester_id,
-			campus_id: page.campus_id,
 		};
+
+		console.log(dataFilter);
 
 		dispatch(
 			getDataExport({
@@ -365,7 +361,8 @@ const Status = ({
 						style={{
 							width: '100%',
 						}}
-						onChange={handleSemesterChange}
+						// (val) => setPage({ ...filter, ...page, smester_id: val })
+						onChange={(val) => handleStandardTableChange('smester_id', val)}
 						placeholder="Chọn kỳ"
 						defaultValue={
 							defaultSemester && defaultSemester?._id ? defaultSemester?._id : ''
@@ -402,7 +399,7 @@ const Status = ({
 								className={style.button}
 								onClick={handleExport}
 							>
-								Tải file
+								Export file
 							</Button>
 							<Button
 								type="primary"
@@ -434,8 +431,8 @@ const Status = ({
 										defaultValue=""
 									>
 										<Option value="">Tất cả</Option>
-										{listMajors &&
-											listMajors.map((item, index) => (
+										{listMajor &&
+											listMajor.map((item, index) => (
 												<>
 													<Option value={item?._id} key={index}>
 														{item?.name}
@@ -571,8 +568,8 @@ const Status = ({
 									defaultValue=""
 								>
 									<Option value="">Tất cả</Option>
-									{listMajors &&
-										listMajors.map((item, index) => (
+									{listMajor &&
+										listMajor.map((item, index) => (
 											<>
 												<Option value={item?._id} key={index}>
 													{item?.name}
@@ -683,7 +680,7 @@ const Status = ({
 					rowKey="_id"
 					loading={loading}
 					columns={columns}
-					dataSource={filteredStudentList ?? []}
+					dataSource={list}
 					scroll={{ x: 'calc(700px + 50%)' }}
 				/>
 			) : (
@@ -724,7 +721,7 @@ const Status = ({
 					}}
 					rowKey="_id"
 					loading={loading}
-					dataSource={filteredStudentList ?? []}
+					dataSource={list}
 				>
 					<Column
 						title="Mssv"
@@ -749,74 +746,74 @@ const Status = ({
 						title="Trạng thái"
 						dataIndex="statusCheck"
 						key="_id"
-						render={(status) => {
-							if (status === 0) {
-								return (
-									<span className="status-fail" style={{ color: 'orange' }}>
-										Chờ kiểm tra
-									</span>
-								);
-							} else if (status === 1) {
-								return (
-									<span className="status-up" style={{ color: 'grey' }}>
-										Sửa lại CV
-									</span>
-								);
-							} else if (status === 2) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Nhận CV
-									</span>
-								);
-							} else if (status === 3) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Trượt
-									</span>
-								);
-							} else if (status === 4) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Đã nộp biên bản <br />
-									</span>
-								);
-							} else if (status === 5) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Sửa biên bản <br />
-									</span>
-								);
-							} else if (status === 6) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Đang thực tập <br />
-									</span>
-								);
-							} else if (status === 7) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Đã nộp báo cáo <br />
-									</span>
-								);
-							} else if (status === 8) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Sửa báo cáo <br />
-									</span>
-								);
-							} else if (status === 9) {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Hoàn thành <br />
-									</span>
-								);
-							} else {
-								return (
-									<span className="status-fail" style={{ color: 'red' }}>
-										Chưa đăng ký
-									</span>
-								);
-							}
+						render={(status, student) => {
+							const statusMap = {
+								0: {
+									message: 'Chờ kiểm tra',
+									className: 'status-fail',
+									style: { color: '#ff8c00' }, // orange
+								},
+								1: {
+									message: 'Sửa lại CV',
+									className: 'status-up',
+									style: { color: 'grey' },
+								},
+								2: {
+									message:
+										student.support === 0 ? ' Chờ nộp biên bản' : ' Nhận CV',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								3: {
+									message: 'Trượt',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								4: {
+									message: student?.form ? 'Đã nộp biên bản' : 'Chờ nộp biên bản',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								5: {
+									message: 'Sửa biên bản',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								6: {
+									message: 'Đang thực tập',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								7: {
+									message: student?.report ? 'Đã nộp báo cáo' : 'Chờ nộp báo cáo',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								8: {
+									message: 'Sửa báo cáo',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								9: {
+									message: 'Hoàn thành',
+									className: 'status-fail',
+									style: { color: '#ff5733' }, // red
+								},
+								default: {
+									message: 'Chưa đăng ký',
+									className: 'status-up',
+									style: { color: 'grey' },
+								},
+							};
+							const statusInfo = statusMap[status] || statusMap.default;
+							const { message, className, style } = statusInfo;
+
+							return (
+								<span className={className} style={style}>
+									{message}
+									<br />
+								</span>
+							);
 						}}
 					/>
 				</Table>
@@ -860,7 +857,7 @@ Status.propTypes = {
 	infoUser: object,
 	listManager: array,
 	listBusiness: object,
-	listMajors: array,
+	listMajor: array,
 };
 
 export default connect(({ students, semester, manager, business, major, global }) => ({
@@ -871,6 +868,6 @@ export default connect(({ students, semester, manager, business, major, global }
 	loading: students.loading,
 	listManager: manager.listManager,
 	listBusiness: business.listBusiness,
-	listMajors: major.listMajor,
+	listMajor: major.listMajor,
 	...global,
 }))(Status);
