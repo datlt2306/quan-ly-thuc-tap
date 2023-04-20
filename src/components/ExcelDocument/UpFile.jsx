@@ -151,8 +151,8 @@ const UpFile = ({ keys, parentMethods }) => {
 	const submitSave = () => {
 		// Convert majorCode -> majors (ID)
 		const updatedData = dataNew.map((student) => {
-			let major_id = listMajor.find((major) => major.majorCode === student.majorCode);
-			if (major_id) student.majors = major_id;
+			let major = listMajor.find((major) => major.majorCode === student.majorCode);
+			if (major) student.majors = major._id;
 			delete student.majorCode;
 			return student;
 		});
