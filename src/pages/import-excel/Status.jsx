@@ -361,8 +361,9 @@ const Status = ({
 	};
 
 	const parentMethods = {
-		smester_id: currentSemester,
+		smester_id: currentSemester ?? defaultSemester?._id,
 		campus_id: infoUser?.manager?.campus_id,
+		listMajor,
 		closeVisible,
 	};
 

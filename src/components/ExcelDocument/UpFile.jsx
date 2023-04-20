@@ -10,7 +10,7 @@ import { businessValidationSchema, statusValidationSchema } from './Validate';
 import _ from 'lodash';
 
 const UpFile = ({ keys, parentMethods }) => {
-	const { closeVisible, campus_id, smester_id } = parentMethods;
+	const { closeVisible, campus_id, smester_id, listMajor } = parentMethods;
 	const [dataNew, setDataNew] = useState([]);
 	const [nameFile, setNameFile] = useState('');
 	const dispatch = useDispatch();
@@ -149,8 +149,14 @@ const UpFile = ({ keys, parentMethods }) => {
 	};
 
 	const submitSave = () => {
-		const payload = { data: dataNew, campus_id, smester_id };
-		console.log(payload);
+		// Convert majorCode -> majors (ID)
+		const updatedData = dataNew.map((student) => {
+			let major_id = listMajor.find((major) => major.majorCode === student.majorCode);
+			if (major_id) student.majors = major_id;
+			delete student.majorCode;
+			return student;
+		});
+		const payload = { data: updatedData, campus_id, smester_id };
 		switch (keys) {
 			case 'status':
 				dispatch(insertStudent(payload)).then((res) => {
@@ -173,7 +179,7 @@ const UpFile = ({ keys, parentMethods }) => {
 		}
 	};
 	const notifications = (payload) => {
-		if (loading === false && payload.statusCode === 200) {
+		if (loading === false && payload !== undefined) {
 			message.success('Thành công');
 		} else message.error('Lỗi server!');
 	};
@@ -191,7 +197,7 @@ const UpFile = ({ keys, parentMethods }) => {
 				<label htmlFor="up-file">
 					{!nameFile && dataNew.length === 0 && (
 						<div className={styles.buttonUpfile}>
-							<UploadOutlined className={styles.icon} /> Tải file excel
+							<UploadOutlined className={styles.icon} /> Tải lên danh sách
 						</div>
 					)}
 
