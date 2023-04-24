@@ -387,8 +387,7 @@ const Status = ({
 								Chọn kỳ
 							</Option>
 						)}
-						{listSemesters &&
-							listSemesters.length > 0 &&
+						{listSemesters?.length &&
 							listSemesters?.map((item, index) => (
 								<Option value={item?._id} key={index}>
 									{item?.name}
@@ -445,13 +444,11 @@ const Status = ({
 										defaultValue=""
 									>
 										<Option value="">Tất cả</Option>
-										{listMajor &&
+										{listMajor?.length &&
 											listMajor.map((item, index) => (
-												<>
-													<Option value={item?._id} key={index}>
-														{item?.name}
-													</Option>
-												</>
+												<Option value={item?._id} key={index}>
+													{item?.name}
+												</Option>
 											))}
 									</Select>
 								</div>
@@ -584,11 +581,9 @@ const Status = ({
 									<Option value="">Tất cả</Option>
 									{Array.isArray(listMajor) &&
 										listMajor.map((item, index) => (
-											<>
-												<Option value={item?._id} key={index}>
-													{item?.name}
-												</Option>
-											</>
+											<Option value={item?._id} key={index}>
+												{item?.name}
+											</Option>
 										))}
 								</Select>
 							</div>
@@ -886,7 +881,7 @@ const Status = ({
 							* Giữ nguyên định dạng file mẫu xlsx không thay đổi
 						</p>
 						<p className={text.red}>
-							* Chỉ cập thêm công tin đúng theo các cột trong file excel mẫu
+							* Chỉ cập nhật thêm công tin đúng theo các cột trong file excel mẫu
 						</p>
 					</div>
 					<DownloadFile keys="status" name="sinh viên" />
