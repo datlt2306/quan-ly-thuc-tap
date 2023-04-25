@@ -28,6 +28,7 @@ export const updateMajor = createAsyncThunk('major/updateMajor', async (z) => {
 	}
 	z.callback(false, data.message);
 	return {};
+
 });
 
 export const removeMajor = createAsyncThunk('major,removeMajor', async (id) => {
