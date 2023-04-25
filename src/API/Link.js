@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getLocal } from '../ultis/storage';
 
 const axiosClient = axios.create({
-	baseURL: process.env.REACT_APP_TEST_API,
+	baseURL: 'https://polytuts.website/api',
 });
 
 axiosClient.interceptors.request.use((req) => {

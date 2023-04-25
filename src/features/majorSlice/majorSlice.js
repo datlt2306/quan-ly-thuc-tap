@@ -11,13 +11,24 @@ export const getMajor = createAsyncThunk('major/getMajor', async (id) => {
 });
 export const createMajor = createAsyncThunk('major/createMajor', async (z) => {
 	const { data } = await majorAPI.create(z.data);
-	z.callback(data.status, data.msg);
-	return data;
+	if (!data.statusCode) {
+		z.callback(true, 'Thêm ngành học thành công!');
+		return data;
+	}
+	z.callback(false, data.message);
+	return {};
 });
 export const updateMajor = createAsyncThunk('major/updateMajor', async (z) => {
-	const { data } = await majorAPI.update(z.data._id, z.data);
-	z.callback(data.status, data.message);
-	return data.data;
+	const id = z.data._id;
+	delete z.data._id;
+	const { data } = await majorAPI.update(id, z.data);
+	if (!data.statusCode) {
+		z.callback(true, 'Sửa ngành học thành công!');
+		return data;
+	}
+	z.callback(false, data.message);
+	return {};
+
 });
 
 export const removeMajor = createAsyncThunk('major,removeMajor', async (id) => {
