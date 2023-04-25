@@ -58,10 +58,11 @@ const StudentDetail = (props) => {
 	const getDataStudent = useCallback(async () => {
 		setIsLoading(true);
 		const { data } = await StudentAPI.getStudentById(studentId);
+
 		if (data) {
 			setStudent(data);
 			setNoteDetail(data.note);
-			dispatch(getBusiness({ majors: data.majors._id }));
+			dispatch(getBusiness({ majors: data.majors?._id }));
 			dispatch(
 				getListTime({
 					semester_id: data.smester_id._id,
@@ -108,6 +109,7 @@ const StudentDetail = (props) => {
 		} else if (status === 2) {
 			return (
 				<span className="status-fail" style={{ color: 'red' }}>
+					{/* !!Logic error */}
 					{student.support === 0 ? ' Chờ nộp biên bản' : ' Nhận CV'}
 				</span>
 			);
